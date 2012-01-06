@@ -10,13 +10,19 @@
 
 @implementation BoardViewController
 
+-(id)init
+{
+	self = [super initWithNibName:@"BoardView" bundle:nil];
+	if(self)
+	{
+		
+	}
+	return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    return [self init];
 }
 
 - (void)didReceiveMemoryWarning
