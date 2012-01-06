@@ -10,7 +10,7 @@
 
 @implementation UIUniversalViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	NSString* viewName = nil;
 	if(nibNameOrNil)
@@ -19,4 +19,11 @@
     self = [super initWithNibName:viewName bundle:nibBundleOrNil];
     return self;
 }
+
+-(void)viewDidLoad
+{
+	[super viewDidLoad];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
+}
+
 @end
