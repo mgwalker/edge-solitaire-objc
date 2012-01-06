@@ -22,6 +22,8 @@
 		B92B753814B6A22B00BC69D5 /* green_felt@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B92B753714B6A22B00BC69D5 /* green_felt@2x.jpg */; };
 		B92B753B14B6A3A100BC69D5 /* green_felt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B92B753A14B6A3A100BC69D5 /* green_felt.jpg */; };
 		B92B753F14B6A6F900BC69D5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B753E14B6A6F900BC69D5 /* GradientButton.m */; };
+		B92B754114B6AB7200BC69D5 /* BoardView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */; };
+		B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B754314B6ADA200BC69D5 /* BoardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		B92B753A14B6A3A100BC69D5 /* green_felt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_felt.jpg; sourceTree = "<group>"; };
 		B92B753D14B6A6F900BC69D5 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		B92B753E14B6A6F900BC69D5 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPhone.xib; sourceTree = "<group>"; };
+		B92B754214B6ADA200BC69D5 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		B92B754314B6ADA200BC69D5 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B92B753514B69FCD00BC69D5 /* LandingView_iPhone.xib */,
+				B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */,
 			);
 			name = "iPhone Views";
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 				B92B752E14B69E6100BC69D5 /* LandingViewController.m */,
 				B92B753014B69F0100BC69D5 /* UIUniversalViewController.h */,
 				B92B753114B69F0100BC69D5 /* UIUniversalViewController.m */,
+				B92B754214B6ADA200BC69D5 /* BoardViewController.h */,
+				B92B754314B6ADA200BC69D5 /* BoardViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 				B92B753614B69FCD00BC69D5 /* LandingView_iPhone.xib in Resources */,
 				B92B753814B6A22B00BC69D5 /* green_felt@2x.jpg in Resources */,
 				B92B753B14B6A3A100BC69D5 /* green_felt.jpg in Resources */,
+				B92B754114B6AB7200BC69D5 /* BoardView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,7 @@
 				B92B752F14B69E6100BC69D5 /* LandingViewController.m in Sources */,
 				B92B753214B69F0100BC69D5 /* UIUniversalViewController.m in Sources */,
 				B92B753F14B6A6F900BC69D5 /* GradientButton.m in Sources */,
+				B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
