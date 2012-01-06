@@ -7,7 +7,17 @@
 //
 
 #import "UIUniversalViewController.h"
+#import "GradientButton.h"
 
 @interface LandingViewController : UIUniversalViewController
+{
+	
+}
+
+@property (retain) IBOutlet GradientButton* startGameButton;
+@property (retain) IBOutlet GradientButton* tutorialButton;
+
+-(IBAction)startGame:(id)sender;
+-(IBAction)tutorial:(id)sender;
 
 @end

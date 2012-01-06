@@ -10,6 +10,8 @@
 
 @implementation LandingViewController
 
+@synthesize startGameButton, tutorialButton;
+
 -(id)init
 {
 	self = [super initWithNibName:@"LandingView" bundle:nil];
@@ -46,7 +48,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
+	[self.startGameButton useWhiteStyle];
+	[self.tutorialButton useWhiteStyle];
 }
 
 - (void)viewDidUnload
@@ -56,6 +61,18 @@
     // e.g. self.myOutlet = nil;
 }
 
+#pragma mark - Actions
+-(IBAction)startGame:(id)sender
+{
+	
+}
+
+-(IBAction)tutorial:(id)sender
+{
+	
+}
+
+#pragma mark - Rotation
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
