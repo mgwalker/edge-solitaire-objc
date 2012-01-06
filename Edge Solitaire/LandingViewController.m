@@ -7,6 +7,7 @@
 //
 
 #import "LandingViewController.h"
+#import "BoardViewController.h"
 
 @implementation LandingViewController
 
@@ -49,7 +50,7 @@
 {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
+	self.navigationController.navigationBarHidden = YES;
 	[self.startGameButton useWhiteStyle];
 	[self.tutorialButton useWhiteStyle];
 }
@@ -64,7 +65,8 @@
 #pragma mark - Actions
 -(IBAction)startGame:(id)sender
 {
-	
+	BoardViewController* vc = [[BoardViewController alloc] init];
+	[self.navigationController pushViewController:vc animated:NO];
 }
 
 -(IBAction)tutorial:(id)sender
