@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B90A954C14B68E9300F33242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954B14B68E9300F33242 /* UIKit.framework */; };
+		B90A954E14B68E9300F33242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954D14B68E9300F33242 /* Foundation.framework */; };
+		B90A955014B68E9300F33242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954F14B68E9300F33242 /* CoreGraphics.framework */; };
+		B90A955214B68E9300F33242 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A955114B68E9300F33242 /* CoreData.framework */; };
+		B90A955814B68E9300F33242 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B90A955614B68E9300F33242 /* InfoPlist.strings */; };
+		B90A955A14B68E9300F33242 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A955914B68E9300F33242 /* main.m */; };
+		B90A955E14B68E9300F33242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A955D14B68E9300F33242 /* AppDelegate.m */; };
+		B90A956114B68E9300F33242 /* Edge_Solitaire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B90A955F14B68E9300F33242 /* Edge_Solitaire.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B90A954714B68E9300F33242 /* Edge Solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edge Solitaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90A954B14B68E9300F33242 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B90A954D14B68E9300F33242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B90A954F14B68E9300F33242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B90A955114B68E9300F33242 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B90A955514B68E9300F33242 /* Edge Solitaire-Info.plist */ = {isa = PBXFileReference; path = "Edge Solitaire-Info.plist"; sourceTree = "<group>"; };
+		B90A955714B68E9300F33242 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B90A955914B68E9300F33242 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B90A955B14B68E9300F33242 /* Edge Solitaire-Prefix.pch */ = {isa = PBXFileReference; path = "Edge Solitaire-Prefix.pch"; sourceTree = "<group>"; };
+		B90A955C14B68E9300F33242 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B90A955D14B68E9300F33242 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B90A956014B68E9300F33242 /* Edge_Solitaire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Edge_Solitaire.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B90A954414B68E9300F33242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90A954C14B68E9300F33242 /* UIKit.framework in Frameworks */,
+				B90A954E14B68E9300F33242 /* Foundation.framework in Frameworks */,
+				B90A955014B68E9300F33242 /* CoreGraphics.framework in Frameworks */,
+				B90A955214B68E9300F33242 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B90A953C14B68E9300F33242 = {
+			isa = PBXGroup;
+			children = (
+				B90A955314B68E9300F33242 /* Edge Solitaire */,
+				B90A954A14B68E9300F33242 /* Frameworks */,
+				B90A954814B68E9300F33242 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B90A954814B68E9300F33242 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B90A954714B68E9300F33242 /* Edge Solitaire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B90A954A14B68E9300F33242 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B90A954B14B68E9300F33242 /* UIKit.framework */,
+				B90A954D14B68E9300F33242 /* Foundation.framework */,
+				B90A954F14B68E9300F33242 /* CoreGraphics.framework */,
+				B90A955114B68E9300F33242 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B90A955314B68E9300F33242 /* Edge Solitaire */ = {
+			isa = PBXGroup;
+			children = (
+				B90A955C14B68E9300F33242 /* AppDelegate.h */,
+				B90A955D14B68E9300F33242 /* AppDelegate.m */,
+				B90A955F14B68E9300F33242 /* Edge_Solitaire.xcdatamodeld */,
+				B90A955414B68E9300F33242 /* Supporting Files */,
+			);
+			path = "Edge Solitaire";
+			sourceTree = "<group>";
+		};
+		B90A955414B68E9300F33242 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B90A955514B68E9300F33242 /* Edge Solitaire-Info.plist */,
+				B90A955614B68E9300F33242 /* InfoPlist.strings */,
+				B90A955914B68E9300F33242 /* main.m */,
+				B90A955B14B68E9300F33242 /* Edge Solitaire-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B90A954614B68E9300F33242 /* Edge Solitaire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B90A956414B68E9300F33242 /* Build configuration list for PBXNativeTarget "Edge Solitaire" */;
+			buildPhases = (
+				B90A954314B68E9300F33242 /* Sources */,
+				B90A954414B68E9300F33242 /* Frameworks */,
+				B90A954514B68E9300F33242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Edge Solitaire";
+			productName = "Edge Solitaire";
+			productReference = B90A954714B68E9300F33242 /* Edge Solitaire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B90A953E14B68E9300F33242 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B90A954114B68E9300F33242 /* Build configuration list for PBXProject "Edge Solitaire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B90A953C14B68E9300F33242;
+			productRefGroup = B90A954814B68E9300F33242 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B90A954614B68E9300F33242 /* Edge Solitaire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B90A954514B68E9300F33242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90A955814B68E9300F33242 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B90A954314B68E9300F33242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90A955A14B68E9300F33242 /* main.m in Sources */,
+				B90A955E14B68E9300F33242 /* AppDelegate.m in Sources */,
+				B90A956114B68E9300F33242 /* Edge_Solitaire.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B90A955614B68E9300F33242 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90A955714B68E9300F33242 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B90A956214B68E9300F33242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B90A956314B68E9300F33242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B90A956514B68E9300F33242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edge Solitaire/Edge Solitaire-Prefix.pch";
+				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B90A956614B68E9300F33242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edge Solitaire/Edge Solitaire-Prefix.pch";
+				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B90A954114B68E9300F33242 /* Build configuration list for PBXProject "Edge Solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90A956214B68E9300F33242 /* Debug */,
+				B90A956314B68E9300F33242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B90A956414B68E9300F33242 /* Build configuration list for PBXNativeTarget "Edge Solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90A956514B68E9300F33242 /* Debug */,
+				B90A956614B68E9300F33242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B90A955F14B68E9300F33242 /* Edge_Solitaire.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B90A956014B68E9300F33242 /* Edge_Solitaire.xcdatamodel */,
+			);
+			currentVersion = B90A956014B68E9300F33242 /* Edge_Solitaire.xcdatamodel */;
+			path = Edge_Solitaire.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B90A953E14B68E9300F33242 /* Project object */;
+}
