@@ -15,6 +15,10 @@
 		B90A955A14B68E9300F33242 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A955914B68E9300F33242 /* main.m */; };
 		B90A955E14B68E9300F33242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A955D14B68E9300F33242 /* AppDelegate.m */; };
 		B90A956114B68E9300F33242 /* Edge_Solitaire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B90A955F14B68E9300F33242 /* Edge_Solitaire.xcdatamodeld */; };
+		B92B752F14B69E6100BC69D5 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B752E14B69E6100BC69D5 /* LandingViewController.m */; };
+		B92B753214B69F0100BC69D5 /* UIUniversalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B753114B69F0100BC69D5 /* UIUniversalViewController.m */; };
+		B92B753414B69FBC00BC69D5 /* LandingView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92B753314B69FBC00BC69D5 /* LandingView_iPad.xib */; };
+		B92B753614B69FCD00BC69D5 /* LandingView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92B753514B69FCD00BC69D5 /* LandingView_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,12 @@
 		B90A955C14B68E9300F33242 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B90A955D14B68E9300F33242 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B90A956014B68E9300F33242 /* Edge_Solitaire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Edge_Solitaire.xcdatamodel; sourceTree = "<group>"; };
+		B92B752D14B69E6100BC69D5 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		B92B752E14B69E6100BC69D5 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
+		B92B753014B69F0100BC69D5 /* UIUniversalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUniversalViewController.h; sourceTree = "<group>"; };
+		B92B753114B69F0100BC69D5 /* UIUniversalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUniversalViewController.m; sourceTree = "<group>"; };
+		B92B753314B69FBC00BC69D5 /* LandingView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingView_iPad.xib; sourceTree = "<group>"; };
+		B92B753514B69FCD00BC69D5 /* LandingView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingView_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,9 @@
 		B90A955314B68E9300F33242 /* Edge Solitaire */ = {
 			isa = PBXGroup;
 			children = (
+				B92B752C14B69E3F00BC69D5 /* View Controllers */,
+				B92B752B14B69E3300BC69D5 /* iPhone Views */,
+				B92B752914B69E2500BC69D5 /* iPad Views */,
 				B90A955C14B68E9300F33242 /* AppDelegate.h */,
 				B90A955D14B68E9300F33242 /* AppDelegate.m */,
 				B90A955F14B68E9300F33242 /* Edge_Solitaire.xcdatamodeld */,
@@ -95,6 +108,33 @@
 				B90A955B14B68E9300F33242 /* Edge Solitaire-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B92B752914B69E2500BC69D5 /* iPad Views */ = {
+			isa = PBXGroup;
+			children = (
+				B92B753314B69FBC00BC69D5 /* LandingView_iPad.xib */,
+			);
+			name = "iPad Views";
+			sourceTree = "<group>";
+		};
+		B92B752B14B69E3300BC69D5 /* iPhone Views */ = {
+			isa = PBXGroup;
+			children = (
+				B92B753514B69FCD00BC69D5 /* LandingView_iPhone.xib */,
+			);
+			name = "iPhone Views";
+			sourceTree = "<group>";
+		};
+		B92B752C14B69E3F00BC69D5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B92B752D14B69E6100BC69D5 /* LandingViewController.h */,
+				B92B752E14B69E6100BC69D5 /* LandingViewController.m */,
+				B92B753014B69F0100BC69D5 /* UIUniversalViewController.h */,
+				B92B753114B69F0100BC69D5 /* UIUniversalViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90A955814B68E9300F33242 /* InfoPlist.strings in Resources */,
+				B92B753414B69FBC00BC69D5 /* LandingView_iPad.xib in Resources */,
+				B92B753614B69FCD00BC69D5 /* LandingView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +203,8 @@
 				B90A955A14B68E9300F33242 /* main.m in Sources */,
 				B90A955E14B68E9300F33242 /* AppDelegate.m in Sources */,
 				B90A956114B68E9300F33242 /* Edge_Solitaire.xcdatamodeld in Sources */,
+				B92B752F14B69E6100BC69D5 /* LandingViewController.m in Sources */,
+				B92B753214B69F0100BC69D5 /* UIUniversalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +310,7 @@
 				B90A956614B68E9300F33242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

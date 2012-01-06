@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LandingViewController.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+	
+	LandingViewController* vc = [[LandingViewController alloc] init];
+	self.window.rootViewController = vc;
+	
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
