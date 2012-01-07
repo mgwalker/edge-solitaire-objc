@@ -7,7 +7,28 @@
 //
 
 #import "UIUniversalViewController.h"
+#import "CardSpot.h"
 
 @interface BoardViewController : UIUniversalViewController
+
+@property (retain) IBOutlet CardSpot* spot0;
+@property (retain) IBOutlet CardSpot* spot1;
+@property (retain) IBOutlet CardSpot* spot2;
+@property (retain) IBOutlet CardSpot* spot3;
+
+@property (retain) IBOutlet CardSpot* spot4;
+@property (retain) IBOutlet CardSpot* spot5;
+@property (retain) IBOutlet CardSpot* spot6;
+@property (retain) IBOutlet CardSpot* spot7;
+
+@property (retain) IBOutlet CardSpot* spot8;
+@property (retain) IBOutlet CardSpot* spot9;
+@property (retain) IBOutlet CardSpot* spot10;
+@property (retain) IBOutlet CardSpot* spot11;
+
+@property (retain) IBOutlet CardSpot* spot12;
+@property (retain) IBOutlet CardSpot* spot13;
+@property (retain) IBOutlet CardSpot* spot14;
+@property (retain) IBOutlet CardSpot* spot15;
 
 @end
