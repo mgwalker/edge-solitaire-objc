@@ -10,8 +10,12 @@
 #import "UIUniversalViewController.h"
 
 @interface CardSpot : UIView
+{
+	NSInteger _cellID;
+}
 
 @property (assign) NSString* cardType;
+@property (assign) NSInteger cellID;
 
 @end
 
