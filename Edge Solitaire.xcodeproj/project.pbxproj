@@ -24,6 +24,11 @@
 		B92B753F14B6A6F900BC69D5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B753E14B6A6F900BC69D5 /* GradientButton.m */; };
 		B92B754114B6AB7200BC69D5 /* BoardView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */; };
 		B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B754314B6ADA200BC69D5 /* BoardViewController.m */; };
+		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
+		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
+		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
+		B9F20C1714B7F3D900F9810A /* cardspot_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C1514B7F3D900F9810A /* cardspot_iPhone.png */; };
+		B9F20C1814B7F3D900F9810A /* cardspot_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C1614B7F3D900F9810A /* cardspot_iPhone@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,12 @@
 		B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPhone.xib; sourceTree = "<group>"; };
 		B92B754214B6ADA200BC69D5 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
 		B92B754314B6ADA200BC69D5 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
+		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
+		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
+		B9F20C1214B7ED8700F9810A /* CardSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSpot.m; sourceTree = "<group>"; };
+		B9F20C1514B7F3D900F9810A /* cardspot_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPhone.png; sourceTree = "<group>"; };
+		B9F20C1614B7F3D900F9810A /* cardspot_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardspot_iPhone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				B92B753314B69FBC00BC69D5 /* LandingView_iPad.xib */,
+				B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */,
 			);
 			name = "iPad Views";
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 				B92B753114B69F0100BC69D5 /* UIUniversalViewController.m */,
 				B92B754214B6ADA200BC69D5 /* BoardViewController.h */,
 				B92B754314B6ADA200BC69D5 /* BoardViewController.m */,
+				B9F20C1414B7ED9000F9810A /* Controls */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -159,6 +172,9 @@
 			children = (
 				B92B753A14B6A3A100BC69D5 /* green_felt.jpg */,
 				B92B753714B6A22B00BC69D5 /* green_felt@2x.jpg */,
+				B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */,
+				B9F20C1514B7F3D900F9810A /* cardspot_iPhone.png */,
+				B9F20C1614B7F3D900F9810A /* cardspot_iPhone@2x.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -170,6 +186,15 @@
 				B92B753E14B6A6F900BC69D5 /* GradientButton.m */,
 			);
 			name = GradientButton;
+			sourceTree = "<group>";
+		};
+		B9F20C1414B7ED9000F9810A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B9F20C1114B7ED8700F9810A /* CardSpot.h */,
+				B9F20C1214B7ED8700F9810A /* CardSpot.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +253,10 @@
 				B92B753814B6A22B00BC69D5 /* green_felt@2x.jpg in Resources */,
 				B92B753B14B6A3A100BC69D5 /* green_felt.jpg in Resources */,
 				B92B754114B6AB7200BC69D5 /* BoardView_iPhone.xib in Resources */,
+				B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */,
+				B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */,
+				B9F20C1714B7F3D900F9810A /* cardspot_iPhone.png in Resources */,
+				B9F20C1814B7F3D900F9810A /* cardspot_iPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +274,7 @@
 				B92B753214B69F0100BC69D5 /* UIUniversalViewController.m in Sources */,
 				B92B753F14B6A6F900BC69D5 /* GradientButton.m in Sources */,
 				B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */,
+				B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
