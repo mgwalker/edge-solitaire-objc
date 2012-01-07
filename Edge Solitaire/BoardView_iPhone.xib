@@ -54,7 +54,6 @@
 						<string key="NSFrame">{{92, 20}, {64, 79}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:212</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -279,7 +278,6 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MC4xODAyMjg3MTU2IDAuNTAyMDcyNzA0MSAwLjA5MDU3MzM5Mjc0AA</bytes>
@@ -297,6 +295,134 @@
 						<reference key="destination" ref="191373211"/>
 					</object>
 					<int key="connectionID">59</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot0</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="989469147"/>
+					</object>
+					<int key="connectionID">76</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="876624642"/>
+					</object>
+					<int key="connectionID">77</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="623205280"/>
+					</object>
+					<int key="connectionID">78</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="420378552"/>
+					</object>
+					<int key="connectionID">79</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot4</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="293316369"/>
+					</object>
+					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot5</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="22514771"/>
+					</object>
+					<int key="connectionID">81</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot6</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="545208489"/>
+					</object>
+					<int key="connectionID">82</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot7</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="13489671"/>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot8</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="500200559"/>
+					</object>
+					<int key="connectionID">84</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot9</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="89660449"/>
+					</object>
+					<int key="connectionID">85</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot10</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="834705724"/>
+					</object>
+					<int key="connectionID">86</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot11</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="58649913"/>
+					</object>
+					<int key="connectionID">87</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot12</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="399091723"/>
+					</object>
+					<int key="connectionID">88</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot13</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="367105009"/>
+					</object>
+					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot14</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1070591055"/>
+					</object>
+					<int key="connectionID">90</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spot15</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="192779553"/>
+					</object>
+					<int key="connectionID">91</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -473,13 +599,97 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">75</int>
+			<int key="maxID">91</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">BoardViewController</string>
 					<string key="superclassName">UIUniversalViewController</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="spot0">CardSpot</string>
+						<string key="spot1">CardSpot</string>
+						<string key="spot10">CardSpot</string>
+						<string key="spot11">CardSpot</string>
+						<string key="spot12">CardSpot</string>
+						<string key="spot13">CardSpot</string>
+						<string key="spot14">CardSpot</string>
+						<string key="spot15">CardSpot</string>
+						<string key="spot2">CardSpot</string>
+						<string key="spot3">CardSpot</string>
+						<string key="spot4">CardSpot</string>
+						<string key="spot5">CardSpot</string>
+						<string key="spot6">CardSpot</string>
+						<string key="spot7">CardSpot</string>
+						<string key="spot8">CardSpot</string>
+						<string key="spot9">CardSpot</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="spot0">
+							<string key="name">spot0</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot1">
+							<string key="name">spot1</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot10">
+							<string key="name">spot10</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot11">
+							<string key="name">spot11</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot12">
+							<string key="name">spot12</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot13">
+							<string key="name">spot13</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot14">
+							<string key="name">spot14</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot15">
+							<string key="name">spot15</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot2">
+							<string key="name">spot2</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot3">
+							<string key="name">spot3</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot4">
+							<string key="name">spot4</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot5">
+							<string key="name">spot5</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot6">
+							<string key="name">spot6</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot7">
+							<string key="name">spot7</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot8">
+							<string key="name">spot8</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spot9">
+							<string key="name">spot9</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/BoardViewController.h</string>
