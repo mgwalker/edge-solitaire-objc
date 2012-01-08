@@ -15,12 +15,14 @@
 @synthesize spot8, spot9, spot10, spot11;
 @synthesize spot12, spot13, spot14, spot15;
 
+@synthesize nextCard;
+
 -(id)init
 {
 	self = [super initWithNibName:@"BoardView" bundle:nil];
 	if(self)
 	{
-		
+		_cardDeck = [Card shuffledDeck];
 	}
 	return self;
 }
@@ -69,6 +71,8 @@
 	spot13.cellID = 13;
 	spot14.cellID = 14;
 	spot15.cellID = 15;
+	
+	nextCard.card = [_cardDeck lastObject];
 }
 
 - (void)viewDidUnload

@@ -10,6 +10,10 @@
 #import "CardSpot.h"
 
 @interface BoardViewController : UIUniversalViewController
+{
+	// Array of Cards
+	NSMutableArray* _cardDeck;
+}
 
 @property (retain) IBOutlet CardSpot* spot0;
 @property (retain) IBOutlet CardSpot* spot1;
@@ -30,5 +34,7 @@
 @property (retain) IBOutlet CardSpot* spot13;
 @property (retain) IBOutlet CardSpot* spot14;
 @property (retain) IBOutlet CardSpot* spot15;
+
+@property (retain) IBOutlet CardSpot* nextCard;
 
 @end
