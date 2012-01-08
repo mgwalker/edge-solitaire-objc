@@ -10,10 +10,10 @@
 
 enum CardSuit
 {
-	Club,
-	Diamond,
-	Heart,
-	Spade
+	CardSuitClub,
+	CardSuitDiamond,
+	CardSuitHeart,
+	CardSuitSpade
 };
 
 @interface Card : NSObject
