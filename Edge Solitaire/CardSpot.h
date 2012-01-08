@@ -10,13 +10,18 @@
 #import "UIUniversalViewController.h"
 #import "Card.h"
 
+@protocol CardSpotDelegate;
+
 @interface CardSpot : UIView
 {
 	NSInteger _cellID;
+	NSInteger _edgeValue;
 	Card* _card;
 }
 
+@property (retain) id<CardSpotDelegate> delegate;
 @property (assign) NSInteger cellID;
+@property (readonly) NSInteger edgeValue;
 @property (retain) Card* card;
 
 @end
@@ -30,4 +35,8 @@
 -(void)setup;
 -(UIImage*)imageWithName:(NSString*)imageName;
 
+@end
+
+@protocol CardSpotDelegate
+-(void)cardSpotTouched:(CardSpot*)cardSpot;
 @end

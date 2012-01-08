@@ -10,7 +10,9 @@
 
 @implementation CardSpot
 
+@synthesize delegate;
 @synthesize placeholder, placeholderFace, cardImage;
+@synthesize edgeValue = _edgeValue;
 
 -(id)init
 {
@@ -40,20 +42,24 @@
 	[self addSubview:self.placeholder];
 
 	self.backgroundColor = [UIColor clearColor];
+	
+	self.exclusiveTouch = YES;
+	self.userInteractionEnabled = YES;
 }
 
--(UIImage*)imageWithName:(NSString*)imageName
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	return [UIImage imageNamed:
-			[NSString stringWithFormat:@"%@_%@", imageName, (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"iPad" : @"iPhone")]];
+	[delegate cardSpotTouched:self];
 }
 
 -(void)setCellID:(NSInteger)cellID
 {
 	if(cellID >= 0 && cellID < 16)
 	{
+		_edgeValue = 0;
 		if(cellID == 0 || cellID == 3 || cellID == 12 || cellID == 15)
 		{
+			_edgeValue = 13;
 			[self.placeholderFace removeFromSuperview];
 			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
 			self.placeholderFace.image = [self imageWithName:@"KingMarker"];
@@ -61,6 +67,7 @@
 		}
 		else if(cellID == 1 || cellID == 2 || cellID == 13 || cellID == 14)
 		{
+			_edgeValue = 12;
 			[self.placeholderFace removeFromSuperview];
 			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
 			self.placeholderFace.image = [self imageWithName:@"QueenMarker"];
@@ -68,6 +75,7 @@
 		}
 		else if(cellID == 4 || cellID == 7 || cellID == 8 || cellID == 11)
 		{
+			_edgeValue = 11;
 			[self.placeholderFace removeFromSuperview];
 			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
 			self.placeholderFace.image = [self imageWithName:@"JackMarker"];
@@ -120,6 +128,12 @@
 -(Card*)card
 {
 	return _card;
+}
+
+-(UIImage*)imageWithName:(NSString*)imageName
+{
+	return [UIImage imageNamed:
+			[NSString stringWithFormat:@"%@_%@", imageName, (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"iPad" : @"iPhone")]];
 }
 
 @end
