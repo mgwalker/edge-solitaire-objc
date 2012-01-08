@@ -10,8 +10,6 @@
 
 @implementation CardSpot
 
-@synthesize cardType;
-
 @synthesize placeholder, placeholderFace, cardImage;
 
 -(id)init
@@ -37,7 +35,8 @@
 
 -(void)setup
 {
-	self.placeholder = [[UIImageView alloc] initWithImage:[self imageWithName:@"cardspot"]];
+	self.placeholder = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+	self.placeholder.image = [self imageWithName:@"cardspot"];
 	[self addSubview:self.placeholder];
 
 	self.backgroundColor = [UIColor clearColor];
@@ -52,23 +51,26 @@
 -(void)setCellID:(NSInteger)cellID
 {
 	if(cellID >= 0 && cellID < 16)
-	{		
+	{
 		if(cellID == 0 || cellID == 3 || cellID == 12 || cellID == 15)
 		{
 			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithImage:[self imageWithName:@"KingMarker"]];
+			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+			self.placeholderFace.image = [self imageWithName:@"KingMarker"];
 			[self addSubview:self.placeholderFace];
 		}
 		else if(cellID == 1 || cellID == 2 || cellID == 13 || cellID == 14)
 		{
 			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithImage:[self imageWithName:@"QueenMarker"]];
+			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+			self.placeholderFace.image = [self imageWithName:@"QueenMarker"];
 			[self addSubview:self.placeholderFace];
 		}
 		else if(cellID == 4 || cellID == 7 || cellID == 8 || cellID == 11)
 		{
 			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithImage:[self imageWithName:@"JackMarker"]];
+			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+			self.placeholderFace.image = [self imageWithName:@"JackMarker"];
 			[self addSubview:self.placeholderFace];
 		}
 
@@ -79,6 +81,45 @@
 -(NSInteger)cellID
 {
 	return _cellID;
+}
+
+-(void)setCard:(Card *)card
+{
+	[self.cardImage removeFromSuperview];
+	if(card != nil)
+	{
+		NSString* cardName = @"";
+		switch(card.suit)
+		{
+			case CardSuitClub:
+				cardName = @"C";
+				break;
+				
+			case CardSuitDiamond:
+				cardName = @"D";
+				break;
+				
+			case CardSuitHeart:
+				cardName = @"H";
+				break;
+				
+			case CardSuitSpade:
+			default:
+				cardName = @"S";
+				break;
+		}
+		
+		cardName = [NSString stringWithFormat:@"%@%i", cardName, card.value];
+		self.cardImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+		self.cardImage.image = [self imageWithName:cardName];
+		[self addSubview:self.cardImage];
+	}
+	_card = card;
+}
+
+-(Card*)card
+{
+	return _card;
 }
 
 @end

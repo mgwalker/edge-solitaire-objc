@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "UIUniversalViewController.h"
+#import "Card.h"
 
 @interface CardSpot : UIView
 {
 	NSInteger _cellID;
+	Card* _card;
 }
 
-@property (assign) NSString* cardType;
 @property (assign) NSInteger cellID;
+@property (retain) Card* card;
 
 @end
 
