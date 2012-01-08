@@ -13,6 +13,7 @@
 {
 	// Array of Cards
 	NSMutableArray* _cardDeck;
+	NSArray* _allCardSpots;
 }
 
 @property (retain) IBOutlet CardSpot* spot0;

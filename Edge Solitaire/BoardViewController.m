@@ -88,6 +88,12 @@
 	spot15.cellID = 15;
 	spot15.delegate = self;
 	
+	_allCardSpots = [NSArray arrayWithObjects:
+					 spot0, spot1, spot2, spot3,
+					 spot4, spot5, spot6, spot7,
+					 spot8, spot9, spot10, spot11,
+					 spot12, spot13, spot14, spot15, nil];
+	
 	nextCard.card = _cardDeck.lastObject;
 	[_cardDeck removeLastObject];
 }
