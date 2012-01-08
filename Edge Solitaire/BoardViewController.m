@@ -184,15 +184,12 @@
 								
 				BOOL sumToTenExists = NO;
 				NSCountedSet* valuesToCheck = [NSCountedSet set];
-				for(int i = 0; i < _allCardSpots.count - 1; i++)
+				for(CardSpot* spot in _allCardSpots)
 				{
-					CardSpot* spot = [_allCardSpots objectAtIndex:i];
 					if(spot.card != nil)
 					{
 						if(spot.card.value < 10)
-						{
 							[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
-						}
 						else if(spot.card.value == 10)
 						{
 							sumToTenExists = YES;
@@ -305,6 +302,7 @@
 	[_summingCardSpots removeAllObjects];
 	_cardDeck = [Card shuffledDeck];
 
+	nextCard.hidden = NO;
 	nextCard.card = _cardDeck.lastObject;
 	[_cardDeck removeLastObject];
 

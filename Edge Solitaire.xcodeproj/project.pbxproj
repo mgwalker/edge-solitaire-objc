@@ -30,6 +30,7 @@
 		B9AACA1014BA45CE00B9FBB2 /* popupBackground_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA0F14BA45CE00B9FBB2 /* popupBackground_iPad.png */; };
 		B9AACA1314BA485D00B9FBB2 /* MenuButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */; };
 		B9AACA1414BA485D00B9FBB2 /* PlayAgainButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */; };
+		B9AACA1814BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */; };
 		B9B1AB8814B906310052A30A /* C10_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADA14B906310052A30A /* C10_iPad.png */; };
 		B9B1AB8914B906310052A30A /* C11_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADB14B906310052A30A /* C11_iPad.png */; };
 		B9B1AB8A14B906310052A30A /* C12_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADC14B906310052A30A /* C12_iPad.png */; };
@@ -300,6 +301,8 @@
 		B9AACA0F14BA45CE00B9FBB2 /* popupBackground_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popupBackground_iPad.png; sourceTree = "<group>"; };
 		B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton_iPad.png; sourceTree = "<group>"; };
 		B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayAgainButton_iPad.png; sourceTree = "<group>"; };
+		B9AACA1614BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+canMakeTen.h"; sourceTree = "<group>"; };
+		B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCountedSet+canMakeTen.m"; sourceTree = "<group>"; };
 		B9B1AADA14B906310052A30A /* C10_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C10_iPad.png; sourceTree = "<group>"; };
 		B9B1AADB14B906310052A30A /* C11_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C11_iPad.png; sourceTree = "<group>"; };
 		B9B1AADC14B906310052A30A /* C12_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C12_iPad.png; sourceTree = "<group>"; };
@@ -604,6 +607,7 @@
 		B90A955414B68E9300F33242 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9AACA1514BA5FB700B9FBB2 /* NSCountedSet Addition */,
 				B92B753C14B6A6E600BC69D5 /* GradientButton */,
 				B90A955514B68E9300F33242 /* Edge Solitaire-Info.plist */,
 				B90A955614B68E9300F33242 /* InfoPlist.strings */,
@@ -679,6 +683,15 @@
 				B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */,
 			);
 			name = "Status Popups";
+			sourceTree = "<group>";
+		};
+		B9AACA1514BA5FB700B9FBB2 /* NSCountedSet Addition */ = {
+			isa = PBXGroup;
+			children = (
+				B9AACA1614BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.h */,
+				B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */,
+			);
+			name = "NSCountedSet Addition";
 			sourceTree = "<group>";
 		};
 		B9B1AAD814B906310052A30A /* Cards */ = {
@@ -1289,6 +1302,7 @@
 				B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */,
 				B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */,
 				B9B1AC3714B90DAF0052A30A /* Card.m in Sources */,
+				B9AACA1814BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
