@@ -74,6 +74,11 @@
 }
 @end
 
+@interface BoardViewController()
+-(BOOL)canPlayNextCard;
+-(void)showPopup:(UIImageView*)imageToShow;
+@end
+
 @implementation BoardViewController
 
 @synthesize spot0, spot1, spot2, spot3;
@@ -163,9 +168,18 @@
 					 spot4, spot5, spot6, spot7,
 					 spot8, spot9, spot10, spot11,
 					 spot12, spot13, spot14, spot15, nil];
-	
-	nextCard.card = _cardDeck.lastObject;
-	[_cardDeck removeLastObject];
+
+	// Start out hidden.  We don't want them to
+	// fade out when they aren't supposed to be
+	// there at all!
+	popupBackground.hidden = YES;
+	popupCannotPlace.hidden = YES;
+	popupCannotRemove.hidden = YES;
+	popupWin.hidden = YES;
+	playAgainButton.hidden = YES;
+	mainMenuButton.hidden = YES;
+
+	[self resetGame:nil];
 }
 
 -(void)cardSpotTouched:(CardSpot *)cardSpot
@@ -216,18 +230,13 @@
 					break;
 				}
 				
-				if(spot.card.value != spot.edgeValue)
+				if(spot.card.value != spot.edgeValue && spot.edgeValue > 10)
 					hasWon = NO;
 			}
 			
 			if(hasWon)
 			{
-				[[[UIAlertView alloc] initWithTitle:@"You Win!"
-											message:@"You've won!"
-										   delegate:self
-								  cancelButtonTitle:@"Play again"
-								  otherButtonTitles:@"Quit", nil] show];
-
+				[self showPopup:popupWin];
 				return;
 			}
 			
@@ -271,46 +280,17 @@
 				else
 				{
 					// Game over!
-					[[[UIAlertView alloc] initWithTitle:@"Game Over"
-												message:@"You can't clear any cards."
-											   delegate:self
-									  cancelButtonTitle:@"Play again"
-									  otherButtonTitles:@"Quit", nil] show];
+					[self showPopup:popupCannotRemove];
 				}
 			}
 			else
 			{
 				nextCard.card = _cardDeck.lastObject;
 				[_cardDeck removeLastObject];
-//				while(nextCard.card.value > 9)
-//				{
-//					nextCard.card = _cardDeck.lastObject;
-//					[_cardDeck removeLastObject];
-//				}
 
 				// Verify that the next card can be played.
-				BOOL canPlayNextCard = YES;
-				if(nextCard.card.value > 10)
-				{
-					canPlayNextCard = NO;
-					for(CardSpot* spot in _allCardSpots)
-					{
-						if(spot.edgeValue == nextCard.card.value && spot.card == nil)
-						{
-							canPlayNextCard = YES;
-							break;
-						}
-					}
-				}
-				
-				if(!canPlayNextCard)
-				{
-					[[[UIAlertView alloc] initWithTitle:@"Game Over"
-											   message:@"There's nowhere to place this face card."
-											  delegate:self
-									 cancelButtonTitle:@"Play again"
-									 otherButtonTitles:@"Quit", nil] show];
-				}
+				if(![self canPlayNextCard])
+					[self showPopup:popupCannotPlace];
 			}
 		}
 		else
@@ -346,34 +326,47 @@
 	nextCard.card = _cardDeck.lastObject;
 	[_cardDeck removeLastObject];
 	
-	BOOL canPlayNextCard = YES;
+	if(![self canPlayNextCard])
+		[self showPopup:popupCannotPlace];
+}
+
+-(BOOL)canPlayNextCard
+{
+	BOOL can = NO;
 	if(nextCard.card.value > 10)
 	{
-		canPlayNextCard = NO;
 		for(CardSpot* spot in _allCardSpots)
 		{
 			if(spot.edgeValue == nextCard.card.value && spot.card == nil)
 			{
-				canPlayNextCard = YES;
+				can = YES;
 				break;
 			}
 		}
 	}
-	
-	if(!canPlayNextCard)
+	else
 	{
-		[[[UIAlertView alloc] initWithTitle:@"Game Over"
-									message:@"There's nowhere to place this face card."
-								   delegate:self
-						  cancelButtonTitle:@"Play again"
-						  otherButtonTitles:@"Quit", nil] show];
+		for(CardSpot* spot in _allCardSpots)
+		{
+			if(spot.card == nil)
+			{
+				can = YES;
+				break;
+			}
+		}
 	}
+	return can;
 }
 
 -(IBAction)resetGame:(id)sender
 {
+	[self showPopup:nil];
+
 	for(CardSpot* spot in _allCardSpots)
+	{
+		spot.highlighted = NO;
 		spot.card = nil;
+	}
 	[_summingCardSpots removeAllObjects];
 	_cardDeck = [Card shuffledDeck];
 
@@ -397,6 +390,53 @@
 		[self resetGame:nil];
 	else
 		[self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)showPopup:(UIImageView *)imageToShow
+{
+	if(imageToShow)
+	{
+		instruction.text = @"";
+		popupBackground.hidden = NO;
+		popupBackground.alpha = 0;
+		imageToShow.hidden = NO;
+		imageToShow.alpha = 0;
+		playAgainButton.hidden= NO;
+		playAgainButton.alpha= 0;
+		mainMenuButton.hidden = NO;
+		mainMenuButton.alpha = 0;
+	}
+	
+	[UIView animateWithDuration:0.5 animations:^(void)
+	 {
+		if(imageToShow)
+		{
+			popupBackground.alpha = 1;
+			imageToShow.alpha = 1;
+			playAgainButton.alpha= 1;
+			mainMenuButton.alpha = 1;
+		}
+		else
+		{
+			popupBackground.alpha = 0;
+			popupCannotPlace.alpha = 0;
+			popupCannotRemove.alpha = 0;
+			popupWin.alpha = 0;
+			playAgainButton.alpha = 0;
+			mainMenuButton.alpha = 0;
+		}
+	 } completion:^(BOOL finished)
+	 {
+		 if(!imageToShow)
+		 {
+			 popupBackground.hidden = YES;
+			 popupCannotPlace.hidden = YES;
+			 popupCannotRemove.hidden = YES;
+			 popupWin.hidden = YES;
+			 playAgainButton.hidden = YES;
+			 mainMenuButton.hidden = YES;
+		 }
+	 }];
 }
 
 - (void)viewDidUnload
