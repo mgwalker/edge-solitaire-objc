@@ -218,6 +218,17 @@
 					hasWon = NO;
 			}
 			
+			if(hasWon)
+			{
+				[[[UIAlertView alloc] initWithTitle:@"You Win!"
+											message:@"You've won!"
+										   delegate:self
+								  cancelButtonTitle:@"Play again"
+								  otherButtonTitles:@"Quit", nil] show];
+
+				return;
+			}
+			
 			if(allOccupied)
 			{
 				// If all card slots are full, verify that
