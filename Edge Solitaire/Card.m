@@ -24,9 +24,24 @@
 -(NSInteger)value { return _value; }
 -(enum CardSuit)suit { return _suit; }
 
-+(NSArray*)shuffledDeck
++(NSMutableArray*)shuffledDeck
 {
-	return nil;
+	NSMutableArray* deck = [NSMutableArray array];
+	for(int i = 1; i < 14; i++)
+	{
+		[deck addObject:[[Card alloc] initWithSuit:CardSuitClub andValue:i]];
+		[deck addObject:[[Card alloc] initWithSuit:CardSuitDiamond andValue:i]];
+		[deck addObject:[[Card alloc] initWithSuit:CardSuitHeart andValue:i]];
+		[deck addObject:[[Card alloc] initWithSuit:CardSuitSpade andValue:i]];		
+	}
+	
+	for(int i = 0; i < 52; i++)
+	{
+		NSInteger r = arc4random() % 52;
+		[deck exchangeObjectAtIndex:i withObjectAtIndex:r];
+	}
+	
+	return deck;
 }
 
 @end

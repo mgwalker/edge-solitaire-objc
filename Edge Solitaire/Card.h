@@ -27,6 +27,6 @@ enum CardSuit
 @property (readonly) NSInteger value;
 @property (readonly) enum CardSuit suit;
 
-+(NSArray*)shuffledDeck;
++(NSMutableArray*)shuffledDeck;
 
 @end
