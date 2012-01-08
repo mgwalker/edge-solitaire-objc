@@ -40,4 +40,7 @@
 @property (retain) IBOutlet CardSpot* nextCard;
 @property (retain) IBOutlet UIButton* tensDoneButton;
 
+-(IBAction)tensDone:(id)sender;
+-(IBAction)resetGame:(id)sender;
+
 @end

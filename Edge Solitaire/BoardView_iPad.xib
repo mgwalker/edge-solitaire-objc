@@ -40,13 +40,13 @@
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIView" id="391218442">
+							<object class="IBUIView" id="928896261">
 								<reference key="NSNextResponder" ref="780997557"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{663, 15}, {85, 98}}</string>
 								<reference key="NSSuperview" ref="780997557"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="323380126"/>
+								<reference key="NSNextKeyView" ref="700212878"/>
 								<string key="NSReuseIdentifierKey">_NS:212</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -57,7 +57,7 @@
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
-							<object class="IBUIButton" id="323380126">
+							<object class="IBUIButton" id="700212878">
 								<reference key="NSNextResponder" ref="780997557"/>
 								<int key="NSvFlags">-2147483356</int>
 								<string key="NSFrame">{{663, 15}, {85, 98}}</string>
@@ -70,7 +70,6 @@
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">Done</string>
 								<object class="NSColor" key="IBUIHighlightedTitleColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
@@ -83,6 +82,10 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
+								<object class="NSCustomResource" key="IBUINormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">CardBack_iPad.png</string>
+								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">2</int>
 									<double key="pointSize">15</double>
@@ -93,13 +96,13 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
-							<object class="IBUILabel" id="190383261">
+							<object class="IBUILabel" id="66062611">
 								<reference key="NSNextResponder" ref="780997557"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 20}, {635, 88}}</string>
 								<reference key="NSSuperview" ref="780997557"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="391218442"/>
+								<reference key="NSNextKeyView" ref="928896261"/>
 								<string key="NSReuseIdentifierKey">_NS:345</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -134,7 +137,7 @@
 						<string key="NSFrame">{{0, 876}, {768, 128}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="190383261"/>
+						<reference key="NSNextKeyView" ref="66062611"/>
 						<string key="NSReuseIdentifierKey">_NS:196</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -539,7 +542,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">nextCard</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="391218442"/>
+						<reference key="destination" ref="928896261"/>
 					</object>
 					<int key="connectionID">58</int>
 				</object>
@@ -547,7 +550,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tensDoneButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="323380126"/>
+						<reference key="destination" ref="700212878"/>
 					</object>
 					<int key="connectionID">60</int>
 				</object>
@@ -555,9 +558,18 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">instruction</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="190383261"/>
+						<reference key="destination" ref="66062611"/>
 					</object>
 					<int key="connectionID">62</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">tensDone:</string>
+						<reference key="source" ref="700212878"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">64</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -607,9 +619,9 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="780997557"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="391218442"/>
-							<reference ref="323380126"/>
-							<reference ref="190383261"/>
+							<reference ref="928896261"/>
+							<reference ref="700212878"/>
+							<reference ref="66062611"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -671,6 +683,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">35</int>
 						<reference key="object" ref="179290882"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -695,17 +708,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">57</int>
-						<reference key="object" ref="391218442"/>
+						<reference key="object" ref="928896261"/>
 						<reference key="parent" ref="780997557"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">59</int>
-						<reference key="object" ref="323380126"/>
+						<reference key="object" ref="700212878"/>
 						<reference key="parent" ref="780997557"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">61</int>
-						<reference key="object" ref="190383261"/>
+						<reference key="object" ref="66062611"/>
 						<reference key="parent" ref="780997557"/>
 					</object>
 				</array>
@@ -758,13 +771,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">62</int>
+			<int key="maxID">64</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">BoardViewController</string>
 					<string key="superclassName">UIUniversalViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">tensDone:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">tensDone:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">tensDone:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="instruction">UILabel</string>
 						<string key="nextCard">CardSpot</string>
@@ -891,6 +915,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">CardBack_iPad.png</string>
+			<string key="NS.object.0">{85, 98}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>
