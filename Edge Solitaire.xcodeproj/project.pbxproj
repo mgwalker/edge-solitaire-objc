@@ -250,6 +250,11 @@
 		B9B1ACA114B92FFC0052A30A /* S11_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6B14B92FFC0052A30A /* S11_iPad@2x.png */; };
 		B9B1ACA214B92FFC0052A30A /* S12_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6C14B92FFC0052A30A /* S12_iPad@2x.png */; };
 		B9B1ACA314B92FFC0052A30A /* S13_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6D14B92FFC0052A30A /* S13_iPad@2x.png */; };
+		B9B1ACA514B93C890052A30A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1ACA414B93C890052A30A /* QuartzCore.framework */; };
+		B9B1ACAB14B943FB0052A30A /* CardBack_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACA714B943FB0052A30A /* CardBack_iPad.png */; };
+		B9B1ACAC14B943FB0052A30A /* CardBack_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACA814B943FB0052A30A /* CardBack_iPad@2x.png */; };
+		B9B1ACAD14B943FB0052A30A /* CardBack_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACA914B943FB0052A30A /* CardBack_iPhone.png */; };
+		B9B1ACAE14B943FB0052A30A /* CardBack_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACAA14B943FB0052A30A /* CardBack_iPhone@2x.png */; };
 		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
 		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
 		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
@@ -510,6 +515,11 @@
 		B9B1AC6B14B92FFC0052A30A /* S11_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S11_iPad@2x.png"; sourceTree = "<group>"; };
 		B9B1AC6C14B92FFC0052A30A /* S12_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S12_iPad@2x.png"; sourceTree = "<group>"; };
 		B9B1AC6D14B92FFC0052A30A /* S13_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S13_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1ACA414B93C890052A30A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B9B1ACA714B943FB0052A30A /* CardBack_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBack_iPad.png; sourceTree = "<group>"; };
+		B9B1ACA814B943FB0052A30A /* CardBack_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardBack_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1ACA914B943FB0052A30A /* CardBack_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBack_iPhone.png; sourceTree = "<group>"; };
+		B9B1ACAA14B943FB0052A30A /* CardBack_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardBack_iPhone@2x.png"; sourceTree = "<group>"; };
 		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
 		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
 		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
@@ -523,6 +533,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B1ACA514B93C890052A30A /* QuartzCore.framework in Frameworks */,
 				B90A954C14B68E9300F33242 /* UIKit.framework in Frameworks */,
 				B90A954E14B68E9300F33242 /* Foundation.framework in Frameworks */,
 				B90A955014B68E9300F33242 /* CoreGraphics.framework in Frameworks */,
@@ -553,6 +564,7 @@
 		B90A954A14B68E9300F33242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9B1ACA414B93C890052A30A /* QuartzCore.framework */,
 				B90A954B14B68E9300F33242 /* UIKit.framework */,
 				B90A954D14B68E9300F33242 /* Foundation.framework */,
 				B90A954F14B68E9300F33242 /* CoreGraphics.framework */,
@@ -646,6 +658,7 @@
 		B9B1AAD814B906310052A30A /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				B9B1ACA614B943FB0052A30A /* Card Back */,
 				B9B1AAD914B906310052A30A /* iPad */,
 				B9B1AB1014B906310052A30A /* iPad@2x */,
 				B9B1AB1114B906310052A30A /* iPhone */,
@@ -914,6 +927,17 @@
 				B9B1AC3614B90DAF0052A30A /* Card.m */,
 			);
 			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		B9B1ACA614B943FB0052A30A /* Card Back */ = {
+			isa = PBXGroup;
+			children = (
+				B9B1ACA714B943FB0052A30A /* CardBack_iPad.png */,
+				B9B1ACA814B943FB0052A30A /* CardBack_iPad@2x.png */,
+				B9B1ACA914B943FB0052A30A /* CardBack_iPhone.png */,
+				B9B1ACAA14B943FB0052A30A /* CardBack_iPhone@2x.png */,
+			);
+			path = "Card Back";
 			sourceTree = "<group>";
 		};
 		B9F20C1414B7ED9000F9810A /* Controls */ = {
@@ -1210,6 +1234,10 @@
 				B9B1ACA114B92FFC0052A30A /* S11_iPad@2x.png in Resources */,
 				B9B1ACA214B92FFC0052A30A /* S12_iPad@2x.png in Resources */,
 				B9B1ACA314B92FFC0052A30A /* S13_iPad@2x.png in Resources */,
+				B9B1ACAB14B943FB0052A30A /* CardBack_iPad.png in Resources */,
+				B9B1ACAC14B943FB0052A30A /* CardBack_iPad@2x.png in Resources */,
+				B9B1ACAD14B943FB0052A30A /* CardBack_iPhone.png in Resources */,
+				B9B1ACAE14B943FB0052A30A /* CardBack_iPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
