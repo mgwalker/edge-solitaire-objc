@@ -9,11 +9,13 @@
 #import "UIUniversalViewController.h"
 #import "CardSpot.h"
 
-@interface BoardViewController : UIUniversalViewController <CardSpotDelegate>
+@interface BoardViewController : UIUniversalViewController <CardSpotDelegate, UIAlertViewDelegate>
 {
 	// Array of Cards
 	NSMutableArray* _cardDeck;
 	NSArray* _allCardSpots;
+	NSMutableArray* _summingCardSpots;
+	BOOL _inSummingMode;
 }
 
 @property (retain) IBOutlet CardSpot* spot0;
