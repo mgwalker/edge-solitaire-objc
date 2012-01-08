@@ -137,10 +137,15 @@
 	{
 		self.layer.masksToBounds = NO;
 		self.layer.shadowOffset = CGSizeMake(0, 0);
-		self.layer.shadowRadius = 20;
-		self.layer.shadowOpacity = 0.7;
-		self.layer.shadowColor = [UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1].CGColor;
-		self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+		if(highlighted)
+		{
+			self.layer.shadowRadius = 20;
+			self.layer.shadowOpacity = 0.7;
+			self.layer.shadowColor = [UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1].CGColor;
+			self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+		}
+		else
+			self.layer.shadowColor = [UIColor clearColor].CGColor;
 		
 		_highlighted = highlighted;
 		[self setNeedsDisplay];
