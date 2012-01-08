@@ -8,120 +8,69 @@
 
 #import "BoardViewController.h"
 
-@interface NSMutableArray(cansum)
--(BOOL)elementsCanSum:(NSInteger)toValue;
+@interface NSCountedSet(canMakeTen)
 -(BOOL)canMakeTen;
--(BOOL)canMakeTen2;
--(NSMutableArray*)canMakeTen2:(int)index;
 @end
 
-@implementation NSMutableArray(cansum)
-
+@implementation NSCountedSet(canMakeTen)
 -(BOOL)canMakeTen
 {
-	int numberOfCards = self.count;
-
-	int result[11];
-	for (int i = 0; i <= 10; i++)
-		result[i] = numberOfCards + 1;
-		
-	result[0] = 0;
-	for (int i = 1; i <= 10; i++)
+	static NSArray* tensSums = nil;
+	if(tensSums == nil)
+		tensSums = [NSArray arrayWithObjects:
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:3], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:3], [NSNumber numberWithInt:3], [NSNumber numberWithInt:3], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:3], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:3], [NSNumber numberWithInt:3], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:4], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:4], [NSNumber numberWithInt:4], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:3], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:3], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:4], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:5], [NSNumber numberWithInt:5], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:6], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:6], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:2], [NSNumber numberWithInt:6], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:3], [NSNumber numberWithInt:6], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:4], [NSNumber numberWithInt:6], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:7], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:7], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:3], [NSNumber numberWithInt:7], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:1], [NSNumber numberWithInt:8], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:8], nil],
+					[NSCountedSet setWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:9], nil],
+					nil];
+	
+	for(NSCountedSet* sum in tensSums)
 	{
-		for (int j = 0; j < numberOfCards; j++)
+		if([sum isSubsetOfSet:self])
 		{
-			int val = [[self objectAtIndex:j] intValue];
-			if (val <= i && result[i - val] + 1 < result[i])
+			BOOL isSum = YES;
+			for(NSNumber* num in self)
 			{
-				if(i == 10 && result[i - val] + 1 <= numberOfCards)
-					return YES;
-				result[i] = result[i - val] + 1;
+				if([self countForObject:num] < [sum countForObject:num])
+				{
+					isSum = NO;
+					break;
+				}
 			}
+			if(isSum)
+				return YES;
 		}
 	}
-		
-	return result[10] <= numberOfCards;
-}
-
--(BOOL)canMakeTen2
-{
-	NSMutableArray* sums = [self canMakeTen2:0];
-	for(NSNumber* sum in sums)
-		if(sum.intValue == 10)
-			return YES;
 	return NO;
-}
--(NSMutableArray*)canMakeTen2:(int)index
-{
-	/* (1) */
-    if (index >= [self count])
-        return [NSMutableArray arrayWithObject:[NSNumber numberWithInt:0]];
-	
-    /* (2) Generate all the subsets where the `index`th element is not included */
-    NSMutableArray* result = [self canMakeTen2:index + 1];
-	
-    /* (3) Add all the cases where the `index`th element is included */
-    NSUInteger i, n = [result count];
-    float element = [[self objectAtIndex:index] intValue];
-    for (i = 0; i < n; i++)
-	{
-        float element2 = [[result objectAtIndex:i] intValue];
-        [result addObject:[NSNumber numberWithFloat:element + element2]];
-    }
-	
-    return result;
-}
-
--(BOOL)elementsCanSum:(NSInteger)toValue
-{
-	BOOL canSum = NO;
-	//BOOL started[10];
-	
-	NSLog(@"Trying to sum to %i...", toValue);
-	
-	for(int i = 0; i < self.count; i++)
-	{
-		int num = [[self objectAtIndex:i] intValue];
-		//if(started[num.intValue] || num.intValue > toValue)
-		//	continue;
-		
-		if(num > toValue)
-			continue;
-		
-		NSLog(@" --> Starting with %i", num);
-		
-		if(num == toValue)
-		{
-			NSLog(@" --> --> Found the sum: %i", num);
-			canSum = YES;
-			break;
-		}
-		
-		NSMutableArray* sub = [NSMutableArray arrayWithArray:self];
-		[sub removeObjectAtIndex:i];
-		
-		if(sub.count > 0)
-		{
-			NSLog(@" --> --> There's a subarray.  Let's examine that.");
-			NSLog(@" --> --> --> Take %i", num);
-			canSum = [sub elementsCanSum:(toValue - num)];
-			
-			if(!canSum)
-			{
-				NSLog(@" --> --> --> Don't take %i", num);
-				canSum = [sub elementsCanSum:toValue];
-			}
-			if(canSum)
-			{
-				NSLog(@"Can sum to %i", toValue);
-				break;
-			}
-		}
-		else
-			NSLog(@" --> --> There's no subarray.  Alas.  Move on to the next number.");
-	}
-	
-	return canSum;
 }
 @end
 
@@ -251,40 +200,33 @@
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
 		{
 			cardSpot.card = nextCard.card;
-			//if(cardSpot == spot5 || cardSpot == spot6 || cardSpot == spot9 || cardSpot == spot10)
-			//	cardSpot.highlighted = YES;
-						
+			
+			// If all the edge spots are occupied by their
+			// appropriate face cards, the user has won
+			BOOL hasWon = YES;
 			BOOL allOccupied = YES;
 			for(CardSpot* spot in _allCardSpots)
 			{
 				if(spot.card == nil)
 				{
+					hasWon = NO;
 					allOccupied = NO;
 					break;
 				}
+				
+				if(spot.card.value != spot.edgeValue)
+					hasWon = NO;
 			}
 			
 			if(allOccupied)
 			{
-				/* * /
-				BOOL(^Q)(NSInteger cs, NSInteger k);
-				Q = ^BOOL(NSInteger cs, NSInteger k)
-				{
-					return YES;
-				};
-				
-				BOOL hasTen = Q(_allCardSpots.count, 10);
-				//*/
-				
 				// If all card slots are full, verify that
 				// some collection of cards can sum to 10.
 				//   - If not, game over.
 				//   - If so, move on.
 								
-				NSLog(@"All spots are occupied.  Now to check for sums of ten.");
-
 				BOOL sumToTenExists = NO;
-				NSMutableArray* valuesToCheck = [NSMutableArray array];
+				NSCountedSet* valuesToCheck = [NSCountedSet set];
 				for(int i = 0; i < _allCardSpots.count - 1; i++)
 				{
 					CardSpot* spot = [_allCardSpots objectAtIndex:i];
@@ -303,30 +245,7 @@
 				}
 				
 				if(!sumToTenExists)
-				{
-					//sumToTenExists = [valuesToCheck canMakeTen]; // [valuesToCheck elementsCanSum:10];
-					//sumToTenExists = [valuesToCheck elementsCanSum:10];
-					sumToTenExists = [valuesToCheck canMakeTen2];
-					/*BOOL starts[10];
-					BOOL(^canSumFromIndex)(int startingIndex) = ^BOOL(int startingIndex)
-					{
-						return NO;
-					};
-					
-					for(int i = 0; i < valuesToCheck.count; i++)
-					{
-						int startVal = [[valuesToCheck objectAtIndex:i] intValue];
-						if(starts[startVal])
-							continue;
-						
-						starts[startVal] = YES;
-						if(canSumFromIndex(i))
-						{
-							sumToTenExists = YES;
-							break;
-						}
-					}*/
-				}
+					sumToTenExists = [valuesToCheck canMakeTen];
 				
 				if(sumToTenExists)
 				{
@@ -344,8 +263,6 @@
 											   delegate:self
 									  cancelButtonTitle:@"Play again"
 									  otherButtonTitles:@"Quit", nil] show];
-
-					NSLog(@"Game over - no sums to ten");
 				}
 			}
 			else
@@ -380,7 +297,6 @@
 											  delegate:self
 									 cancelButtonTitle:@"Play again"
 									 otherButtonTitles:@"Quit", nil] show];
-					NSLog(@"Can't play face card.  Game over!");
 				}
 			}
 		}
@@ -405,6 +321,10 @@
 
 -(IBAction)tensDone:(id)sender
 {
+	for(CardSpot* spot in _summingCardSpots)
+		spot.highlighted = NO;
+	[_summingCardSpots removeAllObjects];
+	
 	_inSummingMode = NO;
 	instruction.text = @"Tap a spot above to place the next card.";
 	nextCard.hidden = NO;
@@ -434,7 +354,6 @@
 								   delegate:self
 						  cancelButtonTitle:@"Play again"
 						  otherButtonTitles:@"Quit", nil] show];
-		NSLog(@"Can't play face card.  Game over!");
 	}
 }
 
