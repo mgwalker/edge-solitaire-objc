@@ -36,6 +36,8 @@
 @property (retain) IBOutlet CardSpot* spot14;
 @property (retain) IBOutlet CardSpot* spot15;
 
+@property (retain) IBOutlet UILabel* instruction;
 @property (retain) IBOutlet CardSpot* nextCard;
+@property (retain) IBOutlet UIButton* tensDoneButton;
 
 @end

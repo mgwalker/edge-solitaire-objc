@@ -15,7 +15,7 @@
 @synthesize spot8, spot9, spot10, spot11;
 @synthesize spot12, spot13, spot14, spot15;
 
-@synthesize nextCard;
+@synthesize instruction, nextCard, tensDoneButton;
 
 -(id)init
 {
@@ -151,7 +151,9 @@
 				if(sumToTenExists)
 				{
 					// Start clearing sums of 10
-					NSLog(@"Time to clear tens");
+					instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					nextCard.hidden = YES;
+					tensDoneButton.hidden = NO;
 				}
 				else
 				{
@@ -189,7 +191,17 @@
 		{
 			// Tried to place a face card on a
 			// non-face-card slot.
-			NSLog(@"Face cards must go on their assigned spots.");
+			instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			dispatch_queue_t q = dispatch_queue_create("Instruction return", NULL);
+			dispatch_async(q, ^(void)
+						   {
+							   [NSThread sleepForTimeInterval:3];
+							   dispatch_async(dispatch_get_main_queue(), ^(void)
+							   {
+								   instruction.text = @"Tap a spot above to place the next card.";
+							   });
+						   });
+			dispatch_release(q);
 		}
 	}
 }
@@ -201,6 +213,10 @@
 	spot4 = spot5 = spot6 = spot7 = nil;
 	spot8 = spot9 = spot10 = spot11 = nil;
 	spot12 = spot13 = spot14 = spot15 = nil;
+	
+	instruction = nil;
+	nextCard = nil;
+	tensDoneButton = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

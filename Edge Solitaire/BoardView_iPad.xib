@@ -11,8 +11,10 @@
 			<string key="NS.object.0">933</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
-			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
 			<string>IBUIView</string>
+			<string>IBUILabel</string>
+			<string>IBProxyObject</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -38,13 +40,13 @@
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIView" id="55887761">
+							<object class="IBUIView" id="391218442">
 								<reference key="NSNextResponder" ref="780997557"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{663, 15}, {85, 98}}</string>
 								<reference key="NSSuperview" ref="780997557"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="323380126"/>
 								<string key="NSReuseIdentifierKey">_NS:212</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -55,11 +57,84 @@
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
+							<object class="IBUIButton" id="323380126">
+								<reference key="NSNextResponder" ref="780997557"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{663, 15}, {85, 98}}</string>
+								<reference key="NSSuperview" ref="780997557"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
+								<string key="NSReuseIdentifierKey">_NS:241</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Done</string>
+								<object class="NSColor" key="IBUIHighlightedTitleColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<object class="NSColor" key="IBUINormalTitleShadowColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC41AA</bytes>
+								</object>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<int key="type">2</int>
+									<double key="pointSize">15</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">15</double>
+									<int key="NSfFlags">16</int>
+								</object>
+							</object>
+							<object class="IBUILabel" id="190383261">
+								<reference key="NSNextResponder" ref="780997557"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{20, 20}, {635, 88}}</string>
+								<reference key="NSSuperview" ref="780997557"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="391218442"/>
+								<string key="NSReuseIdentifierKey">_NS:345</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<string key="IBUIText">Tap a spot above to place the next card.</string>
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MSAxIDEAA</bytes>
+									<object class="NSColorSpace" key="NSCustomColorSpace">
+										<int key="NSID">1</int>
+									</object>
+								</object>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">1</int>
+								<float key="IBUIMinimumFontSize">10</float>
+								<int key="IBUINumberOfLines">0</int>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<string key="name">BanglaSangamMN-Bold</string>
+									<string key="family">Bangla Sangam MN</string>
+									<int key="traits">0</int>
+									<double key="pointSize">30</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">30</double>
+									<int key="NSfFlags">16</int>
+								</object>
+							</object>
 						</array>
 						<string key="NSFrame">{{0, 876}, {768, 128}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="55887761"/>
+						<reference key="NSNextKeyView" ref="190383261"/>
 						<string key="NSReuseIdentifierKey">_NS:196</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -464,9 +539,25 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">nextCard</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="55887761"/>
+						<reference key="destination" ref="391218442"/>
 					</object>
 					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tensDoneButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="323380126"/>
+					</object>
+					<int key="connectionID">60</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">instruction</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="190383261"/>
+					</object>
+					<int key="connectionID">62</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -516,7 +607,9 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="780997557"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="55887761"/>
+							<reference ref="391218442"/>
+							<reference ref="323380126"/>
+							<reference ref="190383261"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -602,7 +695,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">57</int>
-						<reference key="object" ref="55887761"/>
+						<reference key="object" ref="391218442"/>
+						<reference key="parent" ref="780997557"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">59</int>
+						<reference key="object" ref="323380126"/>
+						<reference key="parent" ref="780997557"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">61</int>
+						<reference key="object" ref="190383261"/>
 						<reference key="parent" ref="780997557"/>
 					</object>
 				</array>
@@ -647,13 +750,15 @@
 				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="57.CustomClassName">CardSpot</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="59.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="61.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">58</int>
+			<int key="maxID">62</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -661,6 +766,7 @@
 					<string key="className">BoardViewController</string>
 					<string key="superclassName">UIUniversalViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="instruction">UILabel</string>
 						<string key="nextCard">CardSpot</string>
 						<string key="spot0">CardSpot</string>
 						<string key="spot1">CardSpot</string>
@@ -678,8 +784,13 @@
 						<string key="spot7">CardSpot</string>
 						<string key="spot8">CardSpot</string>
 						<string key="spot9">CardSpot</string>
+						<string key="tensDoneButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="instruction">
+							<string key="name">instruction</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="nextCard">
 							<string key="name">nextCard</string>
 							<string key="candidateClassName">CardSpot</string>
@@ -747,6 +858,10 @@
 						<object class="IBToOneOutletInfo" key="spot9">
 							<string key="name">spot9</string>
 							<string key="candidateClassName">CardSpot</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tensDoneButton">
+							<string key="name">tensDoneButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
