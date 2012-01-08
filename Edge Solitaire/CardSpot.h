@@ -17,12 +17,14 @@
 	NSInteger _cellID;
 	NSInteger _edgeValue;
 	Card* _card;
+	BOOL _highlighted;
 }
 
 @property (retain) id<CardSpotDelegate> delegate;
 @property (assign) NSInteger cellID;
 @property (readonly) NSInteger edgeValue;
 @property (retain) Card* card;
+@property (assign) BOOL highlighted;
 
 @end
 

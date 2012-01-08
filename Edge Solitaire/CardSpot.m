@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "CardSpot.h"
 
 @implementation CardSpot
@@ -129,6 +130,24 @@
 {
 	return _card;
 }
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+	if(highlighted != _highlighted)
+	{
+		self.layer.masksToBounds = NO;
+		self.layer.shadowOffset = CGSizeMake(0, 0);
+		self.layer.shadowRadius = 20;
+		self.layer.shadowOpacity = 0.7;
+		self.layer.shadowColor = [UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1].CGColor;
+		self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+		
+		_highlighted = highlighted;
+		[self setNeedsDisplay];
+	}
+}
+
+-(BOOL)highlighted { return _highlighted; }
 
 -(UIImage*)imageWithName:(NSString*)imageName
 {
