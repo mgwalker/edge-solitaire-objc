@@ -42,7 +42,15 @@
 @property (retain) IBOutlet CardSpot* nextCard;
 @property (retain) IBOutlet UIButton* tensDoneButton;
 
+@property (retain) IBOutlet UIImageView* popupBackground;
+@property (retain) IBOutlet UIImageView* popupCannotPlace;
+@property (retain) IBOutlet UIImageView* popupCannotRemove;
+@property (retain) IBOutlet UIImageView* popupWin;
+@property (retain) IBOutlet UIButton* playAgainButton;
+@property (retain) IBOutlet UIButton* mainMenuButton;
+
 -(IBAction)tensDone:(id)sender;
 -(IBAction)resetGame:(id)sender;
+-(IBAction)quitGame:(id)sender;
 
 @end

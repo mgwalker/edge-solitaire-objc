@@ -83,6 +83,8 @@
 
 @synthesize instruction, nextCard, tensDoneButton;
 
+@synthesize popupBackground, popupCannotPlace, popupCannotRemove, popupWin, playAgainButton, mainMenuButton;
+
 -(id)init
 {
 	self = [super initWithNibName:@"BoardView" bundle:nil];
@@ -382,6 +384,11 @@
 	instruction.text = @"Tap a spot above to place the next card.";
 	nextCard.hidden = NO;
 	tensDoneButton.hidden = YES;
+}
+
+-(IBAction)quitGame:(id)sender
+{
+	[self.navigationController popViewControllerAnimated:NO];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
