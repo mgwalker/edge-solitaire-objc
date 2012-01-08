@@ -196,6 +196,60 @@
 		B9B1AC3114B906310052A30A /* QueenMarker_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AB8614B906310052A30A /* QueenMarker_iPhone.png */; };
 		B9B1AC3214B906310052A30A /* QueenMarker_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AB8714B906310052A30A /* QueenMarker_iPhone@2x.png */; };
 		B9B1AC3714B90DAF0052A30A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1AC3614B90DAF0052A30A /* Card.m */; };
+		B9B1AC6E14B92FFC0052A30A /* C1_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3814B92FFC0052A30A /* C1_iPad@2x.png */; };
+		B9B1AC6F14B92FFC0052A30A /* C2_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3914B92FFC0052A30A /* C2_iPad@2x.png */; };
+		B9B1AC7014B92FFC0052A30A /* C3_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3A14B92FFC0052A30A /* C3_iPad@2x.png */; };
+		B9B1AC7114B92FFC0052A30A /* C4_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3B14B92FFC0052A30A /* C4_iPad@2x.png */; };
+		B9B1AC7214B92FFC0052A30A /* C5_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3C14B92FFC0052A30A /* C5_iPad@2x.png */; };
+		B9B1AC7314B92FFC0052A30A /* C6_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3D14B92FFC0052A30A /* C6_iPad@2x.png */; };
+		B9B1AC7414B92FFC0052A30A /* C7_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3E14B92FFC0052A30A /* C7_iPad@2x.png */; };
+		B9B1AC7514B92FFC0052A30A /* C8_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC3F14B92FFC0052A30A /* C8_iPad@2x.png */; };
+		B9B1AC7614B92FFC0052A30A /* C9_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4014B92FFC0052A30A /* C9_iPad@2x.png */; };
+		B9B1AC7714B92FFC0052A30A /* C10_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4114B92FFC0052A30A /* C10_iPad@2x.png */; };
+		B9B1AC7814B92FFC0052A30A /* C11_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4214B92FFC0052A30A /* C11_iPad@2x.png */; };
+		B9B1AC7914B92FFC0052A30A /* C12_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4314B92FFC0052A30A /* C12_iPad@2x.png */; };
+		B9B1AC7A14B92FFC0052A30A /* C13_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4414B92FFC0052A30A /* C13_iPad@2x.png */; };
+		B9B1AC7B14B92FFC0052A30A /* D1_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4514B92FFC0052A30A /* D1_iPad@2x.png */; };
+		B9B1AC7C14B92FFC0052A30A /* D2_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4614B92FFC0052A30A /* D2_iPad@2x.png */; };
+		B9B1AC7D14B92FFC0052A30A /* D3_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4714B92FFC0052A30A /* D3_iPad@2x.png */; };
+		B9B1AC7E14B92FFC0052A30A /* D4_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4814B92FFC0052A30A /* D4_iPad@2x.png */; };
+		B9B1AC7F14B92FFC0052A30A /* D5_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4914B92FFC0052A30A /* D5_iPad@2x.png */; };
+		B9B1AC8014B92FFC0052A30A /* D6_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4A14B92FFC0052A30A /* D6_iPad@2x.png */; };
+		B9B1AC8114B92FFC0052A30A /* D7_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4B14B92FFC0052A30A /* D7_iPad@2x.png */; };
+		B9B1AC8214B92FFC0052A30A /* D8_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4C14B92FFC0052A30A /* D8_iPad@2x.png */; };
+		B9B1AC8314B92FFC0052A30A /* D9_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4D14B92FFC0052A30A /* D9_iPad@2x.png */; };
+		B9B1AC8414B92FFC0052A30A /* D10_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4E14B92FFC0052A30A /* D10_iPad@2x.png */; };
+		B9B1AC8514B92FFC0052A30A /* D11_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC4F14B92FFC0052A30A /* D11_iPad@2x.png */; };
+		B9B1AC8614B92FFC0052A30A /* D12_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5014B92FFC0052A30A /* D12_iPad@2x.png */; };
+		B9B1AC8714B92FFC0052A30A /* D13_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5114B92FFC0052A30A /* D13_iPad@2x.png */; };
+		B9B1AC8814B92FFC0052A30A /* H1_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5214B92FFC0052A30A /* H1_iPad@2x.png */; };
+		B9B1AC8914B92FFC0052A30A /* H2_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5314B92FFC0052A30A /* H2_iPad@2x.png */; };
+		B9B1AC8A14B92FFC0052A30A /* H3_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5414B92FFC0052A30A /* H3_iPad@2x.png */; };
+		B9B1AC8B14B92FFC0052A30A /* H4_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5514B92FFC0052A30A /* H4_iPad@2x.png */; };
+		B9B1AC8C14B92FFC0052A30A /* H5_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5614B92FFC0052A30A /* H5_iPad@2x.png */; };
+		B9B1AC8D14B92FFC0052A30A /* H6_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5714B92FFC0052A30A /* H6_iPad@2x.png */; };
+		B9B1AC8E14B92FFC0052A30A /* H7_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5814B92FFC0052A30A /* H7_iPad@2x.png */; };
+		B9B1AC8F14B92FFC0052A30A /* H8_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5914B92FFC0052A30A /* H8_iPad@2x.png */; };
+		B9B1AC9014B92FFC0052A30A /* H9_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5A14B92FFC0052A30A /* H9_iPad@2x.png */; };
+		B9B1AC9114B92FFC0052A30A /* H10_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5B14B92FFC0052A30A /* H10_iPad@2x.png */; };
+		B9B1AC9214B92FFC0052A30A /* H11_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5C14B92FFC0052A30A /* H11_iPad@2x.png */; };
+		B9B1AC9314B92FFC0052A30A /* H12_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5D14B92FFC0052A30A /* H12_iPad@2x.png */; };
+		B9B1AC9414B92FFC0052A30A /* H13_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5E14B92FFC0052A30A /* H13_iPad@2x.png */; };
+		B9B1AC9514B92FFC0052A30A /* J1_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC5F14B92FFC0052A30A /* J1_iPad@2x.png */; };
+		B9B1AC9614B92FFC0052A30A /* J2_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6014B92FFC0052A30A /* J2_iPad@2x.png */; };
+		B9B1AC9714B92FFC0052A30A /* S1_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6114B92FFC0052A30A /* S1_iPad@2x.png */; };
+		B9B1AC9814B92FFC0052A30A /* S2_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6214B92FFC0052A30A /* S2_iPad@2x.png */; };
+		B9B1AC9914B92FFC0052A30A /* S3_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6314B92FFC0052A30A /* S3_iPad@2x.png */; };
+		B9B1AC9A14B92FFC0052A30A /* S4_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6414B92FFC0052A30A /* S4_iPad@2x.png */; };
+		B9B1AC9B14B92FFC0052A30A /* S5_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6514B92FFC0052A30A /* S5_iPad@2x.png */; };
+		B9B1AC9C14B92FFC0052A30A /* S6_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6614B92FFC0052A30A /* S6_iPad@2x.png */; };
+		B9B1AC9D14B92FFC0052A30A /* S7_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6714B92FFC0052A30A /* S7_iPad@2x.png */; };
+		B9B1AC9E14B92FFC0052A30A /* S8_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6814B92FFC0052A30A /* S8_iPad@2x.png */; };
+		B9B1AC9F14B92FFC0052A30A /* S9_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6914B92FFC0052A30A /* S9_iPad@2x.png */; };
+		B9B1ACA014B92FFC0052A30A /* S10_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6A14B92FFC0052A30A /* S10_iPad@2x.png */; };
+		B9B1ACA114B92FFC0052A30A /* S11_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6B14B92FFC0052A30A /* S11_iPad@2x.png */; };
+		B9B1ACA214B92FFC0052A30A /* S12_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6C14B92FFC0052A30A /* S12_iPad@2x.png */; };
+		B9B1ACA314B92FFC0052A30A /* S13_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AC6D14B92FFC0052A30A /* S13_iPad@2x.png */; };
 		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
 		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
 		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
@@ -402,6 +456,60 @@
 		B9B1AB8714B906310052A30A /* QueenMarker_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QueenMarker_iPhone@2x.png"; sourceTree = "<group>"; };
 		B9B1AC3514B90DAF0052A30A /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		B9B1AC3614B90DAF0052A30A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		B9B1AC3814B92FFC0052A30A /* C1_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C1_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3914B92FFC0052A30A /* C2_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C2_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3A14B92FFC0052A30A /* C3_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C3_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3B14B92FFC0052A30A /* C4_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C4_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3C14B92FFC0052A30A /* C5_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C5_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3D14B92FFC0052A30A /* C6_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C6_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3E14B92FFC0052A30A /* C7_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C7_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC3F14B92FFC0052A30A /* C8_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C8_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4014B92FFC0052A30A /* C9_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C9_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4114B92FFC0052A30A /* C10_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C10_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4214B92FFC0052A30A /* C11_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C11_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4314B92FFC0052A30A /* C12_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C12_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4414B92FFC0052A30A /* C13_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C13_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4514B92FFC0052A30A /* D1_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D1_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4614B92FFC0052A30A /* D2_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D2_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4714B92FFC0052A30A /* D3_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D3_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4814B92FFC0052A30A /* D4_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D4_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4914B92FFC0052A30A /* D5_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D5_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4A14B92FFC0052A30A /* D6_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D6_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4B14B92FFC0052A30A /* D7_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D7_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4C14B92FFC0052A30A /* D8_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D8_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4D14B92FFC0052A30A /* D9_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D9_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4E14B92FFC0052A30A /* D10_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D10_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC4F14B92FFC0052A30A /* D11_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D11_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5014B92FFC0052A30A /* D12_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D12_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5114B92FFC0052A30A /* D13_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D13_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5214B92FFC0052A30A /* H1_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H1_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5314B92FFC0052A30A /* H2_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H2_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5414B92FFC0052A30A /* H3_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H3_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5514B92FFC0052A30A /* H4_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H4_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5614B92FFC0052A30A /* H5_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H5_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5714B92FFC0052A30A /* H6_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H6_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5814B92FFC0052A30A /* H7_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H7_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5914B92FFC0052A30A /* H8_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H8_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5A14B92FFC0052A30A /* H9_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H9_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5B14B92FFC0052A30A /* H10_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H10_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5C14B92FFC0052A30A /* H11_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H11_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5D14B92FFC0052A30A /* H12_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H12_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5E14B92FFC0052A30A /* H13_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "H13_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC5F14B92FFC0052A30A /* J1_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "J1_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6014B92FFC0052A30A /* J2_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "J2_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6114B92FFC0052A30A /* S1_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S1_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6214B92FFC0052A30A /* S2_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S2_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6314B92FFC0052A30A /* S3_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S3_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6414B92FFC0052A30A /* S4_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S4_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6514B92FFC0052A30A /* S5_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S5_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6614B92FFC0052A30A /* S6_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S6_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6714B92FFC0052A30A /* S7_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S7_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6814B92FFC0052A30A /* S8_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S8_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6914B92FFC0052A30A /* S9_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S9_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6A14B92FFC0052A30A /* S10_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S10_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6B14B92FFC0052A30A /* S11_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S11_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6C14B92FFC0052A30A /* S12_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S12_iPad@2x.png"; sourceTree = "<group>"; };
+		B9B1AC6D14B92FFC0052A30A /* S13_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S13_iPad@2x.png"; sourceTree = "<group>"; };
 		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
 		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
 		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
@@ -619,6 +727,60 @@
 		B9B1AB1014B906310052A30A /* iPad@2x */ = {
 			isa = PBXGroup;
 			children = (
+				B9B1AC3814B92FFC0052A30A /* C1_iPad@2x.png */,
+				B9B1AC3914B92FFC0052A30A /* C2_iPad@2x.png */,
+				B9B1AC3A14B92FFC0052A30A /* C3_iPad@2x.png */,
+				B9B1AC3B14B92FFC0052A30A /* C4_iPad@2x.png */,
+				B9B1AC3C14B92FFC0052A30A /* C5_iPad@2x.png */,
+				B9B1AC3D14B92FFC0052A30A /* C6_iPad@2x.png */,
+				B9B1AC3E14B92FFC0052A30A /* C7_iPad@2x.png */,
+				B9B1AC3F14B92FFC0052A30A /* C8_iPad@2x.png */,
+				B9B1AC4014B92FFC0052A30A /* C9_iPad@2x.png */,
+				B9B1AC4114B92FFC0052A30A /* C10_iPad@2x.png */,
+				B9B1AC4214B92FFC0052A30A /* C11_iPad@2x.png */,
+				B9B1AC4314B92FFC0052A30A /* C12_iPad@2x.png */,
+				B9B1AC4414B92FFC0052A30A /* C13_iPad@2x.png */,
+				B9B1AC4514B92FFC0052A30A /* D1_iPad@2x.png */,
+				B9B1AC4614B92FFC0052A30A /* D2_iPad@2x.png */,
+				B9B1AC4714B92FFC0052A30A /* D3_iPad@2x.png */,
+				B9B1AC4814B92FFC0052A30A /* D4_iPad@2x.png */,
+				B9B1AC4914B92FFC0052A30A /* D5_iPad@2x.png */,
+				B9B1AC4A14B92FFC0052A30A /* D6_iPad@2x.png */,
+				B9B1AC4B14B92FFC0052A30A /* D7_iPad@2x.png */,
+				B9B1AC4C14B92FFC0052A30A /* D8_iPad@2x.png */,
+				B9B1AC4D14B92FFC0052A30A /* D9_iPad@2x.png */,
+				B9B1AC4E14B92FFC0052A30A /* D10_iPad@2x.png */,
+				B9B1AC4F14B92FFC0052A30A /* D11_iPad@2x.png */,
+				B9B1AC5014B92FFC0052A30A /* D12_iPad@2x.png */,
+				B9B1AC5114B92FFC0052A30A /* D13_iPad@2x.png */,
+				B9B1AC5214B92FFC0052A30A /* H1_iPad@2x.png */,
+				B9B1AC5314B92FFC0052A30A /* H2_iPad@2x.png */,
+				B9B1AC5414B92FFC0052A30A /* H3_iPad@2x.png */,
+				B9B1AC5514B92FFC0052A30A /* H4_iPad@2x.png */,
+				B9B1AC5614B92FFC0052A30A /* H5_iPad@2x.png */,
+				B9B1AC5714B92FFC0052A30A /* H6_iPad@2x.png */,
+				B9B1AC5814B92FFC0052A30A /* H7_iPad@2x.png */,
+				B9B1AC5914B92FFC0052A30A /* H8_iPad@2x.png */,
+				B9B1AC5A14B92FFC0052A30A /* H9_iPad@2x.png */,
+				B9B1AC5B14B92FFC0052A30A /* H10_iPad@2x.png */,
+				B9B1AC5C14B92FFC0052A30A /* H11_iPad@2x.png */,
+				B9B1AC5D14B92FFC0052A30A /* H12_iPad@2x.png */,
+				B9B1AC5E14B92FFC0052A30A /* H13_iPad@2x.png */,
+				B9B1AC5F14B92FFC0052A30A /* J1_iPad@2x.png */,
+				B9B1AC6014B92FFC0052A30A /* J2_iPad@2x.png */,
+				B9B1AC6114B92FFC0052A30A /* S1_iPad@2x.png */,
+				B9B1AC6214B92FFC0052A30A /* S2_iPad@2x.png */,
+				B9B1AC6314B92FFC0052A30A /* S3_iPad@2x.png */,
+				B9B1AC6414B92FFC0052A30A /* S4_iPad@2x.png */,
+				B9B1AC6514B92FFC0052A30A /* S5_iPad@2x.png */,
+				B9B1AC6614B92FFC0052A30A /* S6_iPad@2x.png */,
+				B9B1AC6714B92FFC0052A30A /* S7_iPad@2x.png */,
+				B9B1AC6814B92FFC0052A30A /* S8_iPad@2x.png */,
+				B9B1AC6914B92FFC0052A30A /* S9_iPad@2x.png */,
+				B9B1AC6A14B92FFC0052A30A /* S10_iPad@2x.png */,
+				B9B1AC6B14B92FFC0052A30A /* S11_iPad@2x.png */,
+				B9B1AC6C14B92FFC0052A30A /* S12_iPad@2x.png */,
+				B9B1AC6D14B92FFC0052A30A /* S13_iPad@2x.png */,
 			);
 			path = "iPad@2x";
 			sourceTree = "<group>";
@@ -994,6 +1156,60 @@
 				B9B1AC3014B906310052A30A /* QueenMarker_iPad.png in Resources */,
 				B9B1AC3114B906310052A30A /* QueenMarker_iPhone.png in Resources */,
 				B9B1AC3214B906310052A30A /* QueenMarker_iPhone@2x.png in Resources */,
+				B9B1AC6E14B92FFC0052A30A /* C1_iPad@2x.png in Resources */,
+				B9B1AC6F14B92FFC0052A30A /* C2_iPad@2x.png in Resources */,
+				B9B1AC7014B92FFC0052A30A /* C3_iPad@2x.png in Resources */,
+				B9B1AC7114B92FFC0052A30A /* C4_iPad@2x.png in Resources */,
+				B9B1AC7214B92FFC0052A30A /* C5_iPad@2x.png in Resources */,
+				B9B1AC7314B92FFC0052A30A /* C6_iPad@2x.png in Resources */,
+				B9B1AC7414B92FFC0052A30A /* C7_iPad@2x.png in Resources */,
+				B9B1AC7514B92FFC0052A30A /* C8_iPad@2x.png in Resources */,
+				B9B1AC7614B92FFC0052A30A /* C9_iPad@2x.png in Resources */,
+				B9B1AC7714B92FFC0052A30A /* C10_iPad@2x.png in Resources */,
+				B9B1AC7814B92FFC0052A30A /* C11_iPad@2x.png in Resources */,
+				B9B1AC7914B92FFC0052A30A /* C12_iPad@2x.png in Resources */,
+				B9B1AC7A14B92FFC0052A30A /* C13_iPad@2x.png in Resources */,
+				B9B1AC7B14B92FFC0052A30A /* D1_iPad@2x.png in Resources */,
+				B9B1AC7C14B92FFC0052A30A /* D2_iPad@2x.png in Resources */,
+				B9B1AC7D14B92FFC0052A30A /* D3_iPad@2x.png in Resources */,
+				B9B1AC7E14B92FFC0052A30A /* D4_iPad@2x.png in Resources */,
+				B9B1AC7F14B92FFC0052A30A /* D5_iPad@2x.png in Resources */,
+				B9B1AC8014B92FFC0052A30A /* D6_iPad@2x.png in Resources */,
+				B9B1AC8114B92FFC0052A30A /* D7_iPad@2x.png in Resources */,
+				B9B1AC8214B92FFC0052A30A /* D8_iPad@2x.png in Resources */,
+				B9B1AC8314B92FFC0052A30A /* D9_iPad@2x.png in Resources */,
+				B9B1AC8414B92FFC0052A30A /* D10_iPad@2x.png in Resources */,
+				B9B1AC8514B92FFC0052A30A /* D11_iPad@2x.png in Resources */,
+				B9B1AC8614B92FFC0052A30A /* D12_iPad@2x.png in Resources */,
+				B9B1AC8714B92FFC0052A30A /* D13_iPad@2x.png in Resources */,
+				B9B1AC8814B92FFC0052A30A /* H1_iPad@2x.png in Resources */,
+				B9B1AC8914B92FFC0052A30A /* H2_iPad@2x.png in Resources */,
+				B9B1AC8A14B92FFC0052A30A /* H3_iPad@2x.png in Resources */,
+				B9B1AC8B14B92FFC0052A30A /* H4_iPad@2x.png in Resources */,
+				B9B1AC8C14B92FFC0052A30A /* H5_iPad@2x.png in Resources */,
+				B9B1AC8D14B92FFC0052A30A /* H6_iPad@2x.png in Resources */,
+				B9B1AC8E14B92FFC0052A30A /* H7_iPad@2x.png in Resources */,
+				B9B1AC8F14B92FFC0052A30A /* H8_iPad@2x.png in Resources */,
+				B9B1AC9014B92FFC0052A30A /* H9_iPad@2x.png in Resources */,
+				B9B1AC9114B92FFC0052A30A /* H10_iPad@2x.png in Resources */,
+				B9B1AC9214B92FFC0052A30A /* H11_iPad@2x.png in Resources */,
+				B9B1AC9314B92FFC0052A30A /* H12_iPad@2x.png in Resources */,
+				B9B1AC9414B92FFC0052A30A /* H13_iPad@2x.png in Resources */,
+				B9B1AC9514B92FFC0052A30A /* J1_iPad@2x.png in Resources */,
+				B9B1AC9614B92FFC0052A30A /* J2_iPad@2x.png in Resources */,
+				B9B1AC9714B92FFC0052A30A /* S1_iPad@2x.png in Resources */,
+				B9B1AC9814B92FFC0052A30A /* S2_iPad@2x.png in Resources */,
+				B9B1AC9914B92FFC0052A30A /* S3_iPad@2x.png in Resources */,
+				B9B1AC9A14B92FFC0052A30A /* S4_iPad@2x.png in Resources */,
+				B9B1AC9B14B92FFC0052A30A /* S5_iPad@2x.png in Resources */,
+				B9B1AC9C14B92FFC0052A30A /* S6_iPad@2x.png in Resources */,
+				B9B1AC9D14B92FFC0052A30A /* S7_iPad@2x.png in Resources */,
+				B9B1AC9E14B92FFC0052A30A /* S8_iPad@2x.png in Resources */,
+				B9B1AC9F14B92FFC0052A30A /* S9_iPad@2x.png in Resources */,
+				B9B1ACA014B92FFC0052A30A /* S10_iPad@2x.png in Resources */,
+				B9B1ACA114B92FFC0052A30A /* S11_iPad@2x.png in Resources */,
+				B9B1ACA214B92FFC0052A30A /* S12_iPad@2x.png in Resources */,
+				B9B1ACA314B92FFC0052A30A /* S13_iPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

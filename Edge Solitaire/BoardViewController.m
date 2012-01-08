@@ -105,21 +105,91 @@
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
 		{
 			cardSpot.card = nextCard.card;
+						
+			BOOL allOccupied = YES;
+			for(CardSpot* spot in _allCardSpots)
+			{
+				if(spot.card == nil)
+				{
+					allOccupied = NO;
+					break;
+				}
+			}
 			
-			// If all card slots are full, verify that
-			// some collection of cards can sum to 10.
-			//   - If not, game over.
-			//   - If so, move on.
-			
-			nextCard.card = _cardDeck.lastObject;
-			[_cardDeck removeLastObject];
-			
-			// Verify that the next card can be played.
+			if(allOccupied)
+			{
+				// If all card slots are full, verify that
+				// some collection of cards can sum to 10.
+				//   - If not, game over.
+				//   - If so, move on.
+
+				BOOL sumToTenExists = NO;
+				for(int i = 0; i < _allCardSpots.count - 1; i++)
+				{
+					CardSpot* spot = [_allCardSpots objectAtIndex:i];
+					if(spot.card == nil || spot.card.value > 10)
+						continue;
+					
+					NSInteger sum = spot.card.value;
+					int j = i + 1;
+					while(sum < 10 && j < _allCardSpots.count)
+					{
+						CardSpot* subsequent = [_allCardSpots objectAtIndex:j++];
+						if(subsequent.card == nil || subsequent.card.value > 9)
+							continue;
+						
+						sum += subsequent.card.value;
+					}
+					
+					if(sum == 10)
+					{
+						sumToTenExists = YES;
+						break;
+					}
+				}
+				
+				if(sumToTenExists)
+				{
+					// Start clearing sums of 10
+					NSLog(@"Time to clear tens");
+				}
+				else
+				{
+					// Game over!
+					NSLog(@"Game over - no sums to ten");
+				}
+			}
+			else
+			{
+				nextCard.card = _cardDeck.lastObject;
+				[_cardDeck removeLastObject];
+
+				// Verify that the next card can be played.
+				BOOL canPlayNextCard = YES;
+				if(nextCard.card.value > 10)
+				{
+					canPlayNextCard = NO;
+					for(CardSpot* spot in _allCardSpots)
+					{
+						if(spot.edgeValue == nextCard.card.value && spot.card == nil)
+						{
+							canPlayNextCard = YES;
+							break;
+						}
+					}
+				}
+				
+				if(!canPlayNextCard)
+				{
+					NSLog(@"Can't play face card.  Game over!");
+				}
+			}
 		}
 		else
 		{
 			// Tried to place a face card on a
 			// non-face-card slot.
+			NSLog(@"Face cards must go on their assigned spots.");
 		}
 	}
 }
