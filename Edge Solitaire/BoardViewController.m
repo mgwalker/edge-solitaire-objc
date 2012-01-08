@@ -160,17 +160,17 @@
 			{
 				if(spot.card == nil)
 				{
-					hasWon = NO;
+					if(spot.edgeValue > 10)
+						hasWon = NO;
 					allOccupied = NO;
-					break;
 				}
-				
-				if(spot.card.value != spot.edgeValue && spot.edgeValue > 10)
+				else if(spot.card.value != spot.edgeValue && spot.edgeValue > 10)
 					hasWon = NO;
 			}
 			
 			if(hasWon)
 			{
+				nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
 			}
