@@ -37,7 +37,25 @@
 					<object class="IBUIView" id="823287600">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 380}, {320, 80}}</string>
+						<array class="NSMutableArray" key="NSSubviews">
+							<object class="IBUIView" id="351409955">
+								<reference key="NSNextResponder" ref="823287600"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{256, 0}, {64, 79}}</string>
+								<reference key="NSSuperview" ref="823287600"/>
+								<reference key="NSWindow"/>
+								<string key="NSReuseIdentifierKey">_NS:212</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+									<object class="NSColorSpace" key="NSCustomColorSpace" id="792946825">
+										<int key="NSID">2</int>
+									</object>
+								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+						</array>
+						<string key="NSFrame">{{0, 381}, {320, 79}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="876624642"/>
@@ -58,9 +76,7 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="792946825">
-								<int key="NSID">2</int>
-							</object>
+							<reference key="NSCustomColorSpace" ref="792946825"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -424,6 +440,14 @@
 					</object>
 					<int key="connectionID">91</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nextCard</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="351409955"/>
+					</object>
+					<int key="connectionID">93</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -471,6 +495,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">34</int>
 						<reference key="object" ref="823287600"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="351409955"/>
+						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -553,6 +580,11 @@
 						<reference key="object" ref="192779553"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">92</int>
+						<reference key="object" ref="351409955"/>
+						<reference key="parent" ref="823287600"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -594,12 +626,14 @@
 				<string key="74.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="75.CustomClassName">CardSpot</string>
 				<string key="75.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="92.CustomClassName">CardSpot</string>
+				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">91</int>
+			<int key="maxID">93</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -607,6 +641,7 @@
 					<string key="className">BoardViewController</string>
 					<string key="superclassName">UIUniversalViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="nextCard">CardSpot</string>
 						<string key="spot0">CardSpot</string>
 						<string key="spot1">CardSpot</string>
 						<string key="spot10">CardSpot</string>
@@ -625,6 +660,10 @@
 						<string key="spot9">CardSpot</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="nextCard">
+							<string key="name">nextCard</string>
+							<string key="candidateClassName">CardSpot</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="spot0">
 							<string key="name">spot0</string>
 							<string key="candidateClassName">CardSpot</string>
