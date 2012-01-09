@@ -31,6 +31,7 @@
 		B9AACA1314BA485D00B9FBB2 /* MenuButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */; };
 		B9AACA1414BA485D00B9FBB2 /* PlayAgainButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */; };
 		B9AACA1814BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */; };
+		B9AAD19E14BA799F00E17B03 /* logo_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AAD19D14BA799F00E17B03 /* logo_iPad.png */; };
 		B9B1AB8814B906310052A30A /* C10_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADA14B906310052A30A /* C10_iPad.png */; };
 		B9B1AB8914B906310052A30A /* C11_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADB14B906310052A30A /* C11_iPad.png */; };
 		B9B1AB8A14B906310052A30A /* C12_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1AADC14B906310052A30A /* C12_iPad.png */; };
@@ -303,6 +304,7 @@
 		B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayAgainButton_iPad.png; sourceTree = "<group>"; };
 		B9AACA1614BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+canMakeTen.h"; sourceTree = "<group>"; };
 		B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCountedSet+canMakeTen.m"; sourceTree = "<group>"; };
+		B9AAD19D14BA799F00E17B03 /* logo_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_iPad.png; sourceTree = "<group>"; };
 		B9B1AADA14B906310052A30A /* C10_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C10_iPad.png; sourceTree = "<group>"; };
 		B9B1AADB14B906310052A30A /* C11_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C11_iPad.png; sourceTree = "<group>"; };
 		B9B1AADC14B906310052A30A /* C12_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C12_iPad.png; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 			children = (
 				B9AACA0714BA437700B9FBB2 /* Status Popups */,
 				B9B1AAD814B906310052A30A /* Cards */,
+				B9AAD19D14BA799F00E17B03 /* logo_iPad.png */,
 				B92B753A14B6A3A100BC69D5 /* green_felt.jpg */,
 				B92B753714B6A22B00BC69D5 /* green_felt@2x.jpg */,
 				B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */,
@@ -675,12 +678,7 @@
 		B9AACA0714BA437700B9FBB2 /* Status Popups */ = {
 			isa = PBXGroup;
 			children = (
-				B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */,
-				B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */,
-				B9AACA0F14BA45CE00B9FBB2 /* popupBackground_iPad.png */,
-				B9AACA0914BA439400B9FBB2 /* cannotRemove_iPad.png */,
-				B9AACA0A14BA439400B9FBB2 /* won_iPad.png */,
-				B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */,
+				B9AAD19B14BA787700E17B03 /* iPad */,
 			);
 			name = "Status Popups";
 			sourceTree = "<group>";
@@ -692,6 +690,19 @@
 				B9AACA1714BA5FDA00B9FBB2 /* NSCountedSet+canMakeTen.m */,
 			);
 			name = "NSCountedSet Addition";
+			sourceTree = "<group>";
+		};
+		B9AAD19B14BA787700E17B03 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */,
+				B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */,
+				B9AACA0F14BA45CE00B9FBB2 /* popupBackground_iPad.png */,
+				B9AACA0914BA439400B9FBB2 /* cannotRemove_iPad.png */,
+				B9AACA0A14BA439400B9FBB2 /* won_iPad.png */,
+				B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 		B9B1AAD814B906310052A30A /* Cards */ = {
@@ -1283,6 +1294,7 @@
 				B9AACA1014BA45CE00B9FBB2 /* popupBackground_iPad.png in Resources */,
 				B9AACA1314BA485D00B9FBB2 /* MenuButton_iPad.png in Resources */,
 				B9AACA1414BA485D00B9FBB2 /* PlayAgainButton_iPad.png in Resources */,
+				B9AAD19E14BA799F00E17B03 /* logo_iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

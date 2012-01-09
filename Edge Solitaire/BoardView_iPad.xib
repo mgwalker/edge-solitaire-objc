@@ -807,6 +807,7 @@
 							<reference ref="66062611"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
+						<string key="objectName">Status Bar (Bottom)</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
@@ -898,6 +899,7 @@
 						<int key="objectID">59</int>
 						<reference key="object" ref="700212878"/>
 						<reference key="parent" ref="780997557"/>
+						<string key="objectName">Tens Done Button</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">61</int>
