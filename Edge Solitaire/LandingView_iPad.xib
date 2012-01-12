@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="399025315">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{243, 635}, {106, 37}}</string>
+						<string key="NSFrame">{{169, 947}, {106, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="635572931"/>
@@ -75,7 +75,7 @@
 					<object class="IBUIButton" id="635572931">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{206, 726}, {79, 37}}</string>
+						<string key="NSFrame">{{487, 947}, {79, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -98,7 +98,7 @@
 					<object class="IBUIImageView" id="562642828">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{145, 213}, {478, 279}}</string>
+						<string key="NSFrame">{{126, 68}, {516, 620}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="399025315"/>
@@ -296,7 +296,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">logo_iPad.png</string>
-			<string key="NS.object.0">{478, 279}</string>
+			<string key="NS.object.0">{516, 620}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
