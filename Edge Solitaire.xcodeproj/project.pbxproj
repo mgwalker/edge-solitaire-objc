@@ -24,6 +24,25 @@
 		B92B753F14B6A6F900BC69D5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B753E14B6A6F900BC69D5 /* GradientButton.m */; };
 		B92B754114B6AB7200BC69D5 /* BoardView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */; };
 		B92B754414B6ADA200BC69D5 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B754314B6ADA200BC69D5 /* BoardViewController.m */; };
+		B9A47C9014BE819F00D776D2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8914BE819E00D776D2 /* Icon-72.png */; };
+		B9A47C9114BE819F00D776D2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8A14BE819E00D776D2 /* Icon-Small-50.png */; };
+		B9A47C9214BE819F00D776D2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8B14BE819E00D776D2 /* Icon-Small.png */; };
+		B9A47C9314BE819F00D776D2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8C14BE819E00D776D2 /* Icon-Small@2x.png */; };
+		B9A47C9414BE819F00D776D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8D14BE819E00D776D2 /* Icon.png */; };
+		B9A47C9514BE819F00D776D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8E14BE819E00D776D2 /* Icon@2x.png */; };
+		B9A47C9614BE819F00D776D2 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8F14BE819E00D776D2 /* iTunesArtwork */; };
+		B9A47C9914BE81DC00D776D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C9814BE81DC00D776D2 /* Icon.png */; };
+		B9A47C9B14BE81E100D776D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C9A14BE81E100D776D2 /* Icon@2x.png */; };
+		B9A47C9F14BE820C00D776D2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C9E14BE820C00D776D2 /* Icon-72.png */; };
+		B9A47CA314BE831E00D776D2 /* logo_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CA014BE831E00D776D2 /* logo_iPad@2x.png */; };
+		B9A47CA414BE831E00D776D2 /* logo_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CA114BE831E00D776D2 /* logo_iPhone.png */; };
+		B9A47CA514BE831E00D776D2 /* logo_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CA214BE831E00D776D2 /* logo_iPhone@2x.png */; };
+		B9A47CA714BE837400D776D2 /* popupBackground_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CA614BE837400D776D2 /* popupBackground_iPad@2x.png */; };
+		B9A47CA914BE839A00D776D2 /* MenuButton_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CA814BE839A00D776D2 /* MenuButton_iPad@2x.png */; };
+		B9A47CAB14BE83B800D776D2 /* PlayAgainButton_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CAA14BE83B800D776D2 /* PlayAgainButton_iPad@2x.png */; };
+		B9A47CAD14BE83E200D776D2 /* cannotPlace_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CAC14BE83E100D776D2 /* cannotPlace_iPad@2x.png */; };
+		B9A47CAF14BE83F700D776D2 /* cannotRemove_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CAE14BE83F700D776D2 /* cannotRemove_iPad@2x.png */; };
+		B9A47CB114BE841600D776D2 /* won_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47CB014BE841600D776D2 /* won_iPad@2x.png */; };
 		B9AACA0C14BA439400B9FBB2 /* cannotRemove_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA0914BA439400B9FBB2 /* cannotRemove_iPad.png */; };
 		B9AACA0D14BA439400B9FBB2 /* won_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA0A14BA439400B9FBB2 /* won_iPad.png */; };
 		B9AACA0E14BA439400B9FBB2 /* cannotPlace_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */; };
@@ -296,6 +315,26 @@
 		B92B754014B6AB7200BC69D5 /* BoardView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPhone.xib; sourceTree = "<group>"; };
 		B92B754214B6ADA200BC69D5 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
 		B92B754314B6ADA200BC69D5 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		B9A47C8914BE819E00D776D2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B9A47C8A14BE819E00D776D2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		B9A47C8B14BE819E00D776D2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		B9A47C8C14BE819E00D776D2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		B9A47C8D14BE819E00D776D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B9A47C8E14BE819E00D776D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B9A47C8F14BE819E00D776D2 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		B9A47C9814BE81DC00D776D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B9A47C9A14BE81E100D776D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B9A47C9C14BE81EC00D776D2 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		B9A47C9E14BE820C00D776D2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B9A47CA014BE831E00D776D2 /* logo_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_iPad@2x.png"; path = "Cards/logo_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CA114BE831E00D776D2 /* logo_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_iPhone.png; path = Cards/logo_iPhone.png; sourceTree = "<group>"; };
+		B9A47CA214BE831E00D776D2 /* logo_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_iPhone@2x.png"; path = "Cards/logo_iPhone@2x.png"; sourceTree = "<group>"; };
+		B9A47CA614BE837400D776D2 /* popupBackground_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popupBackground_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CA814BE839A00D776D2 /* MenuButton_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuButton_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CAA14BE83B800D776D2 /* PlayAgainButton_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayAgainButton_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CAC14BE83E100D776D2 /* cannotPlace_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cannotPlace_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CAE14BE83F700D776D2 /* cannotRemove_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cannotRemove_iPad@2x.png"; sourceTree = "<group>"; };
+		B9A47CB014BE841600D776D2 /* won_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "won_iPad@2x.png"; sourceTree = "<group>"; };
 		B9AACA0914BA439400B9FBB2 /* cannotRemove_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cannotRemove_iPad.png; sourceTree = "<group>"; };
 		B9AACA0A14BA439400B9FBB2 /* won_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = won_iPad.png; sourceTree = "<group>"; };
 		B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cannotPlace_iPad.png; sourceTree = "<group>"; };
@@ -564,6 +603,10 @@
 		B90A953C14B68E9300F33242 = {
 			isa = PBXGroup;
 			children = (
+				B9A47C9E14BE820C00D776D2 /* Icon-72.png */,
+				B9A47C9C14BE81EC00D776D2 /* Default-Portrait~ipad.png */,
+				B9A47C9A14BE81E100D776D2 /* Icon@2x.png */,
+				B9A47C9814BE81DC00D776D2 /* Icon.png */,
 				B90A955314B68E9300F33242 /* Edge Solitaire */,
 				B90A954A14B68E9300F33242 /* Frameworks */,
 				B90A954814B68E9300F33242 /* Products */,
@@ -654,8 +697,12 @@
 		B92B753914B6A23400BC69D5 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B9A47C8814BE819E00D776D2 /* Icons */,
 				B9AACA0714BA437700B9FBB2 /* Status Popups */,
 				B9B1AAD814B906310052A30A /* Cards */,
+				B9A47CA014BE831E00D776D2 /* logo_iPad@2x.png */,
+				B9A47CA114BE831E00D776D2 /* logo_iPhone.png */,
+				B9A47CA214BE831E00D776D2 /* logo_iPhone@2x.png */,
 				B9AAD19D14BA799F00E17B03 /* logo_iPad.png */,
 				B92B753A14B6A3A100BC69D5 /* green_felt.jpg */,
 				B92B753714B6A22B00BC69D5 /* green_felt@2x.jpg */,
@@ -673,6 +720,20 @@
 				B92B753E14B6A6F900BC69D5 /* GradientButton.m */,
 			);
 			name = GradientButton;
+			sourceTree = "<group>";
+		};
+		B9A47C8814BE819E00D776D2 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B9A47C8914BE819E00D776D2 /* Icon-72.png */,
+				B9A47C8A14BE819E00D776D2 /* Icon-Small-50.png */,
+				B9A47C8B14BE819E00D776D2 /* Icon-Small.png */,
+				B9A47C8C14BE819E00D776D2 /* Icon-Small@2x.png */,
+				B9A47C8D14BE819E00D776D2 /* Icon.png */,
+				B9A47C8E14BE819E00D776D2 /* Icon@2x.png */,
+				B9A47C8F14BE819E00D776D2 /* iTunesArtwork */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		B9AACA0714BA437700B9FBB2 /* Status Popups */ = {
@@ -696,11 +757,17 @@
 			isa = PBXGroup;
 			children = (
 				B9AACA1114BA485D00B9FBB2 /* MenuButton_iPad.png */,
+				B9A47CA814BE839A00D776D2 /* MenuButton_iPad@2x.png */,
 				B9AACA1214BA485D00B9FBB2 /* PlayAgainButton_iPad.png */,
+				B9A47CAA14BE83B800D776D2 /* PlayAgainButton_iPad@2x.png */,
 				B9AACA0F14BA45CE00B9FBB2 /* popupBackground_iPad.png */,
+				B9A47CA614BE837400D776D2 /* popupBackground_iPad@2x.png */,
 				B9AACA0914BA439400B9FBB2 /* cannotRemove_iPad.png */,
+				B9A47CAE14BE83F700D776D2 /* cannotRemove_iPad@2x.png */,
 				B9AACA0A14BA439400B9FBB2 /* won_iPad.png */,
+				B9A47CB014BE841600D776D2 /* won_iPad@2x.png */,
 				B9AACA0B14BA439400B9FBB2 /* cannotPlace_iPad.png */,
+				B9A47CAC14BE83E100D776D2 /* cannotPlace_iPad@2x.png */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -1295,6 +1362,25 @@
 				B9AACA1314BA485D00B9FBB2 /* MenuButton_iPad.png in Resources */,
 				B9AACA1414BA485D00B9FBB2 /* PlayAgainButton_iPad.png in Resources */,
 				B9AAD19E14BA799F00E17B03 /* logo_iPad.png in Resources */,
+				B9A47C9014BE819F00D776D2 /* Icon-72.png in Resources */,
+				B9A47C9114BE819F00D776D2 /* Icon-Small-50.png in Resources */,
+				B9A47C9214BE819F00D776D2 /* Icon-Small.png in Resources */,
+				B9A47C9314BE819F00D776D2 /* Icon-Small@2x.png in Resources */,
+				B9A47C9414BE819F00D776D2 /* Icon.png in Resources */,
+				B9A47C9514BE819F00D776D2 /* Icon@2x.png in Resources */,
+				B9A47C9614BE819F00D776D2 /* iTunesArtwork in Resources */,
+				B9A47C9914BE81DC00D776D2 /* Icon.png in Resources */,
+				B9A47C9B14BE81E100D776D2 /* Icon@2x.png in Resources */,
+				B9A47C9F14BE820C00D776D2 /* Icon-72.png in Resources */,
+				B9A47CA314BE831E00D776D2 /* logo_iPad@2x.png in Resources */,
+				B9A47CA414BE831E00D776D2 /* logo_iPhone.png in Resources */,
+				B9A47CA514BE831E00D776D2 /* logo_iPhone@2x.png in Resources */,
+				B9A47CA714BE837400D776D2 /* popupBackground_iPad@2x.png in Resources */,
+				B9A47CA914BE839A00D776D2 /* MenuButton_iPad@2x.png in Resources */,
+				B9A47CAB14BE83B800D776D2 /* PlayAgainButton_iPad@2x.png in Resources */,
+				B9A47CAD14BE83E200D776D2 /* cannotPlace_iPad@2x.png in Resources */,
+				B9A47CAF14BE83F700D776D2 /* cannotRemove_iPad@2x.png in Resources */,
+				B9A47CB114BE841600D776D2 /* won_iPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
