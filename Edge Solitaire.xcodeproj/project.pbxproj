@@ -294,6 +294,10 @@
 		B9B1ACAC14B943FB0052A30A /* CardBack_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACA814B943FB0052A30A /* CardBack_iPad@2x.png */; };
 		B9B1ACAD14B943FB0052A30A /* CardBack_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACA914B943FB0052A30A /* CardBack_iPhone.png */; };
 		B9B1ACAE14B943FB0052A30A /* CardBack_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1ACAA14B943FB0052A30A /* CardBack_iPhone@2x.png */; };
+		B9CE914614BFD28600E85FF0 /* Clear.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914214BFD28600E85FF0 /* Clear.mp3 */; };
+		B9CE914714BFD28600E85FF0 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914314BFD28600E85FF0 /* GameOver.mp3 */; };
+		B9CE914814BFD28600E85FF0 /* Place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914414BFD28600E85FF0 /* Place.mp3 */; };
+		B9CE914914BFD28600E85FF0 /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914514BFD28600E85FF0 /* Win.mp3 */; };
 		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
 		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
 		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
@@ -600,6 +604,10 @@
 		B9B1ACA814B943FB0052A30A /* CardBack_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardBack_iPad@2x.png"; sourceTree = "<group>"; };
 		B9B1ACA914B943FB0052A30A /* CardBack_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBack_iPhone.png; sourceTree = "<group>"; };
 		B9B1ACAA14B943FB0052A30A /* CardBack_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardBack_iPhone@2x.png"; sourceTree = "<group>"; };
+		B9CE914214BFD28600E85FF0 /* Clear.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Clear.mp3; sourceTree = "<group>"; };
+		B9CE914314BFD28600E85FF0 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
+		B9CE914414BFD28600E85FF0 /* Place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Place.mp3; sourceTree = "<group>"; };
+		B9CE914514BFD28600E85FF0 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
 		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
 		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
 		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
@@ -660,6 +668,7 @@
 		B90A955314B68E9300F33242 /* Edge Solitaire */ = {
 			isa = PBXGroup;
 			children = (
+				B9CE914114BFD28600E85FF0 /* Sounds */,
 				B9B1AC3414B90D980052A30A /* Data Models */,
 				B92B753914B6A23400BC69D5 /* Graphics */,
 				B92B752C14B69E3F00BC69D5 /* View Controllers */,
@@ -1101,6 +1110,17 @@
 			path = "Card Back";
 			sourceTree = "<group>";
 		};
+		B9CE914114BFD28600E85FF0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B9CE914214BFD28600E85FF0 /* Clear.mp3 */,
+				B9CE914314BFD28600E85FF0 /* GameOver.mp3 */,
+				B9CE914414BFD28600E85FF0 /* Place.mp3 */,
+				B9CE914514BFD28600E85FF0 /* Win.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		B9F20C1414B7ED9000F9810A /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -1437,6 +1457,10 @@
 				B9A47CC814BE873300D776D2 /* popupBackground_iPhone@2x.png in Resources */,
 				B9A47CC914BE873300D776D2 /* won_iPhone.png in Resources */,
 				B9A47CCA14BE873300D776D2 /* won_iPhone@2x.png in Resources */,
+				B9CE914614BFD28600E85FF0 /* Clear.mp3 in Resources */,
+				B9CE914714BFD28600E85FF0 /* GameOver.mp3 in Resources */,
+				B9CE914814BFD28600E85FF0 /* Place.mp3 in Resources */,
+				B9CE914914BFD28600E85FF0 /* Win.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
