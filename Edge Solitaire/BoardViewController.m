@@ -33,6 +33,22 @@
 		_cardDeck = [Card shuffledDeck];
 		_summingCardSpots = [NSMutableArray array];
 		_inSummingMode = NO;
+		
+		_winSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Win"
+																						 withExtension:@"mp3"]
+														   error:NULL];
+		
+		_loseSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"GameOver"
+																						  withExtension:@"mp3"]
+															error:NULL];
+		
+		_clearSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Clear"
+																						   withExtension:@"mp3"]
+															 error:NULL];
+		
+		_clickSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Place"
+																						   withExtension:@"mp3"]
+															 error:NULL];
 	}
 	return self;
 }
@@ -113,21 +129,29 @@
 	popupWin.hidden = YES;
 	playAgainButton.hidden = YES;
 	mainMenuButton.hidden = YES;
+	
+	[_winSound prepareToPlay];
+	[_loseSound prepareToPlay];
+	[_clearSound prepareToPlay];
+	[_clickSound prepareToPlay];
 
 	[self resetGame:nil];
 }
 
 -(void)cardSpotTouched:(CardSpot *)cardSpot
-{
+{	
 	if(_inSummingMode)
 	{
+		BOOL click = NO;
 		if([_summingCardSpots containsObject:cardSpot])
 		{
+			click = YES;
 			cardSpot.highlighted = NO;
 			[_summingCardSpots removeObject:cardSpot];
 		}
 		else if(cardSpot.card != nil && cardSpot.card.value <= 10)
 		{
+			click = YES;
 			cardSpot.highlighted = YES;
 			[_summingCardSpots addObject:cardSpot];
 		}
@@ -138,6 +162,7 @@
 		
 		if(sum == 10)
 		{
+			[_clearSound play];
 			for(CardSpot* spot in _summingCardSpots)
 			{
 				spot.highlighted = NO;
@@ -145,11 +170,14 @@
 			}
 			[_summingCardSpots removeAllObjects];
 		}
+		else if(click)
+			[_clickSound play];
 	}
 	else if(nextCard.card != nil && cardSpot.card == nil)
 	{
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
-		{
+			{
+			[_clickSound play];
 			cardSpot.card = nextCard.card;
 			
 			// If all the edge spots are occupied by their
@@ -170,6 +198,7 @@
 			
 			if(hasWon)
 			{
+				[_winSound play];
 				nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
@@ -212,6 +241,7 @@
 				else
 				{
 					// Game over!
+					[_loseSound play];
 					[self showPopup:popupCannotRemove];
 				}
 			}
@@ -222,7 +252,10 @@
 
 				// Verify that the next card can be played.
 				if(![self canPlayNextCard])
+				{
+					[_loseSound play];
 					[self showPopup:popupCannotPlace];
+				}
 			}
 		}
 		else
@@ -259,7 +292,10 @@
 	[_cardDeck removeLastObject];
 	
 	if(![self canPlayNextCard])
+	{
+		[_loseSound play];
 		[self showPopup:popupCannotPlace];
+	}
 }
 
 -(BOOL)canPlayNextCard

@@ -8,6 +8,7 @@
 
 #import "UIUniversalViewController.h"
 #import "CardSpot.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface BoardViewController : UIUniversalViewController <CardSpotDelegate, UIAlertViewDelegate>
 {
@@ -16,6 +17,11 @@
 	NSArray* _allCardSpots;
 	NSMutableArray* _summingCardSpots;
 	BOOL _inSummingMode;
+	
+	AVAudioPlayer* _winSound;
+	AVAudioPlayer* _loseSound;
+	AVAudioPlayer* _clickSound;
+	AVAudioPlayer* _clearSound;
 }
 
 @property (retain) IBOutlet CardSpot* spot0;

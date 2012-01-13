@@ -298,6 +298,7 @@
 		B9CE914714BFD28600E85FF0 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914314BFD28600E85FF0 /* GameOver.mp3 */; };
 		B9CE914814BFD28600E85FF0 /* Place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914414BFD28600E85FF0 /* Place.mp3 */; };
 		B9CE914914BFD28600E85FF0 /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914514BFD28600E85FF0 /* Win.mp3 */; };
+		B9CE914C14BFD37E00E85FF0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */; };
 		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
 		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
 		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
@@ -608,6 +609,7 @@
 		B9CE914314BFD28600E85FF0 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
 		B9CE914414BFD28600E85FF0 /* Place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Place.mp3; sourceTree = "<group>"; };
 		B9CE914514BFD28600E85FF0 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
+		B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
 		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
 		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CE914C14BFD37E00E85FF0 /* AVFoundation.framework in Frameworks */,
 				B9B1ACA514B93C890052A30A /* QuartzCore.framework in Frameworks */,
 				B90A954C14B68E9300F33242 /* UIKit.framework in Frameworks */,
 				B90A954E14B68E9300F33242 /* Foundation.framework in Frameworks */,
@@ -635,6 +638,7 @@
 		B90A953C14B68E9300F33242 = {
 			isa = PBXGroup;
 			children = (
+				B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */,
 				B9A47C9E14BE820C00D776D2 /* Icon-72.png */,
 				B9A47C9C14BE81EC00D776D2 /* Default-Portrait~ipad.png */,
 				B9A47C9A14BE81E100D776D2 /* Icon@2x.png */,
