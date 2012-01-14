@@ -17,6 +17,7 @@
 	NSArray* _allCardSpots;
 	NSMutableArray* _summingCardSpots;
 	BOOL _inSummingMode;
+	BOOL _popupVisible;
 	
 	AVAudioPlayer* _winSound;
 	AVAudioPlayer* _loseSound;
@@ -53,9 +54,12 @@
 @property (retain) IBOutlet UIImageView* popupBackground;
 @property (retain) IBOutlet UIImageView* popupCannotPlace;
 @property (retain) IBOutlet UIImageView* popupCannotRemove;
+@property (retain) IBOutlet UIImageView* popupRestart;
 @property (retain) IBOutlet UIImageView* popupWin;
 @property (retain) IBOutlet UIButton* playAgainButton;
 @property (retain) IBOutlet UIButton* mainMenuButton;
+@property (retain) IBOutlet UIButton* restartButton;
+@property (retain) IBOutlet UIButton* quitButton;
 
 @property (retain) IBOutlet UIButton* muteToggleButton;
 

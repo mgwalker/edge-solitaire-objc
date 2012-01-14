@@ -23,7 +23,8 @@
 
 @synthesize instruction, nextCard, tensDoneButton, muteToggleButton;
 
-@synthesize popupBackground, popupCannotPlace, popupCannotRemove, popupWin, playAgainButton, mainMenuButton;
+@synthesize popupBackground, popupCannotPlace, popupCannotRemove, popupRestart, popupWin;
+@synthesize playAgainButton, mainMenuButton, restartButton, quitButton;
 
 -(id)init
 {
@@ -33,6 +34,7 @@
 		_cardDeck = [Card shuffledDeck];
 		_summingCardSpots = [NSMutableArray array];
 		_inSummingMode = NO;
+		_popupVisible = NO;
 		
 		_winSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Win"
 																						 withExtension:@"mp3"]
@@ -126,9 +128,12 @@
 	popupBackground.hidden = YES;
 	popupCannotPlace.hidden = YES;
 	popupCannotRemove.hidden = YES;
+	popupRestart.hidden = YES;
 	popupWin.hidden = YES;
 	playAgainButton.hidden = YES;
 	mainMenuButton.hidden = YES;
+	restartButton.hidden = YES;
+	quitButton.hidden = YES;
 	
 	[_winSound prepareToPlay];
 	[_loseSound prepareToPlay];
@@ -144,7 +149,10 @@
 }
 
 -(void)cardSpotTouched:(CardSpot *)cardSpot
-{	
+{
+	if(_popupVisible)
+		return;
+	
 	if(_inSummingMode)
 	{
 		BOOL click = NO;
@@ -378,7 +386,7 @@
 
 -(IBAction)quitOrRestart:(id)sender
 {
-	
+	[self showPopup:self.popupRestart];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -402,7 +410,14 @@
 		playAgainButton.alpha= 0;
 		mainMenuButton.hidden = NO;
 		mainMenuButton.alpha = 0;
+		restartButton.hidden = NO;
+		restartButton.alpha = 0;
+		quitButton.hidden = NO;
+		quitButton.alpha = 0;
+		_popupVisible = YES;
 	}
+	else
+		_popupVisible = NO;
 	
 	[UIView animateWithDuration:0.5 animations:^(void)
 	 {
@@ -410,17 +425,28 @@
 		{
 			popupBackground.alpha = 1;
 			imageToShow.alpha = 1;
-			playAgainButton.alpha= 1;
-			mainMenuButton.alpha = 1;
+			if(imageToShow == self.popupRestart)
+			{
+				restartButton.alpha = 1;
+				quitButton.alpha = 1;
+			}
+			else
+			{
+				playAgainButton.alpha= 1;
+				mainMenuButton.alpha = 1;
+			}
 		}
 		else
 		{
 			popupBackground.alpha = 0;
 			popupCannotPlace.alpha = 0;
 			popupCannotRemove.alpha = 0;
+			popupRestart.alpha = 0;
 			popupWin.alpha = 0;
 			playAgainButton.alpha = 0;
 			mainMenuButton.alpha = 0;
+			restartButton.alpha = 0;
+			quitButton.alpha = 0;
 		}
 	 } completion:^(BOOL finished)
 	 {
@@ -429,9 +455,12 @@
 			 popupBackground.hidden = YES;
 			 popupCannotPlace.hidden = YES;
 			 popupCannotRemove.hidden = YES;
+			 popupRestart.hidden = YES;
 			 popupWin.hidden = YES;
 			 playAgainButton.hidden = YES;
 			 mainMenuButton.hidden = YES;
+			 restartButton.hidden = YES;
+			 quitButton.hidden = YES;
 		 }
 	 }];
 }
