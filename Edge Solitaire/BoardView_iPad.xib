@@ -227,7 +227,7 @@
 						<string key="NSFrame">{{206, 461}, {170, 197}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="25823178"/>
+						<reference key="NSNextKeyView" ref="622800299"/>
 						<string key="NSReuseIdentifierKey">_NS:212</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -452,7 +452,7 @@
 						<string key="NSFrame">{{376, 561}, {320, 102}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="344591237"/>
+						<reference key="NSNextKeyView" ref="546971625"/>
 						<string key="NSReuseIdentifierKey">_NS:241</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -477,7 +477,7 @@
 						<string key="NSFrame">{{376, 672}, {320, 102}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="179290882"/>
+						<reference key="NSNextKeyView" ref="611070510"/>
 						<string key="NSReuseIdentifierKey">_NS:241</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -520,7 +520,7 @@
 								<reference key="IBUINormalTitleShadowColor" ref="965187738"/>
 								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">mute.png</string>
+									<string key="NSResourceName">unmute.png</string>
 								</object>
 								<reference key="IBUIFontDescription" ref="991875227"/>
 								<reference key="IBUIFont" ref="306709937"/>
@@ -561,6 +561,71 @@
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+					</object>
+					<object class="IBUIImageView" id="622800299">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{221, 219}, {324, 324}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="25823178"/>
+						<string key="NSReuseIdentifierKey">_NS:569</string>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restart_iPad.png</string>
+						</object>
+					</object>
+					<object class="IBUIButton" id="546971625">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{376, 562}, {320, 102}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="344591237"/>
+						<string key="NSReuseIdentifierKey">_NS:241</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="659705116"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="965187738"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">RestartButton_iPad.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="991875227"/>
+						<reference key="IBUIFont" ref="306709937"/>
+					</object>
+					<object class="IBUIButton" id="611070510">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{376, 672}, {320, 102}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="179290882"/>
+						<string key="NSReuseIdentifierKey">_NS:241</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="659705116"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="965187738"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">QuitButton_iPad.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="991875227"/>
+						<reference key="IBUIFont" ref="306709937"/>
 					</object>
 				</array>
 				<string key="NSFrameSize">{768, 1024}</string>
@@ -793,6 +858,30 @@
 					<int key="connectionID">86</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">popupRestart</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="622800299"/>
+					</object>
+					<int key="connectionID">88</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">restartButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="546971625"/>
+					</object>
+					<int key="connectionID">91</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">quitButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="611070510"/>
+					</object>
+					<int key="connectionID">93</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">tensDone:</string>
 						<reference key="source" ref="700212878"/>
@@ -837,6 +926,24 @@
 					</object>
 					<int key="connectionID">85</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">resetGame:</string>
+						<reference key="source" ref="546971625"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">92</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">quitGame:</string>
+						<reference key="source" ref="611070510"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">94</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -874,6 +981,9 @@
 							<reference ref="20496918"/>
 							<reference ref="25823178"/>
 							<reference ref="919645115"/>
+							<reference ref="622800299"/>
+							<reference ref="611070510"/>
+							<reference ref="546971625"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1045,6 +1155,21 @@
 						<reference key="object" ref="710632751"/>
 						<reference key="parent" ref="919645115"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">87</int>
+						<reference key="object" ref="622800299"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">89</int>
+						<reference key="object" ref="546971625"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">90</int>
+						<reference key="object" ref="611070510"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1099,12 +1224,15 @@
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="87.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="89.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="90.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">86</int>
+			<int key="maxID">94</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1149,7 +1277,10 @@
 						<string key="popupBackground">UIImageView</string>
 						<string key="popupCannotPlace">UIImageView</string>
 						<string key="popupCannotRemove">UIImageView</string>
+						<string key="popupRestart">UIImageView</string>
 						<string key="popupWin">UIImageView</string>
+						<string key="quitButton">UIButton</string>
+						<string key="restartButton">UIButton</string>
 						<string key="spot0">CardSpot</string>
 						<string key="spot1">CardSpot</string>
 						<string key="spot10">CardSpot</string>
@@ -1201,9 +1332,21 @@
 							<string key="name">popupCannotRemove</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="popupRestart">
+							<string key="name">popupRestart</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="popupWin">
 							<string key="name">popupWin</string>
 							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="quitButton">
+							<string key="name">quitButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="restartButton">
+							<string key="name">restartButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="spot0">
 							<string key="name">spot0</string>
@@ -1309,11 +1452,14 @@
 			<string key="CardBack_iPad.png">{85, 98}</string>
 			<string key="MenuButton_iPad.png">{320, 102}</string>
 			<string key="PlayAgainButton_iPad.png">{320, 102}</string>
+			<string key="QuitButton_iPad.png">{320, 102}</string>
+			<string key="RestartButton_iPad.png">{320, 102}</string>
 			<string key="cannotPlace_iPad.png">{589, 373}</string>
 			<string key="cannotRemove_iPad.png">{591, 374}</string>
-			<string key="mute.png">{20, 20}</string>
 			<string key="popupBackground_iPad.png">{768, 1004}</string>
 			<string key="restart.png">{20, 20}</string>
+			<string key="restart_iPad.png">{324, 324}</string>
+			<string key="unmute.png">{20, 20}</string>
 			<string key="won_iPad.png">{593, 547}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
