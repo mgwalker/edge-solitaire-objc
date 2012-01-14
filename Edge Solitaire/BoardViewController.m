@@ -21,7 +21,7 @@
 @synthesize spot8, spot9, spot10, spot11;
 @synthesize spot12, spot13, spot14, spot15;
 
-@synthesize instruction, nextCard, tensDoneButton;
+@synthesize instruction, nextCard, tensDoneButton, muteToggleButton;
 
 @synthesize popupBackground, popupCannotPlace, popupCannotRemove, popupWin, playAgainButton, mainMenuButton;
 
@@ -134,6 +134,11 @@
 	[_loseSound prepareToPlay];
 	[_clearSound prepareToPlay];
 	[_clickSound prepareToPlay];
+	
+	// Initialize to the inverse of the saved state,
+	// then toggle.  Get the correct UI for free!
+	_isMuted = ![[NSUserDefaults standardUserDefaults] boolForKey:@"muted"];
+	[self toggleMute:nil];
 
 	[self resetGame:nil];
 }
@@ -162,7 +167,9 @@
 		
 		if(sum == 10)
 		{
-			[_clearSound play];
+			if(!_isMuted)
+				[_clearSound play];
+			
 			for(CardSpot* spot in _summingCardSpots)
 			{
 				spot.highlighted = NO;
@@ -170,14 +177,15 @@
 			}
 			[_summingCardSpots removeAllObjects];
 		}
-		else if(click)
+		else if(click && !_isMuted)
 			[_clickSound play];
 	}
 	else if(nextCard.card != nil && cardSpot.card == nil)
 	{
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
-			{
-			[_clickSound play];
+		{
+			if(!_isMuted)
+				[_clickSound play];
 			cardSpot.card = nextCard.card;
 			
 			// If all the edge spots are occupied by their
@@ -198,7 +206,8 @@
 			
 			if(hasWon)
 			{
-				[_winSound play];
+				if(!_isMuted)
+					[_winSound play];
 				nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
@@ -241,7 +250,8 @@
 				else
 				{
 					// Game over!
-					[_loseSound play];
+					if(!_isMuted)
+						[_loseSound play];
 					[self showPopup:popupCannotRemove];
 				}
 			}
@@ -253,7 +263,8 @@
 				// Verify that the next card can be played.
 				if(![self canPlayNextCard])
 				{
-					[_loseSound play];
+					if(!_isMuted)
+						[_loseSound play];
 					[self showPopup:popupCannotPlace];
 				}
 			}
@@ -293,7 +304,8 @@
 	
 	if(![self canPlayNextCard])
 	{
-		[_loseSound play];
+		if(!_isMuted)
+			[_loseSound play];
 		[self showPopup:popupCannotPlace];
 	}
 }
@@ -351,6 +363,22 @@
 -(IBAction)quitGame:(id)sender
 {
 	[self.navigationController popViewControllerAnimated:NO];
+}
+
+-(IBAction)toggleMute:(id)sender
+{
+	if(_isMuted)
+		[self.muteToggleButton setBackgroundImage:[UIImage imageNamed:@"mute.png"] forState:UIControlStateNormal];
+	else
+		[self.muteToggleButton setBackgroundImage:[UIImage imageNamed:@"unmute.png"] forState:UIControlStateNormal];
+	
+	_isMuted = !_isMuted;
+	[[NSUserDefaults standardUserDefaults] setBool:_isMuted forKey:@"muted"];
+}
+
+-(IBAction)quitOrRestart:(id)sender
+{
+	
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

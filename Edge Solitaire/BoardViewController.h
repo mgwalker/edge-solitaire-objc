@@ -22,6 +22,8 @@
 	AVAudioPlayer* _loseSound;
 	AVAudioPlayer* _clickSound;
 	AVAudioPlayer* _clearSound;
+	
+	BOOL _isMuted;
 }
 
 @property (retain) IBOutlet CardSpot* spot0;
@@ -55,8 +57,12 @@
 @property (retain) IBOutlet UIButton* playAgainButton;
 @property (retain) IBOutlet UIButton* mainMenuButton;
 
+@property (retain) IBOutlet UIButton* muteToggleButton;
+
 -(IBAction)tensDone:(id)sender;
 -(IBAction)resetGame:(id)sender;
 -(IBAction)quitGame:(id)sender;
+-(IBAction)quitOrRestart:(id)sender;
+-(IBAction)toggleMute:(id)sender;
 
 @end
