@@ -386,7 +386,8 @@
 
 -(IBAction)quitOrRestart:(id)sender
 {
-	[self showPopup:self.popupRestart];
+	if(!_popupVisible)
+		[self showPopup:self.popupRestart];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -415,6 +416,8 @@
 		quitButton.hidden = NO;
 		quitButton.alpha = 0;
 		_popupVisible = YES;
+		if(imageToShow != self.popupRestart)
+			nextCard.hidden = YES;
 	}
 	else
 		_popupVisible = NO;
