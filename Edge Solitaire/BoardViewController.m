@@ -9,9 +9,18 @@
 #import "BoardViewController.h"
 #import "NSCountedSet+canMakeTen.h"
 
+typedef enum
+{
+	EdgeSoundTypeWinning,
+	EdgeSoundTypeLosing,
+	EdgeSoundTypeClearing,
+	EdgeSoundTypeClicking
+} EdgeSoundType;
+
 @interface BoardViewController()
 -(BOOL)canPlayNextCard;
 -(void)showPopup:(UIImageView*)imageToShow;
+-(void)playSound:(EdgeSoundType)soundType;
 @end
 
 @implementation BoardViewController
@@ -176,7 +185,7 @@
 		if(sum == 10)
 		{
 			if(!_isMuted)
-				[_clearSound play];
+				[self playSound:EdgeSoundTypeClearing];
 			
 			for(CardSpot* spot in _summingCardSpots)
 			{
@@ -186,14 +195,14 @@
 			[_summingCardSpots removeAllObjects];
 		}
 		else if(click && !_isMuted)
-			[_clickSound play];
+			[self playSound:EdgeSoundTypeClicking];
 	}
 	else if(nextCard.card != nil && cardSpot.card == nil)
 	{
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
 		{
 			if(!_isMuted)
-				[_clickSound play];
+				[self playSound:EdgeSoundTypeClicking];
 			cardSpot.card = nextCard.card;
 			
 			// If all the edge spots are occupied by their
@@ -215,7 +224,7 @@
 			if(hasWon)
 			{
 				if(!_isMuted)
-					[_winSound play];
+					[self playSound:EdgeSoundTypeWinning];
 				nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
@@ -259,7 +268,7 @@
 				{
 					// Game over!
 					if(!_isMuted)
-						[_loseSound play];
+						[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotRemove];
 				}
 			}
@@ -272,7 +281,7 @@
 				if(![self canPlayNextCard])
 				{
 					if(!_isMuted)
-						[_loseSound play];
+						[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotPlace];
 				}
 			}
@@ -313,7 +322,7 @@
 	if(![self canPlayNextCard])
 	{
 		if(!_isMuted)
-			[_loseSound play];
+			[self playSound:EdgeSoundTypeLosing];
 		[self showPopup:popupCannotPlace];
 	}
 }
@@ -466,6 +475,33 @@
 			 quitButton.hidden = YES;
 		 }
 	 }];
+}
+
+-(void)playSound:(EdgeSoundType)soundType
+{
+	[_winSound stop];
+	[_loseSound stop];
+	[_clearSound stop];
+	[_clickSound stop];
+	
+	switch(soundType)
+	{
+		case EdgeSoundTypeWinning:
+			[_winSound play];
+			break;
+			
+		case EdgeSoundTypeLosing:
+			[_loseSound play];
+			break;
+			
+		case EdgeSoundTypeClearing:
+			[_clearSound play];
+			break;
+			
+		case EdgeSoundTypeClicking:
+			[_clickSound play];
+			break;
+	}
 }
 
 - (void)viewDidUnload
