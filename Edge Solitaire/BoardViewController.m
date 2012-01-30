@@ -236,6 +236,8 @@ typedef enum
 				// some collection of cards can sum to 10.
 				//   - If not, game over.
 				//   - If so, move on.
+				
+				nextCard.hidden = YES;
 								
 				BOOL sumToTenExists = NO;
 				NSCountedSet* valuesToCheck = [NSCountedSet set];
@@ -260,7 +262,6 @@ typedef enum
 				{
 					// Start clearing sums of 10
 					instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
-					nextCard.hidden = YES;
 					tensDoneButton.hidden = NO;
 					_inSummingMode = YES;
 				}
@@ -425,8 +426,6 @@ typedef enum
 		quitButton.hidden = NO;
 		quitButton.alpha = 0;
 		_popupVisible = YES;
-		if(imageToShow != self.popupRestart)
-			nextCard.hidden = YES;
 	}
 	else
 		_popupVisible = NO;
