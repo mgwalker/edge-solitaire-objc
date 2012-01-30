@@ -184,8 +184,7 @@ typedef enum
 		
 		if(sum == 10)
 		{
-			if(!_isMuted)
-				[self playSound:EdgeSoundTypeClearing];
+			[self playSound:EdgeSoundTypeClearing];
 			
 			for(CardSpot* spot in _summingCardSpots)
 			{
@@ -194,15 +193,14 @@ typedef enum
 			}
 			[_summingCardSpots removeAllObjects];
 		}
-		else if(click && !_isMuted)
+		else if(click)
 			[self playSound:EdgeSoundTypeClicking];
 	}
 	else if(nextCard.card != nil && cardSpot.card == nil)
 	{
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
 		{
-			if(!_isMuted)
-				[self playSound:EdgeSoundTypeClicking];
+			[self playSound:EdgeSoundTypeClicking];
 			cardSpot.card = nextCard.card;
 			
 			// If all the edge spots are occupied by their
@@ -223,8 +221,7 @@ typedef enum
 			
 			if(hasWon)
 			{
-				if(!_isMuted)
-					[self playSound:EdgeSoundTypeWinning];
+				[self playSound:EdgeSoundTypeWinning];
 				nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
@@ -268,8 +265,7 @@ typedef enum
 				else
 				{
 					// Game over!
-					if(!_isMuted)
-						[self playSound:EdgeSoundTypeLosing];
+					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotRemove];
 				}
 			}
@@ -281,8 +277,7 @@ typedef enum
 				// Verify that the next card can be played.
 				if(![self canPlayNextCard])
 				{
-					if(!_isMuted)
-						[self playSound:EdgeSoundTypeLosing];
+					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotPlace];
 				}
 			}
@@ -322,8 +317,7 @@ typedef enum
 	
 	if(![self canPlayNextCard])
 	{
-		if(!_isMuted)
-			[self playSound:EdgeSoundTypeLosing];
+		[self playSound:EdgeSoundTypeLosing];
 		[self showPopup:popupCannotPlace];
 	}
 }
@@ -483,23 +477,26 @@ typedef enum
 	[_clearSound stop];
 	[_clickSound stop];
 	
-	switch(soundType)
+	if(!_isMuted)
 	{
-		case EdgeSoundTypeWinning:
-			[_winSound play];
-			break;
-			
-		case EdgeSoundTypeLosing:
-			[_loseSound play];
-			break;
-			
-		case EdgeSoundTypeClearing:
-			[_clearSound play];
-			break;
-			
-		case EdgeSoundTypeClicking:
-			[_clickSound play];
-			break;
+		switch(soundType)
+		{
+			case EdgeSoundTypeWinning:
+				[_winSound play];
+				break;
+				
+			case EdgeSoundTypeLosing:
+				[_loseSound play];
+				break;
+				
+			case EdgeSoundTypeClearing:
+				[_clearSound play];
+				break;
+				
+			case EdgeSoundTypeClicking:
+				[_clickSound play];
+				break;
+		}
 	}
 }
 
