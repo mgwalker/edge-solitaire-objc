@@ -443,6 +443,21 @@
 							<string key="NSResourceName">cannotRemove_iPhone.png</string>
 						</object>
 					</object>
+					<object class="IBUIImageView" id="279611101">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{77, 96}, {169, 169}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="876624642"/>
+						<string key="NSReuseIdentifierKey">_NS:567</string>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restart_iPad.png</string>
+						</object>
+					</object>
 					<object class="IBUIButton" id="91750444">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
@@ -489,6 +504,56 @@
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">PlayAgainButton_iPhone.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="744367283"/>
+						<reference key="IBUIFont" ref="352181808"/>
+					</object>
+					<object class="IBUIButton" id="1023939106">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{139, 247}, {161, 51}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="90278847"/>
+						<string key="NSReuseIdentifierKey">_NS:225</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="743708227"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="176021989"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">RestartButton_iPad.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="744367283"/>
+						<reference key="IBUIFont" ref="352181808"/>
+					</object>
+					<object class="IBUIButton" id="709310014">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{139, 306}, {161, 51}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="1070591055"/>
+						<string key="NSReuseIdentifierKey">_NS:225</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="743708227"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="176021989"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">QuitButton_iPad.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="744367283"/>
 						<reference key="IBUIFont" ref="352181808"/>
@@ -790,6 +855,30 @@
 					<int key="connectionID">117</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">popupRestart</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="279611101"/>
+					</object>
+					<int key="connectionID">121</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">restartButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1023939106"/>
+					</object>
+					<int key="connectionID">126</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">quitButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="709310014"/>
+					</object>
+					<int key="connectionID">127</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">tensDone:</string>
 						<reference key="source" ref="682169337"/>
@@ -834,6 +923,24 @@
 					</object>
 					<int key="connectionID">118</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">resetGame:</string>
+						<reference key="source" ref="1023939106"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">128</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">quitGame:</string>
+						<reference key="source" ref="709310014"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">129</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -871,6 +978,9 @@
 							<reference ref="90278847"/>
 							<reference ref="91750444"/>
 							<reference ref="651306247"/>
+							<reference ref="279611101"/>
+							<reference ref="709310014"/>
+							<reference ref="1023939106"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1042,6 +1152,23 @@
 						<reference key="object" ref="674023013"/>
 						<reference key="parent" ref="651306247"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">120</int>
+						<reference key="object" ref="279611101"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">122</int>
+						<reference key="object" ref="1023939106"/>
+						<reference key="parent" ref="191373211"/>
+						<string key="objectName">Play Again button</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">124</int>
+						<reference key="object" ref="709310014"/>
+						<reference key="parent" ref="191373211"/>
+						<string key="objectName">Play Again button</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1058,6 +1185,9 @@
 				<string key="114.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="115.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="116.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="120.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="122.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="124.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="34.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="60.CustomClassName">CardSpot</string>
 				<string key="60.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1101,7 +1231,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">119</int>
+			<int key="maxID">129</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1146,7 +1276,10 @@
 						<string key="popupBackground">UIImageView</string>
 						<string key="popupCannotPlace">UIImageView</string>
 						<string key="popupCannotRemove">UIImageView</string>
+						<string key="popupRestart">UIImageView</string>
 						<string key="popupWin">UIImageView</string>
+						<string key="quitButton">UIButton</string>
+						<string key="restartButton">UIButton</string>
 						<string key="spot0">CardSpot</string>
 						<string key="spot1">CardSpot</string>
 						<string key="spot10">CardSpot</string>
@@ -1198,9 +1331,21 @@
 							<string key="name">popupCannotRemove</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="popupRestart">
+							<string key="name">popupRestart</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="popupWin">
 							<string key="name">popupWin</string>
 							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="quitButton">
+							<string key="name">quitButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="restartButton">
+							<string key="name">restartButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="spot0">
 							<string key="name">spot0</string>
@@ -1302,11 +1447,14 @@
 			<string key="CardBack_iPhone.png">{64, 79}</string>
 			<string key="MenuButton_iPhone.png">{161, 51}</string>
 			<string key="PlayAgainButton_iPhone.png">{161, 51}</string>
+			<string key="QuitButton_iPad.png">{320, 102}</string>
+			<string key="RestartButton_iPad.png">{320, 102}</string>
 			<string key="cannotPlace_iPhone.png">{256, 165}</string>
 			<string key="cannotRemove_iPhone.png">{258, 169}</string>
 			<string key="mute.png">{20, 20}</string>
 			<string key="popupBackground_iPhone.png">{320, 460}</string>
 			<string key="restart.png">{20, 20}</string>
+			<string key="restart_iPad.png">{324, 324}</string>
 			<string key="won_iPhone.png">{259, 242}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
