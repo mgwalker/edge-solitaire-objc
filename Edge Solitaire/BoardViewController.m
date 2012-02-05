@@ -474,30 +474,33 @@ typedef enum
 }
 
 -(void)playSound:(EdgeSoundType)soundType
-{
-	[_winSound stop];
-	[_loseSound stop];
-	[_clearSound stop];
-	[_clickSound stop];
-	
+{	
 	if(!_isMuted)
 	{
 		switch(soundType)
 		{
 			case EdgeSoundTypeWinning:
-				[_winSound play];
+				_winSound.currentTime = 0;
+				if(!_winSound.playing)
+					[_winSound play];
 				break;
 				
 			case EdgeSoundTypeLosing:
-				[_loseSound play];
+				_loseSound.currentTime = 0;
+				if(!_loseSound.playing)
+					[_loseSound play];
 				break;
 				
 			case EdgeSoundTypeClearing:
-				[_clearSound play];
+				_clearSound.currentTime = 0;
+				if(!_clearSound.playing)
+					[_clearSound play];
 				break;
 				
 			case EdgeSoundTypeClicking:
-				[_clickSound play];
+				_clickSound.currentTime = 0;
+				if(!_clickSound.playing)
+					[_clickSound play];
 				break;
 		}
 	}
