@@ -203,6 +203,7 @@ typedef enum
 	{
 		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
 		{
+			instruction.text = @"Tap a spot above to place the next card.";
 			[self playSound:EdgeSoundTypeClicking];
 			cardSpot.card = nextCard.card;
 			
@@ -290,16 +291,6 @@ typedef enum
 			// Tried to place a face card on a
 			// non-face-card slot.
 			instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
-			dispatch_queue_t q = dispatch_queue_create("Instruction return", NULL);
-			dispatch_async(q, ^(void)
-						   {
-							   [NSThread sleepForTimeInterval:3];
-							   dispatch_async(dispatch_get_main_queue(), ^(void)
-							   {
-								   instruction.text = @"Tap a spot above to place the next card.";
-							   });
-						   });
-			dispatch_release(q);
 		}
 	}
 }
