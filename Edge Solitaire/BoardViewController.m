@@ -45,6 +45,9 @@ typedef enum
 		_inSummingMode = NO;
 		_popupVisible = NO;
 		
+		// Allow audio from other apps to mix in.
+		[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
+		
 		_winSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Win"
 																						 withExtension:@"mp3"]
 														   error:NULL];
