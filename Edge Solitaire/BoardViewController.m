@@ -380,9 +380,9 @@ typedef enum
 -(IBAction)toggleMute:(id)sender
 {
 	if(_isMuted)
-		[self.muteToggleButton setBackgroundImage:[UIImage imageNamed:@"unmute.png"] forState:UIControlStateNormal];
+		[self.muteToggleButton setImage:[UIImage imageNamed:@"unmute.png"] forState:UIControlStateNormal];
 	else
-		[self.muteToggleButton setBackgroundImage:[UIImage imageNamed:@"mute.png"] forState:UIControlStateNormal];
+		[self.muteToggleButton setImage:[UIImage imageNamed:@"mute.png"] forState:UIControlStateNormal];
 	
 	_isMuted = !_isMuted;
 	[[NSUserDefaults standardUserDefaults] setBool:_isMuted forKey:@"muted"];
