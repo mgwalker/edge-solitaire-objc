@@ -30,6 +30,12 @@
 		B955692F14C1E7B8003850C7 /* RestartButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B955692914C1E7B8003850C7 /* RestartButton_iPad.png */; };
 		B955693014C1E7B8003850C7 /* restart_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B955692A14C1E7B8003850C7 /* restart_iPad.png */; };
 		B955693114C1E7B8003850C7 /* restart_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B955692B14C1E7B8003850C7 /* restart_iPad@2x.png */; };
+		B95B80D414E0ABA4007FEEF5 /* restart_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80D214E0ABA4007FEEF5 /* restart_iPhone.png */; };
+		B95B80D514E0ABA4007FEEF5 /* restart_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80D314E0ABA4007FEEF5 /* restart_iPhone@2x.png */; };
+		B95B80D914E0AC03007FEEF5 /* QuitButton_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80D714E0AC03007FEEF5 /* QuitButton_iPhone.png */; };
+		B95B80DA14E0AC03007FEEF5 /* RestartButton_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80D814E0AC03007FEEF5 /* RestartButton_iPhone.png */; };
+		B95B80DD14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80DB14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png */; };
+		B95B80DE14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80DC14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png */; };
 		B9667A3F14C100C0006B58DB /* mute.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3914C100C0006B58DB /* mute.png */; };
 		B9667A4014C100C0006B58DB /* mute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3A14C100C0006B58DB /* mute@2x.png */; };
 		B9667A4114C100C0006B58DB /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3B14C100C0006B58DB /* restart.png */; };
@@ -347,6 +353,12 @@
 		B955692914C1E7B8003850C7 /* RestartButton_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButton_iPad.png; sourceTree = "<group>"; };
 		B955692A14C1E7B8003850C7 /* restart_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart_iPad.png; sourceTree = "<group>"; };
 		B955692B14C1E7B8003850C7 /* restart_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restart_iPad@2x.png"; sourceTree = "<group>"; };
+		B95B80D214E0ABA4007FEEF5 /* restart_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart_iPhone.png; sourceTree = "<group>"; };
+		B95B80D314E0ABA4007FEEF5 /* restart_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restart_iPhone@2x.png"; sourceTree = "<group>"; };
+		B95B80D714E0AC03007FEEF5 /* QuitButton_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuitButton_iPhone.png; sourceTree = "<group>"; };
+		B95B80D814E0AC03007FEEF5 /* RestartButton_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButton_iPhone.png; sourceTree = "<group>"; };
+		B95B80DB14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuitButton_iPhone@2x.png"; sourceTree = "<group>"; };
+		B95B80DC14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RestartButton_iPhone@2x.png"; sourceTree = "<group>"; };
 		B9667A3914C100C0006B58DB /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute.png; sourceTree = "<group>"; };
 		B9667A3A14C100C0006B58DB /* mute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute@2x.png"; sourceTree = "<group>"; };
 		B9667A3B14C100C0006B58DB /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart.png; sourceTree = "<group>"; };
@@ -803,6 +815,12 @@
 		B9A47CB214BE870D00D776D2 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				B95B80DB14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png */,
+				B95B80DC14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png */,
+				B95B80D714E0AC03007FEEF5 /* QuitButton_iPhone.png */,
+				B95B80D814E0AC03007FEEF5 /* RestartButton_iPhone.png */,
+				B95B80D214E0ABA4007FEEF5 /* restart_iPhone.png */,
+				B95B80D314E0ABA4007FEEF5 /* restart_iPhone@2x.png */,
 				B9A47CB314BE873300D776D2 /* cannotPlace_iPhone.png */,
 				B9A47CB414BE873300D776D2 /* cannotPlace_iPhone@2x.png */,
 				B9A47CB514BE873300D776D2 /* cannotRemove_iPhone.png */,
@@ -1507,6 +1525,12 @@
 				B955692F14C1E7B8003850C7 /* RestartButton_iPad.png in Resources */,
 				B955693014C1E7B8003850C7 /* restart_iPad.png in Resources */,
 				B955693114C1E7B8003850C7 /* restart_iPad@2x.png in Resources */,
+				B95B80D414E0ABA4007FEEF5 /* restart_iPhone.png in Resources */,
+				B95B80D514E0ABA4007FEEF5 /* restart_iPhone@2x.png in Resources */,
+				B95B80D914E0AC03007FEEF5 /* QuitButton_iPhone.png in Resources */,
+				B95B80DA14E0AC03007FEEF5 /* RestartButton_iPhone.png in Resources */,
+				B95B80DD14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png in Resources */,
+				B95B80DE14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

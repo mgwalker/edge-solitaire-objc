@@ -149,7 +149,7 @@
 						<string key="NSFrame">{{92, 50}, {64, 79}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="623205280"/>
+						<reference key="NSNextKeyView" ref="279611101"/>
 						<string key="NSReuseIdentifierKey">_NS:212</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -254,7 +254,7 @@
 						<string key="NSFrame">{{92, 224}, {64, 79}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1023939106"/>
+						<reference key="NSNextKeyView" ref="90278847"/>
 						<string key="NSReuseIdentifierKey">_NS:212</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -419,7 +419,7 @@
 						<string key="NSFrame">{{32, 96}, {256, 165}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="279611101"/>
+						<reference key="NSNextKeyView" ref="876624642"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -446,16 +446,16 @@
 					<object class="IBUIImageView" id="279611101">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{77, 96}, {169, 169}}</string>
+						<string key="NSFrame">{{93, 103}, {136, 136}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="876624642"/>
+						<reference key="NSNextKeyView" ref="623205280"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">restart_iPad.png</string>
+							<string key="NSResourceName">restart_iPhone.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="91750444">
@@ -489,7 +489,7 @@
 						<string key="NSFrame">{{139, 247}, {161, 51}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="834705724"/>
+						<reference key="NSNextKeyView" ref="1023939106"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -511,10 +511,10 @@
 					<object class="IBUIButton" id="1023939106">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{139, 247}, {161, 51}}</string>
+						<string key="NSFrame">{{139, 247}, {160, 51}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="90278847"/>
+						<reference key="NSNextKeyView" ref="834705724"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -528,7 +528,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="176021989"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">RestartButton_iPad.png</string>
+							<string key="NSResourceName">RestartButton_iPhone.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="744367283"/>
 						<reference key="IBUIFont" ref="352181808"/>
@@ -536,7 +536,7 @@
 					<object class="IBUIButton" id="709310014">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{139, 306}, {161, 51}}</string>
+						<string key="NSFrame">{{139, 306}, {160, 51}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1070591055"/>
@@ -553,7 +553,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="176021989"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">QuitButton_iPad.png</string>
+							<string key="NSResourceName">QuitButton_iPhone.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="744367283"/>
 						<reference key="IBUIFont" ref="352181808"/>
@@ -978,9 +978,9 @@
 							<reference ref="90278847"/>
 							<reference ref="91750444"/>
 							<reference ref="651306247"/>
-							<reference ref="279611101"/>
 							<reference ref="709310014"/>
 							<reference ref="1023939106"/>
+							<reference ref="279611101"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1465,14 +1465,14 @@
 			<string key="CardBack_iPhone.png">{64, 79}</string>
 			<string key="MenuButton_iPhone.png">{161, 51}</string>
 			<string key="PlayAgainButton_iPhone.png">{161, 51}</string>
-			<string key="QuitButton_iPad.png">{320, 102}</string>
-			<string key="RestartButton_iPad.png">{320, 102}</string>
+			<string key="QuitButton_iPhone.png">{160, 51}</string>
+			<string key="RestartButton_iPhone.png">{160, 51}</string>
 			<string key="cannotPlace_iPhone.png">{256, 165}</string>
 			<string key="cannotRemove_iPhone.png">{258, 169}</string>
 			<string key="mute.png">{20, 20}</string>
 			<string key="popupBackground_iPhone.png">{320, 460}</string>
 			<string key="restart.png">{20, 20}</string>
-			<string key="restart_iPad.png">{324, 324}</string>
+			<string key="restart_iPhone.png">{136, 136}</string>
 			<string key="won_iPhone.png">{259, 242}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
