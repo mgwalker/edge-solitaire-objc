@@ -92,60 +92,60 @@ typedef enum
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	spot0.cellID = 0;
-	spot0.delegate = self;
-	spot1.cellID = 1;
-	spot1.delegate = self;
-	spot2.cellID = 2;
-	spot2.delegate = self;
-	spot3.cellID = 3;
-	spot3.delegate = self;
+	self.spot0.cellID = 0;
+	self.spot0.delegate = self;
+	self.spot1.cellID = 1;
+	self.spot1.delegate = self;
+	self.spot2.cellID = 2;
+	self.spot2.delegate = self;
+	self.spot3.cellID = 3;
+	self.spot3.delegate = self;
 	
-	spot4.cellID = 4;
-	spot4.delegate = self;
-	spot5.cellID = 5;
-	spot5.delegate = self;
-	spot6.cellID = 6;
-	spot6.delegate = self;
-	spot7.cellID = 7;
-	spot7.delegate = self;
+	self.spot4.cellID = 4;
+	self.spot4.delegate = self;
+	self.spot5.cellID = 5;
+	self.spot5.delegate = self;
+	self.spot6.cellID = 6;
+	self.spot6.delegate = self;
+	self.spot7.cellID = 7;
+	self.spot7.delegate = self;
 
-	spot8.cellID = 8;
-	spot8.delegate = self;
-	spot9.cellID = 9;
-	spot9.delegate = self;
-	spot10.cellID = 10;
-	spot10.delegate = self;
-	spot11.cellID = 11;
-	spot11.delegate = self;
+	self.spot8.cellID = 8;
+	self.spot8.delegate = self;
+	self.spot9.cellID = 9;
+	self.spot9.delegate = self;
+	self.spot10.cellID = 10;
+	self.spot10.delegate = self;
+	self.spot11.cellID = 11;
+	self.spot11.delegate = self;
 
-	spot12.cellID = 12;
-	spot12.delegate = self;
-	spot13.cellID = 13;
-	spot13.delegate = self;
-	spot14.cellID = 14;
-	spot14.delegate = self;
-	spot15.cellID = 15;
-	spot15.delegate = self;
+	self.spot12.cellID = 12;
+	self.spot12.delegate = self;
+	self.spot13.cellID = 13;
+	self.spot13.delegate = self;
+	self.spot14.cellID = 14;
+	self.spot14.delegate = self;
+	self.spot15.cellID = 15;
+	self.spot15.delegate = self;
 	
 	_allCardSpots = [NSArray arrayWithObjects:
-					 spot0, spot1, spot2, spot3,
-					 spot4, spot5, spot6, spot7,
-					 spot8, spot9, spot10, spot11,
-					 spot12, spot13, spot14, spot15, nil];
+					 self.spot0, self.spot1, self.spot2, self.spot3,
+					 self.spot4, self.spot5, self.spot6, self.spot7,
+					 self.spot8, self.spot9, self.spot10, self.spot11,
+					 self.spot12, self.spot13, self.spot14, self.spot15, nil];
 
 	// Start out hidden.  We don't want them to
 	// fade out when they aren't supposed to be
 	// there at all!
-	popupBackground.hidden = YES;
-	popupCannotPlace.hidden = YES;
-	popupCannotRemove.hidden = YES;
-	popupRestart.hidden = YES;
-	popupWin.hidden = YES;
-	playAgainButton.hidden = YES;
-	mainMenuButton.hidden = YES;
-	restartButton.hidden = YES;
-	quitButton.hidden = YES;
+	self.popupBackground.hidden = YES;
+	self.popupCannotPlace.hidden = YES;
+	self.popupCannotRemove.hidden = YES;
+	self.popupRestart.hidden = YES;
+	self.popupWin.hidden = YES;
+	self.playAgainButton.hidden = YES;
+	self.mainMenuButton.hidden = YES;
+	self.restartButton.hidden = YES;
+	self.quitButton.hidden = YES;
 	
 	[_winSound prepareToPlay];
 	[_loseSound prepareToPlay];
@@ -199,9 +199,9 @@ typedef enum
 		else if(click)
 			[self playSound:EdgeSoundTypeClicking];
 	}
-	else if(nextCard.card != nil && cardSpot.card == nil)
+	else if(self.nextCard.card != nil && cardSpot.card == nil)
 	{
-		if(nextCard.card.value < 11 || nextCard.card.value == cardSpot.edgeValue)
+		if(self.nextCard.card.value < 11 || self.nextCard.card.value == cardSpot.edgeValue)
 		{
 			instruction.text = @"Tap a spot above to place the next card.";
 			[self playSound:EdgeSoundTypeClicking];
@@ -226,7 +226,7 @@ typedef enum
 			if(hasWon)
 			{
 				[self playSound:EdgeSoundTypeWinning];
-				nextCard.hidden = YES;
+				self.nextCard.hidden = YES;
 				[self showPopup:popupWin];
 				return;
 			}
@@ -238,7 +238,7 @@ typedef enum
 				//   - If not, game over.
 				//   - If so, move on.
 				
-				nextCard.hidden = YES;
+				self.nextCard.hidden = YES;
 								
 				BOOL sumToTenExists = NO;
 				NSCountedSet* valuesToCheck = [NSCountedSet set];
@@ -262,8 +262,8 @@ typedef enum
 				if(sumToTenExists)
 				{
 					// Start clearing sums of 10
-					instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
-					tensDoneButton.hidden = NO;
+					self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					self.tensDoneButton.hidden = NO;
 					_inSummingMode = YES;
 				}
 				else
@@ -275,7 +275,7 @@ typedef enum
 			}
 			else
 			{
-				nextCard.card = _cardDeck.lastObject;
+				self.nextCard.card = _cardDeck.lastObject;
 				[_cardDeck removeLastObject];
 
 				// Verify that the next card can be played.
@@ -290,7 +290,7 @@ typedef enum
 		{
 			// Tried to place a face card on a
 			// non-face-card slot.
-			instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			self.instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
 		}
 	}
 }
@@ -302,11 +302,11 @@ typedef enum
 	[_summingCardSpots removeAllObjects];
 	
 	_inSummingMode = NO;
-	instruction.text = @"Tap a spot above to place the next card.";
-	nextCard.hidden = NO;
-	tensDoneButton.hidden = YES;
+	self.instruction.text = @"Tap a spot above to place the next card.";
+	self.nextCard.hidden = NO;
+	self.tensDoneButton.hidden = YES;
 	
-	nextCard.card = _cardDeck.lastObject;
+	self.nextCard.card = _cardDeck.lastObject;
 	[_cardDeck removeLastObject];
 	
 	if(![self canPlayNextCard])
@@ -319,7 +319,7 @@ typedef enum
 -(BOOL)canPlayNextCard
 {
 	BOOL can = NO;
-	if(nextCard.card.value > 10)
+	if(self.nextCard.card.value > 10)
 	{
 		for(CardSpot* spot in _allCardSpots)
 		{
@@ -356,14 +356,14 @@ typedef enum
 	[_summingCardSpots removeAllObjects];
 	_cardDeck = [Card shuffledDeck];
 
-	nextCard.hidden = NO;
-	nextCard.card = _cardDeck.lastObject;
+	self.nextCard.hidden = NO;
+	self.nextCard.card = _cardDeck.lastObject;
 	[_cardDeck removeLastObject];
 
 	_inSummingMode = NO;
-	instruction.text = @"Tap a spot above to place the next card.";
-	nextCard.hidden = NO;
-	tensDoneButton.hidden = YES;
+	self.instruction.text = @"Tap a spot above to place the next card.";
+	self.nextCard.hidden = NO;
+	self.tensDoneButton.hidden = YES;
 }
 
 -(IBAction)quitGame:(id)sender
@@ -400,19 +400,19 @@ typedef enum
 {
 	if(imageToShow)
 	{
-		instruction.text = @"";
-		popupBackground.hidden = NO;
-		popupBackground.alpha = 0;
+		self.instruction.text = @"";
+		self.popupBackground.hidden = NO;
+		self.popupBackground.alpha = 0;
 		imageToShow.hidden = NO;
 		imageToShow.alpha = 0;
-		playAgainButton.hidden= NO;
-		playAgainButton.alpha= 0;
-		mainMenuButton.hidden = NO;
-		mainMenuButton.alpha = 0;
-		restartButton.hidden = NO;
-		restartButton.alpha = 0;
-		quitButton.hidden = NO;
-		quitButton.alpha = 0;
+		self.playAgainButton.hidden= NO;
+		self.playAgainButton.alpha= 0;
+		self.mainMenuButton.hidden = NO;
+		self.mainMenuButton.alpha = 0;
+		self.restartButton.hidden = NO;
+		self.restartButton.alpha = 0;
+		self.quitButton.hidden = NO;
+		self.quitButton.alpha = 0;
 		_popupVisible = YES;
 	}
 	else
@@ -422,44 +422,44 @@ typedef enum
 	 {
 		if(imageToShow)
 		{
-			popupBackground.alpha = 1;
+			self.popupBackground.alpha = 1;
 			imageToShow.alpha = 1;
 			if(imageToShow == self.popupRestart)
 			{
-				restartButton.alpha = 1;
-				quitButton.alpha = 1;
+				self.restartButton.alpha = 1;
+				self.quitButton.alpha = 1;
 			}
 			else
 			{
-				playAgainButton.alpha= 1;
-				mainMenuButton.alpha = 1;
+				self.playAgainButton.alpha= 1;
+				self.mainMenuButton.alpha = 1;
 			}
 		}
 		else
 		{
-			popupBackground.alpha = 0;
-			popupCannotPlace.alpha = 0;
-			popupCannotRemove.alpha = 0;
-			popupRestart.alpha = 0;
-			popupWin.alpha = 0;
-			playAgainButton.alpha = 0;
-			mainMenuButton.alpha = 0;
-			restartButton.alpha = 0;
-			quitButton.alpha = 0;
+			self.popupBackground.alpha = 0;
+			self.popupCannotPlace.alpha = 0;
+			self.popupCannotRemove.alpha = 0;
+			self.popupRestart.alpha = 0;
+			self.popupWin.alpha = 0;
+			self.playAgainButton.alpha = 0;
+			self.mainMenuButton.alpha = 0;
+			self.restartButton.alpha = 0;
+			self.quitButton.alpha = 0;
 		}
 	 } completion:^(BOOL finished)
 	 {
 		 if(!imageToShow)
 		 {
-			 popupBackground.hidden = YES;
-			 popupCannotPlace.hidden = YES;
-			 popupCannotRemove.hidden = YES;
-			 popupRestart.hidden = YES;
-			 popupWin.hidden = YES;
-			 playAgainButton.hidden = YES;
-			 mainMenuButton.hidden = YES;
-			 restartButton.hidden = YES;
-			 quitButton.hidden = YES;
+			 self.popupBackground.hidden = YES;
+			 self.popupCannotPlace.hidden = YES;
+			 self.popupCannotRemove.hidden = YES;
+			 self.popupRestart.hidden = YES;
+			 self.popupWin.hidden = YES;
+			 self.playAgainButton.hidden = YES;
+			 self.mainMenuButton.hidden = YES;
+			 self.restartButton.hidden = YES;
+			 self.quitButton.hidden = YES;
 		 }
 	 }];
 }
@@ -498,16 +498,29 @@ typedef enum
 }
 
 - (void)viewDidUnload
-{
-    [super viewDidUnload];
-	spot0 = spot1 = spot2 = spot3 = nil;
-	spot4 = spot5 = spot6 = spot7 = nil;
-	spot8 = spot9 = spot10 = spot11 = nil;
-	spot12 = spot13 = spot14 = spot15 = nil;
+{	
+	self.spot0 = self.spot1 = self.spot2 = self.spot3 = nil;	
+	self.spot4 = self.spot5 = self.spot6 = self.spot7 = nil;
+	self.spot8 = self.spot9 = self.spot10 = self.spot11 = nil;	
+	self.spot12 = self.spot13 = self.spot14 = self.spot15 = nil;
 	
-	instruction = nil;
-	nextCard = nil;
-	tensDoneButton = nil;
+	self.instruction = nil;
+	self.nextCard = nil;
+	self.tensDoneButton = nil;
+	
+	self.popupBackground = nil;
+	self.popupCannotPlace = nil;
+	self.popupCannotRemove = nil;
+	self.popupRestart = nil;
+	self.popupWin = nil;
+	self.playAgainButton = nil;
+	self.mainMenuButton = nil;
+	self.restartButton = nil;
+	self.quitButton = nil;
+	
+	self.muteToggleButton = nil;
+	
+	[super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
