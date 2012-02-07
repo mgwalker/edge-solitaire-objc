@@ -36,6 +36,10 @@
 		B95B80DA14E0AC03007FEEF5 /* RestartButton_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80D814E0AC03007FEEF5 /* RestartButton_iPhone.png */; };
 		B95B80DD14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80DB14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png */; };
 		B95B80DE14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80DC14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png */; };
+		B95B80E314E0AD93007FEEF5 /* StartButton_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80DF14E0AD93007FEEF5 /* StartButton_iPad.png */; };
+		B95B80E414E0AD93007FEEF5 /* StartButton_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80E014E0AD93007FEEF5 /* StartButton_iPad@2x.png */; };
+		B95B80E514E0AD93007FEEF5 /* StartButton_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80E114E0AD93007FEEF5 /* StartButton_iPhone.png */; };
+		B95B80E614E0AD93007FEEF5 /* StartButton_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B80E214E0AD93007FEEF5 /* StartButton_iPhone@2x.png */; };
 		B9667A3F14C100C0006B58DB /* mute.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3914C100C0006B58DB /* mute.png */; };
 		B9667A4014C100C0006B58DB /* mute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3A14C100C0006B58DB /* mute@2x.png */; };
 		B9667A4114C100C0006B58DB /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3B14C100C0006B58DB /* restart.png */; };
@@ -359,6 +363,10 @@
 		B95B80D814E0AC03007FEEF5 /* RestartButton_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButton_iPhone.png; sourceTree = "<group>"; };
 		B95B80DB14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuitButton_iPhone@2x.png"; sourceTree = "<group>"; };
 		B95B80DC14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RestartButton_iPhone@2x.png"; sourceTree = "<group>"; };
+		B95B80DF14E0AD93007FEEF5 /* StartButton_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton_iPad.png; sourceTree = "<group>"; };
+		B95B80E014E0AD93007FEEF5 /* StartButton_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StartButton_iPad@2x.png"; sourceTree = "<group>"; };
+		B95B80E114E0AD93007FEEF5 /* StartButton_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton_iPhone.png; sourceTree = "<group>"; };
+		B95B80E214E0AD93007FEEF5 /* StartButton_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StartButton_iPhone@2x.png"; sourceTree = "<group>"; };
 		B9667A3914C100C0006B58DB /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute.png; sourceTree = "<group>"; };
 		B9667A3A14C100C0006B58DB /* mute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute@2x.png"; sourceTree = "<group>"; };
 		B9667A3B14C100C0006B58DB /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart.png; sourceTree = "<group>"; };
@@ -775,6 +783,10 @@
 				B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */,
 				B9F20C1514B7F3D900F9810A /* cardspot_iPhone.png */,
 				B9F20C1614B7F3D900F9810A /* cardspot_iPhone@2x.png */,
+				B95B80DF14E0AD93007FEEF5 /* StartButton_iPad.png */,
+				B95B80E014E0AD93007FEEF5 /* StartButton_iPad@2x.png */,
+				B95B80E114E0AD93007FEEF5 /* StartButton_iPhone.png */,
+				B95B80E214E0AD93007FEEF5 /* StartButton_iPhone@2x.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -1531,6 +1543,10 @@
 				B95B80DA14E0AC03007FEEF5 /* RestartButton_iPhone.png in Resources */,
 				B95B80DD14E0AC31007FEEF5 /* QuitButton_iPhone@2x.png in Resources */,
 				B95B80DE14E0AC31007FEEF5 /* RestartButton_iPhone@2x.png in Resources */,
+				B95B80E314E0AD93007FEEF5 /* StartButton_iPad.png in Resources */,
+				B95B80E414E0AD93007FEEF5 /* StartButton_iPad@2x.png in Resources */,
+				B95B80E514E0AD93007FEEF5 /* StartButton_iPhone.png in Resources */,
+				B95B80E614E0AD93007FEEF5 /* StartButton_iPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
