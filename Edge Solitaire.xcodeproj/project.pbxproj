@@ -1191,6 +1191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B90A956414B68E9300F33242 /* Build configuration list for PBXNativeTarget "Edge Solitaire" */;
 			buildPhases = (
+				B914C2F014E0D05A003B4304 /* ShellScript */,
 				B90A954314B68E9300F33242 /* Sources */,
 				B90A954414B68E9300F33242 /* Frameworks */,
 				B90A954514B68E9300F33242 /* Resources */,
@@ -1538,6 +1539,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B914C2F014E0D05A003B4304 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TARGET=\"$PROJECT_DIR/Edge Solitaire/Edge Solitaire-Info.plist\"\necho $TARGET\nif [ ! -f \"$TARGET\" ]; then\necho \"missing file $TARGET\"\nexit 1;\nfi\n\n# the perl regex splits out the last part of a build number (ie: 1.1.1) and increments it by one\n# if you have a build number that is more than 3 components, add a '\\.\\d+' into the first part of the regex.\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$TARGET\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $buildNumber\" \"$TARGET\"\n\n#NEW_VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$TARGET\" | /usr/bin/perl -pe 's/(\\d+\\.\\d+\\.)(\\d+)/$1.($2+1)/eg'`\n#echo $NEW_VERSION;\n#/usr/libexec/PListBuddy -c \"Set CFBundleVersion $NEW_VERSION\" \"$TARGET\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B90A954314B68E9300F33242 /* Sources */ = {
