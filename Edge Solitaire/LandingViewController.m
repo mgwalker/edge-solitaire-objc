@@ -11,8 +11,6 @@
 
 @implementation LandingViewController
 
-@synthesize startGameButton, tutorialButton;
-
 -(id)init
 {
 	self = [super initWithNibName:@"LandingView" bundle:nil];
@@ -51,8 +49,6 @@
     [super viewDidLoad];
 	
 	self.navigationController.navigationBarHidden = YES;
-	[self.startGameButton useWhiteStyle];
-	[self.tutorialButton useWhiteStyle];
 }
 
 - (void)viewDidUnload
@@ -67,11 +63,6 @@
 {
 	BoardViewController* vc = [[BoardViewController alloc] init];
 	[self.navigationController pushViewController:vc animated:NO];
-}
-
--(IBAction)tutorial:(id)sender
-{
-	
 }
 
 #pragma mark - Rotation
