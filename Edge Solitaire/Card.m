@@ -35,10 +35,10 @@
 		[deck addObject:[[Card alloc] initWithSuit:CardSuitSpade andValue:i]];		
 	}
 	
-	for(int i = 0; i < 52; i++)
+	for(int i = 0; i < (52 * 4); i++)
 	{
 		NSInteger r = arc4random() % 52;
-		[deck exchangeObjectAtIndex:i withObjectAtIndex:r];
+		[deck exchangeObjectAtIndex:(i % 52) withObjectAtIndex:r];
 	}
 	
 	return deck;
