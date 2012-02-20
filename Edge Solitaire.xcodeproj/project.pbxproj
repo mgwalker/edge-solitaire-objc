@@ -1211,7 +1211,7 @@
 		B90A953E14B68E9300F33242 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = B90A954114B68E9300F33242 /* Build configuration list for PBXProject "Edge Solitaire" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1649,13 +1649,13 @@
 		B90A956614B68E9300F33242 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Greg Walker";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edge Solitaire/Edge Solitaire-Prefix.pch";
 				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E7A5633A-8F2C-48D3-AD3A-9EC3ED5A2AF1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
