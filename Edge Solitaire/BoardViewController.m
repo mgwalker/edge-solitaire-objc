@@ -154,7 +154,7 @@ typedef enum
 	
 	// Initialize to the inverse of the saved state,
 	// then toggle.  Get the correct UI for free!
-	_isMuted = ![[NSUserDefaults standardUserDefaults] boolForKey:@"muted"];
+	_isMuted = ![Settings isMuted];
 	[self toggleMute:nil];
 
 	[self resetGame:nil];
@@ -228,6 +228,8 @@ typedef enum
 				[self playSound:EdgeSoundTypeWinning];
 				self.nextCard.hidden = YES;
 				[self showPopup:popupWin];
+				[Settings incrementEdgeGamesPlayed];
+				[Settings incrementEdgeGamesWon];
 				return;
 			}
 			
@@ -271,6 +273,7 @@ typedef enum
 					// Game over!
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotRemove];
+					[Settings incrementEdgeGamesPlayed];
 				}
 			}
 			else
@@ -283,6 +286,7 @@ typedef enum
 				{
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotPlace];
+					[Settings incrementEdgeGamesPlayed];
 				}
 			}
 		}
@@ -313,6 +317,7 @@ typedef enum
 	{
 		[self playSound:EdgeSoundTypeLosing];
 		[self showPopup:popupCannotPlace];
+		[Settings incrementEdgeGamesPlayed];
 	}
 }
 
@@ -379,7 +384,7 @@ typedef enum
 		[self.muteToggleButton setImage:[UIImage imageNamed:@"mute.png"] forState:UIControlStateNormal];
 	
 	_isMuted = !_isMuted;
-	[[NSUserDefaults standardUserDefaults] setBool:_isMuted forKey:@"muted"];
+	[Settings setIsMuted:_isMuted];
 }
 
 -(IBAction)quitOrRestart:(id)sender
