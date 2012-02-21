@@ -10,7 +10,7 @@
 #import "CardSpot.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface BoardViewController : UIUniversalViewController <CardSpotDelegate, UIAlertViewDelegate>
+@interface BoardViewController : UIUniversalViewController <CardSpotDelegate>
 {
 	// Array of Cards
 	NSMutableArray* _cardDeck;

@@ -393,14 +393,6 @@ typedef enum
 		[self showPopup:self.popupRestart];
 }
 
--(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-	if(buttonIndex == alertView.cancelButtonIndex)
-		[self resetGame:nil];
-	else
-		[self.navigationController popViewControllerAnimated:YES];
-}
-
 -(void)showPopup:(UIImageView *)imageToShow
 {
 	if(imageToShow)
