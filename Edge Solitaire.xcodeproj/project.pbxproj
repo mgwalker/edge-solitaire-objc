@@ -1661,7 +1661,7 @@
 				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E7A5633A-8F2C-48D3-AD3A-9EC3ED5A2AF1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFAD0A96-9069-41D3-B640-C84B76DCFD26";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
