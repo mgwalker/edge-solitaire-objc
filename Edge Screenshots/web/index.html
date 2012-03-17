@@ -1,0 +1,181 @@
+<html>
+<head>
+	<title>Zowmbeh: Edge Solitaire</title>
+	<style type="text/css">
+
+		/* Google web fonts */
+		@font-face
+		{
+			font-family: 'Homenaje';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Homenaje'), local('Homenaje-Regular'), url('Homenaje.woff') format('woff');
+		}		
+		@font-face
+		{
+			font-family: 'Asap';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Asap'), local('Asap-Regular'), url('Asap.woff') format('woff');
+		}
+		
+		body
+		{
+			background-color: #131;
+			color: #DDD;
+			font-family: 'Asap';
+			line-height: 1.7em;
+			text-shadow: 1px 1px 2px black;
+		}
+		
+		img#appLogo
+		{
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			max-width: 250px;
+			max-height: 350px;
+		}
+		
+		#appStoreBadge
+		{
+			position: absolute;
+			left: 35px;
+			top: 370px;
+		}
+		
+		#appStoreBadge a
+		{
+			border: 0;
+		}
+		
+		div#mainContent
+		{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 10px;
+			margin-left: 290px;
+			margin-right: 50px;
+		}
+		
+		#appTitle
+		{
+			font-family: 'Exo';
+			font-family: 'Homenaje';
+			font-size: 5em;
+			line-height: 1em;
+			font-weight: bold;
+			font-variant: small-caps;
+			text-shadow: 0 0 3px black;
+			-moz-text-shadow: 0 0 3px black;
+			margin-left: -20px;
+		}
+		
+		.screen
+		{
+			width: 250px;
+			margin-top: 20px;
+			display: inline-block;
+			border: 5px solid black;
+			border-radius: 5px;
+			background-color: #222;
+			line-height: 1.3em;
+		}
+
+		#screens .screen .caption
+		{
+			text-align: center;
+			font-size: 0.9em;
+			padding: 3px;
+		}
+		
+		#screens #iphone
+		{
+		}
+		
+		#screens .screen img
+		{
+			max-width: 250px;
+		}
+				
+	</style>
+	<script type="text/javascript">
+	
+		function init()
+		{
+			return;
+		}
+	
+	</script>
+</head>
+<body onload="init();">
+	<img src="card.png" id="appLogo">
+
+	<div id="appStoreBadge">
+		<a href="#"><img src="AppStoreBadge.png"></a>
+	</div>
+
+	<div id="mainContent">
+		<div id="appTitle">Edge Solitaire</div>
+		
+		Can you put the royals in their place?  In Edge Solitaire, the goal is to place the
+		face cards in their assigned spots around the edge of the game board.  Look out!  If
+		a face card comes up but all of its spots are already filled, you lose!  Each time
+		you completely fill the board, you have a chance to clear spots by selecting cards
+		whose values sum up to ten.  Good luck!
+		<br/>
+		
+		<div id="screens">
+			<div id="iphone">
+				<div class="screen">
+					<img src="iPhone1.png">
+					<div class="caption">
+						Face cards can only go on their designated slots
+						around the edge.  All other cards can be placed anywhere.
+					</div>
+				</div>
+				<div class="screen">
+					<img src="iPhone2.png">
+					<div class="caption">
+						Winning isn't as easy at it seems.  Can you corral the royals
+						into their spots around the edge?
+					</div>
+				</div>
+				<div class="screen">
+					<img src="iPhone3.png">
+					<div class="caption">
+						Start the game, but make sure you have plenty of time!  Edge
+						Solitaire may be slightly addictive!
+					</div>
+				</div>
+			</div>
+			
+			<!--div id="ipad">
+				<div class="screen">
+					<img src="iPad1.png">
+					<div class="caption">
+						Face cards can only go on their designated slots
+						around the edge.  All other cards can be placed anywhere.
+					</div>
+				</div>
+				<div class="screen">
+					<img src="iPad2.png">
+					<div class="caption">
+						Winning isn't as easy at it seems.  Can you corral the royals
+						into their spots around the edge?
+					</div>
+				</div>
+				<div class="screen">
+					<img src="iPad3.png">
+					<div class="caption">
+						Start the game, but make sure you have plenty of time!  Edge
+						Solitaire may be slightly addictive!
+					</div>
+				</div>
+			</div-->
+		</div>
+		
+	</div>
+</body>
+</html>
