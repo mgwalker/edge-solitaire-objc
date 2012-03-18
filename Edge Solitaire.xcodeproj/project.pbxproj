@@ -318,6 +318,7 @@
 		B9CE914814BFD28600E85FF0 /* Place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914414BFD28600E85FF0 /* Place.mp3 */; };
 		B9CE914914BFD28600E85FF0 /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CE914514BFD28600E85FF0 /* Win.mp3 */; };
 		B9CE914C14BFD37E00E85FF0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */; };
+		B9DFA9F715157DE100EF4FB5 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DFA9F615157DE100EF4FB5 /* Icon-144.png */; };
 		B9F20C0B14B7E71A00F9810A /* BoardView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */; };
 		B9F20C0E14B7ECE700F9810A /* cardspot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */; };
 		B9F20C1314B7ED8700F9810A /* CardSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F20C1214B7ED8700F9810A /* CardSpot.m */; };
@@ -647,6 +648,7 @@
 		B9CE914414BFD28600E85FF0 /* Place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Place.mp3; sourceTree = "<group>"; };
 		B9CE914514BFD28600E85FF0 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
 		B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B9DFA9F615157DE100EF4FB5 /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
 		B9F20C0A14B7E71A00F9810A /* BoardView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardView_iPad.xib; sourceTree = "<group>"; };
 		B9F20C0D14B7ECE700F9810A /* cardspot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardspot_iPad.png; sourceTree = "<group>"; };
 		B9F20C1114B7ED8700F9810A /* CardSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSpot.h; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			children = (
 				B9CE914B14BFD37E00E85FF0 /* AVFoundation.framework */,
 				B9A47C9E14BE820C00D776D2 /* Icon-72.png */,
+				B9DFA9F615157DE100EF4FB5 /* Icon-144.png */,
 				B9A47C9A14BE81E100D776D2 /* Icon@2x.png */,
 				B9A47C9814BE81DC00D776D2 /* Icon.png */,
 				B90A955314B68E9300F33242 /* Edge Solitaire */,
@@ -1540,6 +1543,7 @@
 				B95B80E414E0AD93007FEEF5 /* StartButton_iPad@2x.png in Resources */,
 				B95B80E514E0AD93007FEEF5 /* StartButton_iPhone.png in Resources */,
 				B95B80E614E0AD93007FEEF5 /* StartButton_iPhone@2x.png in Resources */,
+				B9DFA9F715157DE100EF4FB5 /* Icon-144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1661,7 +1665,7 @@
 				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFAD0A96-9069-41D3-B640-C84B76DCFD26";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "00422FB8-A41F-4DF3-AFF3-9C9768E07425";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
