@@ -37,7 +37,7 @@
 	
 	for(int i = 51; i > 0; i--)
 	{
-		[deck exchangeObjectAtIndex:arc4random() % (i + 1)
+		[deck exchangeObjectAtIndex:(arc4random() % (i + 1))
 				  withObjectAtIndex:i];
 	}
 	
