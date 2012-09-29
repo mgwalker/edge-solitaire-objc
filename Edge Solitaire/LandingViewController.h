@@ -15,4 +15,6 @@
 
 -(IBAction)startGame:(id)sender;
 
+@property (retain) IBOutlet UILabel* statsLabel;
+
 @end

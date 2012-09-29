@@ -11,6 +11,8 @@
 
 @implementation LandingViewController
 
+@synthesize statsLabel;
+
 -(id)init
 {
 	self = [super initWithNibName:@"LandingView" bundle:nil];
@@ -56,6 +58,25 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	NSInteger played = [Settings edgeGamesPlayed];
+	NSInteger won = [Settings edgeGamesWon];
+	float percentage = 100.0 * (((float)won) / ((float)played));
+	
+	NSNumberFormatter* nf = [[NSNumberFormatter alloc] init];
+	[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
+	[nf setNumberStyle:NSNumberFormatterDecimalStyle];
+	
+	NSString* playedString = [nf stringFromNumber:[NSNumber numberWithInt:played]];
+	NSString* wonString = [nf stringFromNumber:[NSNumber numberWithInt:won]];
+	NSString* percentageString = [NSString stringWithFormat:@"%.1f%%", percentage];
+	
+	[statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
+	
+	[super viewWillAppear:animated];
 }
 
 #pragma mark - Actions
