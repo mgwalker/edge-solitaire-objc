@@ -74,7 +74,10 @@
 	NSString* wonString = [nf stringFromNumber:[NSNumber numberWithInt:won]];
 	NSString* percentageString = [NSString stringWithFormat:@"%.1f%%", percentage];
 	
-	[statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
+	if(played > 0)
+		[statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
+	else
+		[statsLabel setText:@""];
 	
 	[super viewWillAppear:animated];
 }
