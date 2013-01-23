@@ -177,6 +177,9 @@ typedef enum
 	if(_popupVisible)
 		return;
 	
+	int upperBound = (_mode == EdgeGameModeEasy ? 12 : 10);
+	int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
+	
 	if(_inSummingMode)
 	{
 		BOOL click = NO;
@@ -186,7 +189,7 @@ typedef enum
 			cardSpot.highlighted = NO;
 			[_summingCardSpots removeObject:cardSpot];
 		}
-		else if(cardSpot.card != nil && cardSpot.card.value <= 10)
+		else if(cardSpot.card != nil && cardSpot.card.value <= upperBound)
 		{
 			click = YES;
 			cardSpot.highlighted = YES;
@@ -195,7 +198,12 @@ typedef enum
 		
 		int sum = 0;
 		for(CardSpot* spot in _summingCardSpots)
-			sum += spot.card.value;
+		{
+			if(spot.card.value > 10 && spot.card.value <= upperBound)
+				sum += 10;
+			else
+				sum += spot.card.value;
+		}
 		
 		if(sum == 10)
 		{
@@ -213,7 +221,7 @@ typedef enum
 	}
 	else if(self.nextCard.card != nil && cardSpot.card == nil)
 	{
-		if(self.nextCard.card.value < 11 || self.nextCard.card.value == cardSpot.edgeValue)
+		if(self.nextCard.card.value < restrictedCardLowerBound || self.nextCard.card.value == cardSpot.edgeValue)
 		{
 			instruction.text = @"Tap a spot above to place the next card.";
 			[self playSound:EdgeSoundTypeClicking];
@@ -262,7 +270,7 @@ typedef enum
 					{
 						if(spot.card.value < 10)
 							[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
-						else if(spot.card.value == 10)
+						else if(spot.card.value >= 10 && spot.card.value <= upperBound)
 						{
 							sumToTenExists = YES;
 							break;
@@ -335,8 +343,10 @@ typedef enum
 
 -(BOOL)canPlayNextCard
 {
+	int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
+	
 	BOOL can = NO;
-	if(self.nextCard.card.value > 10)
+	if(self.nextCard.card.value >= restrictedCardLowerBound)
 	{
 		for(CardSpot* spot in _allCardSpots)
 		{
