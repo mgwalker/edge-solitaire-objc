@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIUniversalViewController.h"
 #import "Card.h"
 
 @protocol CardSpotDelegate;
+
+typedef enum
+{
+	EdgeGameModeEasy,
+	EdgeGameModeNormal,
+	EdgeGameModeHard
+} EdgeGameMode;
 
 @interface CardSpot : UIView
 {

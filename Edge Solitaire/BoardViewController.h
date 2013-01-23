@@ -26,6 +26,8 @@
 	BOOL _isMuted;
 }
 
+-(id)initWithMode:(EdgeGameMode)mode;
+
 @property (retain) IBOutlet CardSpot* spot0;
 @property (retain) IBOutlet CardSpot* spot1;
 @property (retain) IBOutlet CardSpot* spot2;

@@ -18,6 +18,9 @@ typedef enum
 } EdgeSoundType;
 
 @interface BoardViewController()
+{
+	EdgeGameMode _mode;
+}
 -(BOOL)canPlayNextCard;
 -(void)showPopup:(UIImageView*)imageToShow;
 -(void)playSound:(EdgeSoundType)soundType;
@@ -37,6 +40,11 @@ typedef enum
 
 -(id)init
 {
+	return [self initWithMode:EdgeGameModeNormal];
+}
+
+-(id)initWithMode:(EdgeGameMode)mode
+{
 	self = [super initWithNibName:@"BoardView" bundle:nil];
 	if(self)
 	{
@@ -44,6 +52,8 @@ typedef enum
 		_summingCardSpots = [NSMutableArray array];
 		_inSummingMode = NO;
 		_popupVisible = NO;
+		
+		_mode = mode;
 		
 		// Allow audio from other apps to mix in.
 		[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
