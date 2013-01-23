@@ -92,6 +92,8 @@ typedef enum
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
+
 	self.spot0.cellID = 0;
 	self.spot0.delegate = self;
 	self.spot1.cellID = 1;

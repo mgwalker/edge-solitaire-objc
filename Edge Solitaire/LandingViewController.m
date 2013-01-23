@@ -50,6 +50,7 @@
 {
     [super viewDidLoad];
 	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
 	self.navigationController.navigationBarHidden = YES;
 }
 

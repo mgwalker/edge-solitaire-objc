@@ -8,7 +8,7 @@
 
 #import "UIUniversalViewController.h"
 
-@interface LandingViewController : UIUniversalViewController
+@interface LandingViewController : UIViewController
 {
 	
 }
