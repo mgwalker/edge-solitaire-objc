@@ -104,40 +104,40 @@ typedef enum
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
 
-	self.spot0.cellID = 0;
+	[self.spot0 setCellID:0 forGameMode:_mode];
 	self.spot0.delegate = self;
-	self.spot1.cellID = 1;
+	[self.spot1 setCellID:1 forGameMode:_mode];
 	self.spot1.delegate = self;
-	self.spot2.cellID = 2;
+	[self.spot2 setCellID:2 forGameMode:_mode];
 	self.spot2.delegate = self;
-	self.spot3.cellID = 3;
+	[self.spot3 setCellID:3 forGameMode:_mode];
 	self.spot3.delegate = self;
 	
-	self.spot4.cellID = 4;
+	[self.spot4 setCellID:4 forGameMode:_mode];
 	self.spot4.delegate = self;
-	self.spot5.cellID = 5;
+	[self.spot5 setCellID:5 forGameMode:_mode];
 	self.spot5.delegate = self;
-	self.spot6.cellID = 6;
+	[self.spot6 setCellID:6 forGameMode:_mode];
 	self.spot6.delegate = self;
-	self.spot7.cellID = 7;
+	[self.spot7 setCellID:7 forGameMode:_mode];
 	self.spot7.delegate = self;
 
-	self.spot8.cellID = 8;
+	[self.spot8 setCellID:8 forGameMode:_mode];
 	self.spot8.delegate = self;
-	self.spot9.cellID = 9;
+	[self.spot9 setCellID:9 forGameMode:_mode];
 	self.spot9.delegate = self;
-	self.spot10.cellID = 10;
+	[self.spot10 setCellID:10 forGameMode:_mode];
 	self.spot10.delegate = self;
-	self.spot11.cellID = 11;
+	[self.spot11 setCellID:11 forGameMode:_mode];
 	self.spot11.delegate = self;
 
-	self.spot12.cellID = 12;
+	[self.spot12 setCellID:12 forGameMode:_mode];
 	self.spot12.delegate = self;
-	self.spot13.cellID = 13;
+	[self.spot13 setCellID:13 forGameMode:_mode];
 	self.spot13.delegate = self;
-	self.spot14.cellID = 14;
+	[self.spot14 setCellID:14 forGameMode:_mode];
 	self.spot14.delegate = self;
-	self.spot15.cellID = 15;
+	[self.spot15 setCellID:15 forGameMode:_mode];
 	self.spot15.delegate = self;
 	
 	_allCardSpots = [NSArray arrayWithObjects:

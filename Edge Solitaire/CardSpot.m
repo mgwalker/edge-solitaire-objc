@@ -53,7 +53,7 @@
 	[delegate cardSpotTouched:self];
 }
 
--(void)setCellID:(NSInteger)cellID
+-(void)setCellID:(NSInteger)cellID forGameMode:(EdgeGameMode)mode
 {
 	if(cellID >= 0 && cellID < 16)
 	{
@@ -66,7 +66,7 @@
 			self.placeholderFace.image = [self imageWithName:@"KingMarker"];
 			[self addSubview:self.placeholderFace];
 		}
-		else if(cellID == 1 || cellID == 2 || cellID == 13 || cellID == 14)
+		else if(mode != EdgeGameModeEasy && (cellID == 1 || cellID == 2 || cellID == 13 || cellID == 14))
 		{
 			_edgeValue = 12;
 			[self.placeholderFace removeFromSuperview];
@@ -74,7 +74,7 @@
 			self.placeholderFace.image = [self imageWithName:@"QueenMarker"];
 			[self addSubview:self.placeholderFace];
 		}
-		else if(cellID == 4 || cellID == 7 || cellID == 8 || cellID == 11)
+		else if(mode != EdgeGameModeEasy && (cellID == 4 || cellID == 7 || cellID == 8 || cellID == 11))
 		{
 			_edgeValue = 11;
 			[self.placeholderFace removeFromSuperview];

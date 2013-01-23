@@ -26,8 +26,9 @@ typedef enum
 	BOOL _highlighted;
 }
 
+-(void)setCellID:(NSInteger)cellID forGameMode:(EdgeGameMode)mode;
+
 @property (retain) id<CardSpotDelegate> delegate;
-@property (assign) NSInteger cellID;
 @property (readonly) NSInteger edgeValue;
 @property (retain) Card* card;
 @property (assign) BOOL highlighted;
