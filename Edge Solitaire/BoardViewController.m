@@ -104,47 +104,74 @@ typedef enum
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
 
-	[self.spot0 setCellID:0 forGameMode:_mode];
+	if(_mode == EdgeGameModeHard)
+	{
+		[self.spot0 setRequiredValue:CardValueKing withRequiredSuit:CardSuitClub];
+		[self.spot3 setRequiredValue:CardValueKing withRequiredSuit:CardSuitDiamond];
+		[self.spot12 setRequiredValue:CardValueKing withRequiredSuit:CardSuitHeart];
+		[self.spot15 setRequiredValue:CardValueKing withRequiredSuit:CardSuitSpade];
+	}
+	else
+	{
+		[self.spot0 setRequiredValue:CardValueKing];
+		[self.spot3 setRequiredValue:CardValueKing];
+		[self.spot12 setRequiredValue:CardValueKing];
+		[self.spot15 setRequiredValue:CardValueKing];
+	}
+
+	if(_mode == EdgeGameModeNormal || _mode == EdgeGameModeHard)
+	{
+		if(_mode == EdgeGameModeHard)
+		{
+			[self.spot1 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitHeart];
+			[self.spot2 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitSpade];
+			[self.spot13 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitClub];
+			[self.spot14 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitDiamond];
+			
+			[self.spot4 setRequiredValue:CardValueJack withRequiredSuit:CardSuitDiamond];
+			[self.spot8 setRequiredValue:CardValueJack withRequiredSuit:CardSuitSpade];
+			[self.spot7 setRequiredValue:CardValueJack withRequiredSuit:CardSuitClub];
+			[self.spot11 setRequiredValue:CardValueJack withRequiredSuit:CardSuitHeart];
+		}
+		else
+		{
+			[self.spot1 setRequiredValue:CardValueQueen];
+			[self.spot2 setRequiredValue:CardValueQueen];
+			[self.spot13 setRequiredValue:CardValueQueen];
+			[self.spot14 setRequiredValue:CardValueQueen];
+			
+			[self.spot4 setRequiredValue:CardValueJack];
+			[self.spot8 setRequiredValue:CardValueJack];
+			[self.spot7 setRequiredValue:CardValueJack];
+			[self.spot11 setRequiredValue:CardValueJack];
+		}
+	}
+	
+	
 	self.spot0.delegate = self;
-	[self.spot1 setCellID:1 forGameMode:_mode];
 	self.spot1.delegate = self;
-	[self.spot2 setCellID:2 forGameMode:_mode];
 	self.spot2.delegate = self;
-	[self.spot3 setCellID:3 forGameMode:_mode];
 	self.spot3.delegate = self;
 	
-	[self.spot4 setCellID:4 forGameMode:_mode];
 	self.spot4.delegate = self;
-	[self.spot5 setCellID:5 forGameMode:_mode];
 	self.spot5.delegate = self;
-	[self.spot6 setCellID:6 forGameMode:_mode];
 	self.spot6.delegate = self;
-	[self.spot7 setCellID:7 forGameMode:_mode];
 	self.spot7.delegate = self;
 
-	[self.spot8 setCellID:8 forGameMode:_mode];
 	self.spot8.delegate = self;
-	[self.spot9 setCellID:9 forGameMode:_mode];
 	self.spot9.delegate = self;
-	[self.spot10 setCellID:10 forGameMode:_mode];
 	self.spot10.delegate = self;
-	[self.spot11 setCellID:11 forGameMode:_mode];
 	self.spot11.delegate = self;
 
-	[self.spot12 setCellID:12 forGameMode:_mode];
 	self.spot12.delegate = self;
-	[self.spot13 setCellID:13 forGameMode:_mode];
 	self.spot13.delegate = self;
-	[self.spot14 setCellID:14 forGameMode:_mode];
 	self.spot14.delegate = self;
-	[self.spot15 setCellID:15 forGameMode:_mode];
 	self.spot15.delegate = self;
 	
-	_allCardSpots = [NSArray arrayWithObjects:
-					 self.spot0, self.spot1, self.spot2, self.spot3,
-					 self.spot4, self.spot5, self.spot6, self.spot7,
-					 self.spot8, self.spot9, self.spot10, self.spot11,
-					 self.spot12, self.spot13, self.spot14, self.spot15, nil];
+	_allCardSpots = @[self.spot0, self.spot1, self.spot2, self.spot3,
+					  self.spot4, self.spot5, self.spot6, self.spot7,
+					  self.spot8, self.spot9, self.spot10, self.spot11,
+					  self.spot12, self.spot13, self.spot14, self.spot15];
 
 	// Start out hidden.  We don't want them to
 	// fade out when they aren't supposed to be
@@ -177,29 +204,34 @@ typedef enum
 	if(_popupVisible)
 		return;
 	
-	int upperBound = (_mode == EdgeGameModeEasy ? 12 : 10);
-	int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
-	
 	if(_inSummingMode)
 	{
 		BOOL click = NO;
 		if([_summingCardSpots containsObject:cardSpot])
 		{
+			// Touching a card that was already highlighted
+			// means we should unhighlight it.
 			click = YES;
 			cardSpot.highlighted = NO;
 			[_summingCardSpots removeObject:cardSpot];
 		}
-		else if(cardSpot.card != nil && cardSpot.card.value <= upperBound)
+		
+		else if(cardSpot.card != nil)
 		{
-			click = YES;
-			cardSpot.highlighted = YES;
-			[_summingCardSpots addObject:cardSpot];
+			// If there's a card on the spot and the card is
+			// not required, it can be removed.
+			if(cardSpot.card.value != cardSpot.requiredCardValue)
+			{
+				click = YES;
+				cardSpot.highlighted = YES;
+				[_summingCardSpots addObject:cardSpot];
+			}
 		}
 		
 		int sum = 0;
 		for(CardSpot* spot in _summingCardSpots)
 		{
-			if(spot.card.value > 10 && spot.card.value <= upperBound)
+			if(spot.card.value > 10 && spot.requiredCardValue == 0)
 				sum += 10;
 			else
 				sum += spot.card.value;
@@ -221,7 +253,11 @@ typedef enum
 	}
 	else if(self.nextCard.card != nil && cardSpot.card == nil)
 	{
-		if(self.nextCard.card.value < restrictedCardLowerBound || self.nextCard.card.value == cardSpot.edgeValue)
+		// This is the minimum card value of restricted cards.  Any card
+		// below this value may be placed anywhere.
+		int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
+		
+		if(self.nextCard.card.value < restrictedCardLowerBound || self.nextCard.card.value == cardSpot.requiredCardValue)
 		{
 			instruction.text = @"Tap a spot above to place the next card.";
 			[self playSound:EdgeSoundTypeClicking];
@@ -235,11 +271,11 @@ typedef enum
 			{
 				if(spot.card == nil)
 				{
-					if(spot.edgeValue > 10)
+					if(spot.requiredCardValue > 0)
 						hasWon = NO;
 					allOccupied = NO;
 				}
-				else if(spot.card.value != spot.edgeValue && spot.edgeValue > 10)
+				else if(spot.card.value != spot.requiredCardValue && spot.requiredCardValue > 0)
 					hasWon = NO;
 			}
 			
@@ -270,7 +306,7 @@ typedef enum
 					{
 						if(spot.card.value < 10)
 							[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
-						else if(spot.card.value >= 10 && spot.card.value <= upperBound)
+						else if(spot.card.value >= 10 && spot.requiredCardValue == 0)
 						{
 							sumToTenExists = YES;
 							break;
@@ -350,7 +386,7 @@ typedef enum
 	{
 		for(CardSpot* spot in _allCardSpots)
 		{
-			if(spot.edgeValue == nextCard.card.value && spot.card == nil)
+			if(spot.requiredCardValue == nextCard.card.value && spot.card == nil)
 			{
 				can = YES;
 				break;

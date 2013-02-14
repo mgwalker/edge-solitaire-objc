@@ -9,11 +9,22 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CardSpot.h"
 
+@interface CardSpot()
+
+@property (retain) UIImageView* placeholder;
+@property (retain) UIImageView* placeholderFace;
+@property (retain) UIImageView* cardImage;
+
+-(void)setup;
+-(UIImage*)imageWithName:(NSString*)imageName;
+
+@end
+
 @implementation CardSpot
 
-@synthesize delegate;
-@synthesize placeholder, placeholderFace, cardImage;
-@synthesize edgeValue = _edgeValue;
+//@synthesize delegate;
+//@synthesize placeholder, placeholderFace, cardImage;
+//@synthesize edgeValue = _edgeValue;
 
 -(id)init
 {
@@ -46,50 +57,61 @@
 	
 	self.exclusiveTouch = YES;
 	self.userInteractionEnabled = YES;
+	
+	_requiredCardValue = 0;
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	[delegate cardSpotTouched:self];
+	[self.delegate cardSpotTouched:self];
 }
 
--(void)setCellID:(NSInteger)cellID forGameMode:(EdgeGameMode)mode
+-(void)setRequiredValue:(CardValue)cardValue
 {
-	if(cellID >= 0 && cellID < 16)
+	// We only support face cards for required values.
+	if(cardValue == CardValueJack || cardValue == CardValueQueen || cardValue == CardValueKing)
 	{
-		_edgeValue = 0;
-		if(cellID == 0 || cellID == 3 || cellID == 12 || cellID == 15)
+		[self.placeholderFace removeFromSuperview];
+		self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+		
+		switch(cardValue)
 		{
-			_edgeValue = 13;
-			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-			self.placeholderFace.image = [self imageWithName:@"KingMarker"];
-			[self addSubview:self.placeholderFace];
+			case CardValueJack:
+				self.placeholderFace.image = [self imageWithName:@"JackMarker"];
+				break;
+				
+			case CardValueQueen:
+				self.placeholderFace.image = [self imageWithName:@"QueenMarker"];
+				break;
+				
+			case CardValueKing:
+				self.placeholderFace.image = [self imageWithName:@"KingMarker"];
+				break;
+				
+			default:
+				break;
 		}
-		else if(mode != EdgeGameModeEasy && (cellID == 1 || cellID == 2 || cellID == 13 || cellID == 14))
-		{
-			_edgeValue = 12;
-			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-			self.placeholderFace.image = [self imageWithName:@"QueenMarker"];
-			[self addSubview:self.placeholderFace];
-		}
-		else if(mode != EdgeGameModeEasy && (cellID == 4 || cellID == 7 || cellID == 8 || cellID == 11))
-		{
-			_edgeValue = 11;
-			[self.placeholderFace removeFromSuperview];
-			self.placeholderFace = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-			self.placeholderFace.image = [self imageWithName:@"JackMarker"];
-			[self addSubview:self.placeholderFace];
-		}
-
-		_cellID = cellID;
+		
+		[self addSubview:self.placeholderFace];
+		
+		_requiredCardValue = cardValue;
 	}
 }
 
--(NSInteger)cellID
+-(void)setRequiredValue:(CardValue)cardValue withRequiredSuit:(CardSuit)suit
 {
-	return _cellID;
+	[self setRequiredValue:cardValue];
+	_requiredCardSuit = suit;
+}
+
+-(CardValue)requiredCardValue
+{
+	return _requiredCardValue;
+}
+
+-(CardSuit)requiredCardSuit
+{
+	return _requiredCardSuit;
 }
 
 -(void)setCard:(Card *)card
@@ -97,28 +119,7 @@
 	[self.cardImage removeFromSuperview];
 	if(card != nil)
 	{
-		NSString* cardName = @"";
-		switch(card.suit)
-		{
-			case CardSuitClub:
-				cardName = @"C";
-				break;
-				
-			case CardSuitDiamond:
-				cardName = @"D";
-				break;
-				
-			case CardSuitHeart:
-				cardName = @"H";
-				break;
-				
-			case CardSuitSpade:
-			default:
-				cardName = @"S";
-				break;
-		}
-		
-		cardName = [NSString stringWithFormat:@"%@%i", cardName, card.value];
+		NSString *cardName = [NSString stringWithFormat:@"%@%i", card.suitFirstCharacter, card.value];
 		self.cardImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
 		self.cardImage.image = [self imageWithName:cardName];
 		[self addSubview:self.cardImage];
@@ -161,6 +162,9 @@
 
 -(UIImage*)imageWithName:(NSString*)imageName
 {
+	// This should be eliminated.  Rename all the images to use the ~device
+	// nomenclature and let the OS handle it.  E.g., "JackMarker~ipad" and
+	// "JackMarker~iphone".
 	return [UIImage imageNamed:
 			[NSString stringWithFormat:@"%@_%@", imageName, (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"iPad" : @"iPhone")]];
 }

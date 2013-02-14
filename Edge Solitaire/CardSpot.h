@@ -20,29 +20,21 @@ typedef enum
 
 @interface CardSpot : UIView
 {
-	NSInteger _cellID;
-	NSInteger _edgeValue;
+	CardValue _requiredCardValue;
+	CardSuit _requiredCardSuit;
 	Card* _card;
 	BOOL _highlighted;
 }
 
--(void)setCellID:(NSInteger)cellID forGameMode:(EdgeGameMode)mode;
+-(void)setRequiredValue:(CardValue)cardValue;
+-(void)setRequiredValue:(CardValue)cardValue withRequiredSuit:(CardSuit)suit;
 
-@property (retain) id<CardSpotDelegate> delegate;
-@property (readonly) NSInteger edgeValue;
+@property (readonly) CardValue requiredCardValue;
+@property (readonly) CardSuit requiredCardSuit;
 @property (retain) Card* card;
 @property (assign) BOOL highlighted;
 
-@end
-
-@interface CardSpot()
-
-@property (retain) UIImageView* placeholder;
-@property (retain) UIImageView* placeholderFace;
-@property (retain) UIImageView* cardImage;
-
--(void)setup;
--(UIImage*)imageWithName:(NSString*)imageName;
+@property (retain) id<CardSpotDelegate> delegate;
 
 @end
 
