@@ -11,8 +11,6 @@
 
 @implementation LandingViewController
 
-@synthesize statsLabel;
-
 -(id)init
 {
 	self = [super initWithNibName:@"LandingView" bundle:nil];
@@ -27,23 +25,7 @@
     return [self init];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -59,6 +41,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.statsLabel = nil;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -76,9 +59,9 @@
 	NSString* percentageString = [NSString stringWithFormat:@"%.1f%%", percentage];
 	
 	if(played > 0)
-		[statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
+		[self.statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
 	else
-		[statsLabel setText:@""];
+		[self.statsLabel setText:@""];
 	
 	[super viewWillAppear:animated];
 }
