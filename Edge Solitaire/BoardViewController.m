@@ -231,7 +231,7 @@ typedef enum
 		int sum = 0;
 		for(CardSpot* spot in _summingCardSpots)
 		{
-			if(spot.card.value > 10 && spot.requiredCardValue == 0)
+			if(spot.card.value > 10 && (cardSpot.card.value != spot.requiredCardValue))
 				sum += 10;
 			else
 				sum += spot.card.value;
