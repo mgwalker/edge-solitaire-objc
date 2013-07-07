@@ -7,6 +7,7 @@
 //
 
 #import "LandingViewController.h"
+#import "DifficultyViewController.h"
 #import "BoardViewController.h"
 
 @implementation LandingViewController
@@ -69,8 +70,23 @@
 #pragma mark - Actions
 -(IBAction)startGame:(id)sender
 {
-	BoardViewController* vc = [[BoardViewController alloc] init];
-	[self.navigationController pushViewController:vc animated:NO];
+	if([self respondsToSelector:@selector(presentViewController:animated:completion:)])
+	{
+		LandingViewController *me = self;
+		DifficultyViewController *diff = [[DifficultyViewController alloc] initWithCallback:^(EdgeGameMode mode)
+										  {
+											  BoardViewController* vc = [[BoardViewController alloc] initWithMode:mode];
+											  [me.navigationController pushViewController:vc animated:NO];
+											  [me dismissViewControllerAnimated:NO completion:nil];
+										  }];
+		diff.modalPresentationStyle = UIModalPresentationFormSheet;
+		[self presentViewController:diff animated:YES completion:nil];
+	}
+	else
+		;
+	
+	//BoardViewController* vc = [[BoardViewController alloc] initWithMode:EdgeGameModeEasy];
+	//[self.navigationController pushViewController:vc animated:NO];
 }
 
 #pragma mark - Rotation
