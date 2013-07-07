@@ -185,7 +185,7 @@
 								<double key="preferredMaxLayoutWidth">322</double>
 							</object>
 						</array>
-						<string key="NSFrame">{{20, 124}, {500, 197}}</string>
+						<string key="NSFrame">{{20, 372}, {500, 197}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="929889247"/>
@@ -256,6 +256,7 @@
 								<string key="NSFrame">{{178, 38}, {322, 159}}</string>
 								<reference key="NSSuperview" ref="82283577"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -274,7 +275,7 @@
 								<double key="preferredMaxLayoutWidth">322</double>
 							</object>
 						</array>
-						<string key="NSFrame">{{20, 372}, {500, 197}}</string>
+						<string key="NSFrame">{{20, 124}, {500, 197}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="578349031"/>
