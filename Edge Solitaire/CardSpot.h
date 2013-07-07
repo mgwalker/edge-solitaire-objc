@@ -7,35 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIUniversalViewController.h"
 #import "Card.h"
 
 @protocol CardSpotDelegate;
 
+typedef enum
+{
+	EdgeGameModeEasy,
+	EdgeGameModeNormal,
+	EdgeGameModeHard
+} EdgeGameMode;
+
 @interface CardSpot : UIView
 {
-	NSInteger _cellID;
-	NSInteger _edgeValue;
+	CardValue _requiredCardValue;
+	CardSuit _requiredCardSuit;
 	Card* _card;
 	BOOL _highlighted;
 }
 
-@property (retain) id<CardSpotDelegate> delegate;
-@property (assign) NSInteger cellID;
-@property (readonly) NSInteger edgeValue;
+-(void)setRequiredValue:(CardValue)cardValue;
+-(void)setRequiredValue:(CardValue)cardValue withRequiredSuit:(CardSuit)suit;
+
+@property (readonly) CardValue requiredCardValue;
+@property (readonly) CardSuit requiredCardSuit;
 @property (retain) Card* card;
 @property (assign) BOOL highlighted;
 
-@end
-
-@interface CardSpot()
-
-@property (retain) UIImageView* placeholder;
-@property (retain) UIImageView* placeholderFace;
-@property (retain) UIImageView* cardImage;
-
--(void)setup;
--(UIImage*)imageWithName:(NSString*)imageName;
+@property (retain) id<CardSpotDelegate> delegate;
 
 @end
 

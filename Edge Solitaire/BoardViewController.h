@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "UIUniversalViewController.h"
 #import "CardSpot.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface BoardViewController : UIUniversalViewController <CardSpotDelegate>
+@interface BoardViewController : UIViewController <CardSpotDelegate>
 {
 	// Array of Cards
 	NSMutableArray* _cardDeck;
@@ -26,6 +25,8 @@
 	
 	BOOL _isMuted;
 }
+
+-(id)initWithMode:(EdgeGameMode)mode;
 
 @property (retain) IBOutlet CardSpot* spot0;
 @property (retain) IBOutlet CardSpot* spot1;

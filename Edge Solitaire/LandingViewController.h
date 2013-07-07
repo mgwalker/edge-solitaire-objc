@@ -6,9 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "UIUniversalViewController.h"
-
-@interface LandingViewController : UIUniversalViewController
+@interface LandingViewController : UIViewController
 {
 	
 }
