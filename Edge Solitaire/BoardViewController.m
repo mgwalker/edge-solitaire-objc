@@ -320,7 +320,11 @@ typedef enum
 				if(sumToTenExists)
 				{
 					// Start clearing sums of 10
-					self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					if(_mode == EdgeGameModeNormal)
+						self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					else if(_mode == EdgeGameModeEasy)
+						self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one and Jacks and Queens count as ten.";
+					
 					self.tensDoneButton.hidden = NO;
 					_inSummingMode = YES;
 				}
@@ -350,7 +354,10 @@ typedef enum
 		{
 			// Tried to place a face card on a
 			// non-face-card slot.
-			self.instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			if(_mode == EdgeGameModeNormal)
+				self.instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			else if(_mode == EdgeGameModeEasy)
+				self.instruction.text = @"Kings must be placed in the corners.";
 		}
 	}
 }
