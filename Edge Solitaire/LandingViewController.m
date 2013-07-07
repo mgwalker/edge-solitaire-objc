@@ -70,23 +70,16 @@
 #pragma mark - Actions
 -(IBAction)startGame:(id)sender
 {
-	if([self respondsToSelector:@selector(presentViewController:animated:completion:)])
-	{
-		LandingViewController *me = self;
-		DifficultyViewController *diff = [[DifficultyViewController alloc] initWithCallback:^(EdgeGameMode mode)
-										  {
-											  BoardViewController* vc = [[BoardViewController alloc] initWithMode:mode];
-											  [me.navigationController pushViewController:vc animated:NO];
-											  [me dismissViewControllerAnimated:NO completion:nil];
-										  }];
-		diff.modalPresentationStyle = UIModalPresentationFormSheet;
-		[self presentViewController:diff animated:YES completion:nil];
-	}
-	else
-		;
+	LandingViewController *me = self;
 	
-	//BoardViewController* vc = [[BoardViewController alloc] initWithMode:EdgeGameModeEasy];
-	//[self.navigationController pushViewController:vc animated:NO];
+	DifficultyViewController *diff = [[DifficultyViewController alloc] initWithCallback:^(EdgeGameMode mode)
+									 {
+										 BoardViewController* vc = [[BoardViewController alloc] initWithMode:mode];
+										 [me.navigationController pushViewController:vc animated:NO];
+										 [me dismissViewControllerAnimated:NO completion:nil];
+									 }];
+	diff.modalPresentationStyle = UIModalPresentationFormSheet;
+	[self presentViewController:diff animated:YES completion:nil];
 }
 
 #pragma mark - Rotation
