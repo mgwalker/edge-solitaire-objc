@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CardSpot.h"
 
 @interface Settings : NSObject
 
@@ -14,9 +15,11 @@
 +(void)setIsMuted:(BOOL)muted;
 
 +(NSInteger)edgeGamesPlayed;
-+(void)incrementEdgeGamesPlayed;
++(NSInteger)edgeGamesPlayedForMode:(EdgeGameMode)mode;
++(void)incrementEdgeGamesPlayedForMode:(EdgeGameMode)mode;
 
 +(NSInteger)edgeGamesWon;
-+(void)incrementEdgeGamesWon;
++(NSInteger)edgeGamesWonForMode:(EdgeGameMode)mode;
++(void)incrementEdgeGamesWonForMode:(EdgeGameMode)mode;
 
 @end

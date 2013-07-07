@@ -10,7 +10,7 @@
 
 @implementation Card
 
--(id)initWithSuit:(enum CardSuit)cardSuit andValue:(NSInteger)cardValue
+-(id)initWithSuit:(CardSuit)cardSuit andValue:(NSInteger)cardValue
 {
 	self = [super init];
 	if(self)
@@ -22,7 +22,32 @@
 }
 
 -(NSInteger)value { return _value; }
--(enum CardSuit)suit { return _suit; }
+-(CardSuit)suit { return _suit; }
+
+-(NSString*)suitFirstCharacter
+{
+	NSString* suit = @"";
+	switch(self.suit)
+	{
+		case CardSuitClub:
+			suit = @"C";
+			break;
+			
+		case CardSuitDiamond:
+			suit = @"D";
+			break;
+			
+		case CardSuitHeart:
+			suit = @"H";
+			break;
+			
+		case CardSuitSpade:
+		default:
+			suit = @"S";
+			break;
+	}
+	return suit;
+}
 
 +(NSMutableArray*)shuffledDeck
 {

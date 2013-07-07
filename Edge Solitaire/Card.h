@@ -8,24 +8,42 @@
 
 #import <Foundation/Foundation.h>
 
-enum CardSuit
+typedef enum
 {
 	CardSuitClub,
 	CardSuitDiamond,
 	CardSuitHeart,
 	CardSuitSpade
-};
+} CardSuit;
+
+typedef enum
+{
+	CardValueAce = 1,
+	CardValueTwo = 2,
+	CardValueThree = 3,
+	CardValueFour = 4,
+	CardValueFive = 5,
+	CardValueSix = 6,
+	CardValueSeven = 7,
+	CardValueEight = 8,
+	CardValueNine = 9,
+	CardValueTen = 10,
+	CardValueJack = 11,
+	CardValueQueen = 12,
+	CardValueKing = 13
+} CardValue;
 
 @interface Card : NSObject
 {
 	NSInteger _value;
-	enum CardSuit _suit;
+	CardSuit _suit;
 }
 
--(id)initWithSuit:(enum CardSuit)cardSuit andValue:(NSInteger)cardValue;
+-(id)initWithSuit:(CardSuit)cardSuit andValue:(NSInteger)cardValue;
 
 @property (readonly) NSInteger value;
-@property (readonly) enum CardSuit suit;
+@property (readonly) CardSuit suit;
+@property (readonly) NSString* suitFirstCharacter;
 
 +(NSMutableArray*)shuffledDeck;
 

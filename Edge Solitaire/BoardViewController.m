@@ -18,6 +18,9 @@ typedef enum
 } EdgeSoundType;
 
 @interface BoardViewController()
+{
+	EdgeGameMode _mode;
+}
 -(BOOL)canPlayNextCard;
 -(void)showPopup:(UIImageView*)imageToShow;
 -(void)playSound:(EdgeSoundType)soundType;
@@ -37,6 +40,11 @@ typedef enum
 
 -(id)init
 {
+	return [self initWithMode:EdgeGameModeNormal];
+}
+
+-(id)initWithMode:(EdgeGameMode)mode
+{
 	self = [super initWithNibName:@"BoardView" bundle:nil];
 	if(self)
 	{
@@ -44,6 +52,8 @@ typedef enum
 		_summingCardSpots = [NSMutableArray array];
 		_inSummingMode = NO;
 		_popupVisible = NO;
+		
+		_mode = mode;
 		
 		// Allow audio from other apps to mix in.
 		[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
@@ -92,47 +102,76 @@ typedef enum
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.spot0.cellID = 0;
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
+
+	if(_mode == EdgeGameModeHard)
+	{
+		[self.spot0 setRequiredValue:CardValueKing withRequiredSuit:CardSuitClub];
+		[self.spot3 setRequiredValue:CardValueKing withRequiredSuit:CardSuitDiamond];
+		[self.spot12 setRequiredValue:CardValueKing withRequiredSuit:CardSuitHeart];
+		[self.spot15 setRequiredValue:CardValueKing withRequiredSuit:CardSuitSpade];
+	}
+	else
+	{
+		[self.spot0 setRequiredValue:CardValueKing];
+		[self.spot3 setRequiredValue:CardValueKing];
+		[self.spot12 setRequiredValue:CardValueKing];
+		[self.spot15 setRequiredValue:CardValueKing];
+	}
+
+	if(_mode == EdgeGameModeNormal || _mode == EdgeGameModeHard)
+	{
+		if(_mode == EdgeGameModeHard)
+		{
+			[self.spot1 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitHeart];
+			[self.spot2 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitSpade];
+			[self.spot13 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitClub];
+			[self.spot14 setRequiredValue:CardValueQueen withRequiredSuit:CardSuitDiamond];
+			
+			[self.spot4 setRequiredValue:CardValueJack withRequiredSuit:CardSuitDiamond];
+			[self.spot8 setRequiredValue:CardValueJack withRequiredSuit:CardSuitSpade];
+			[self.spot7 setRequiredValue:CardValueJack withRequiredSuit:CardSuitClub];
+			[self.spot11 setRequiredValue:CardValueJack withRequiredSuit:CardSuitHeart];
+		}
+		else
+		{
+			[self.spot1 setRequiredValue:CardValueQueen];
+			[self.spot2 setRequiredValue:CardValueQueen];
+			[self.spot13 setRequiredValue:CardValueQueen];
+			[self.spot14 setRequiredValue:CardValueQueen];
+			
+			[self.spot4 setRequiredValue:CardValueJack];
+			[self.spot8 setRequiredValue:CardValueJack];
+			[self.spot7 setRequiredValue:CardValueJack];
+			[self.spot11 setRequiredValue:CardValueJack];
+		}
+	}
+	
+	
 	self.spot0.delegate = self;
-	self.spot1.cellID = 1;
 	self.spot1.delegate = self;
-	self.spot2.cellID = 2;
 	self.spot2.delegate = self;
-	self.spot3.cellID = 3;
 	self.spot3.delegate = self;
 	
-	self.spot4.cellID = 4;
 	self.spot4.delegate = self;
-	self.spot5.cellID = 5;
 	self.spot5.delegate = self;
-	self.spot6.cellID = 6;
 	self.spot6.delegate = self;
-	self.spot7.cellID = 7;
 	self.spot7.delegate = self;
 
-	self.spot8.cellID = 8;
 	self.spot8.delegate = self;
-	self.spot9.cellID = 9;
 	self.spot9.delegate = self;
-	self.spot10.cellID = 10;
 	self.spot10.delegate = self;
-	self.spot11.cellID = 11;
 	self.spot11.delegate = self;
 
-	self.spot12.cellID = 12;
 	self.spot12.delegate = self;
-	self.spot13.cellID = 13;
 	self.spot13.delegate = self;
-	self.spot14.cellID = 14;
 	self.spot14.delegate = self;
-	self.spot15.cellID = 15;
 	self.spot15.delegate = self;
 	
-	_allCardSpots = [NSArray arrayWithObjects:
-					 self.spot0, self.spot1, self.spot2, self.spot3,
-					 self.spot4, self.spot5, self.spot6, self.spot7,
-					 self.spot8, self.spot9, self.spot10, self.spot11,
-					 self.spot12, self.spot13, self.spot14, self.spot15, nil];
+	_allCardSpots = @[self.spot0, self.spot1, self.spot2, self.spot3,
+					  self.spot4, self.spot5, self.spot6, self.spot7,
+					  self.spot8, self.spot9, self.spot10, self.spot11,
+					  self.spot12, self.spot13, self.spot14, self.spot15];
 
 	// Start out hidden.  We don't want them to
 	// fade out when they aren't supposed to be
@@ -170,20 +209,33 @@ typedef enum
 		BOOL click = NO;
 		if([_summingCardSpots containsObject:cardSpot])
 		{
+			// Touching a card that was already highlighted
+			// means we should unhighlight it.
 			click = YES;
 			cardSpot.highlighted = NO;
 			[_summingCardSpots removeObject:cardSpot];
 		}
-		else if(cardSpot.card != nil && cardSpot.card.value <= 10)
+		
+		else if(cardSpot.card != nil)
 		{
-			click = YES;
-			cardSpot.highlighted = YES;
-			[_summingCardSpots addObject:cardSpot];
+			// If there's a card on the spot and the card is
+			// not required, it can be removed.
+			if(cardSpot.card.value != cardSpot.requiredCardValue)
+			{
+				click = YES;
+				cardSpot.highlighted = YES;
+				[_summingCardSpots addObject:cardSpot];
+			}
 		}
 		
 		int sum = 0;
 		for(CardSpot* spot in _summingCardSpots)
-			sum += spot.card.value;
+		{
+			if(spot.card.value > 10 && (cardSpot.card.value != spot.requiredCardValue))
+				sum += 10;
+			else
+				sum += spot.card.value;
+		}
 		
 		if(sum == 10)
 		{
@@ -201,7 +253,11 @@ typedef enum
 	}
 	else if(self.nextCard.card != nil && cardSpot.card == nil)
 	{
-		if(self.nextCard.card.value < 11 || self.nextCard.card.value == cardSpot.edgeValue)
+		// This is the minimum card value of restricted cards.  Any card
+		// below this value may be placed anywhere.
+		int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
+		
+		if(self.nextCard.card.value < restrictedCardLowerBound || self.nextCard.card.value == cardSpot.requiredCardValue)
 		{
 			instruction.text = @"Tap a spot above to place the next card.";
 			[self playSound:EdgeSoundTypeClicking];
@@ -215,11 +271,11 @@ typedef enum
 			{
 				if(spot.card == nil)
 				{
-					if(spot.edgeValue > 10)
+					if(spot.requiredCardValue > 0)
 						hasWon = NO;
 					allOccupied = NO;
 				}
-				else if(spot.card.value != spot.edgeValue && spot.edgeValue > 10)
+				else if(spot.card.value != spot.requiredCardValue && spot.requiredCardValue > 0)
 					hasWon = NO;
 			}
 			
@@ -228,8 +284,8 @@ typedef enum
 				[self playSound:EdgeSoundTypeWinning];
 				self.nextCard.hidden = YES;
 				[self showPopup:popupWin];
-				[Settings incrementEdgeGamesPlayed];
-				[Settings incrementEdgeGamesWon];
+				[Settings incrementEdgeGamesPlayedForMode:_mode];
+				[Settings incrementEdgeGamesWonForMode:_mode];
 				return;
 			}
 			
@@ -250,7 +306,7 @@ typedef enum
 					{
 						if(spot.card.value < 10)
 							[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
-						else if(spot.card.value == 10)
+						else if(spot.card.value >= 10 && spot.requiredCardValue == 0)
 						{
 							sumToTenExists = YES;
 							break;
@@ -264,7 +320,11 @@ typedef enum
 				if(sumToTenExists)
 				{
 					// Start clearing sums of 10
-					self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					if(_mode == EdgeGameModeNormal)
+						self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one.";
+					else if(_mode == EdgeGameModeEasy)
+						self.instruction.text = @"Tap cards to sum their values to ten.  Aces count as one and Jacks and Queens count as ten.";
+					
 					self.tensDoneButton.hidden = NO;
 					_inSummingMode = YES;
 				}
@@ -273,7 +333,7 @@ typedef enum
 					// Game over!
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotRemove];
-					[Settings incrementEdgeGamesPlayed];
+					[Settings incrementEdgeGamesPlayedForMode:_mode];
 				}
 			}
 			else
@@ -286,7 +346,7 @@ typedef enum
 				{
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotPlace];
-					[Settings incrementEdgeGamesPlayed];
+					[Settings incrementEdgeGamesPlayedForMode:_mode];
 				}
 			}
 		}
@@ -294,7 +354,10 @@ typedef enum
 		{
 			// Tried to place a face card on a
 			// non-face-card slot.
-			self.instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			if(_mode == EdgeGameModeNormal)
+				self.instruction.text = @"Face cards must be placed on their assigned spots along the edge.";
+			else if(_mode == EdgeGameModeEasy)
+				self.instruction.text = @"Kings must be placed in the corners.";
 		}
 	}
 }
@@ -317,18 +380,20 @@ typedef enum
 	{
 		[self playSound:EdgeSoundTypeLosing];
 		[self showPopup:popupCannotPlace];
-		[Settings incrementEdgeGamesPlayed];
+		[Settings incrementEdgeGamesPlayedForMode:_mode];
 	}
 }
 
 -(BOOL)canPlayNextCard
 {
+	int restrictedCardLowerBound = (_mode == EdgeGameModeEasy ? 13 : 11);
+	
 	BOOL can = NO;
-	if(self.nextCard.card.value > 10)
+	if(self.nextCard.card.value >= restrictedCardLowerBound)
 	{
 		for(CardSpot* spot in _allCardSpots)
 		{
-			if(spot.edgeValue == nextCard.card.value && spot.card == nil)
+			if(spot.requiredCardValue == nextCard.card.value && spot.card == nil)
 			{
 				can = YES;
 				break;

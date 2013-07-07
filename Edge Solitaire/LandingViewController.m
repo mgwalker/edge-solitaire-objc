@@ -7,11 +7,10 @@
 //
 
 #import "LandingViewController.h"
+#import "DifficultyViewController.h"
 #import "BoardViewController.h"
 
 @implementation LandingViewController
-
-@synthesize statsLabel;
 
 -(id)init
 {
@@ -27,29 +26,14 @@
     return [self init];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_felt.jpg"]];
 	self.navigationController.navigationBarHidden = YES;
 }
 
@@ -58,6 +42,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.statsLabel = nil;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -75,9 +60,9 @@
 	NSString* percentageString = [NSString stringWithFormat:@"%.1f%%", percentage];
 	
 	if(played > 0)
-		[statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
+		[self.statsLabel setText:[NSString stringWithFormat:@"You've won %@ games out of %@ played.  That's %@!", wonString, playedString, percentageString]];
 	else
-		[statsLabel setText:@""];
+		[self.statsLabel setText:@""];
 	
 	[super viewWillAppear:animated];
 }
@@ -85,8 +70,16 @@
 #pragma mark - Actions
 -(IBAction)startGame:(id)sender
 {
-	BoardViewController* vc = [[BoardViewController alloc] init];
-	[self.navigationController pushViewController:vc animated:NO];
+	LandingViewController *me = self;
+	
+	DifficultyViewController *diff = [[DifficultyViewController alloc] initWithCallback:^(EdgeGameMode mode)
+									 {
+										 BoardViewController* vc = [[BoardViewController alloc] initWithMode:mode];
+										 [me.navigationController pushViewController:vc animated:NO];
+										 [me dismissViewControllerAnimated:NO completion:nil];
+									 }];
+	diff.modalPresentationStyle = UIModalPresentationFormSheet;
+	[self presentViewController:diff animated:YES completion:nil];
 }
 
 #pragma mark - Rotation
