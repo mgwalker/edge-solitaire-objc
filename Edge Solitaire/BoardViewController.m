@@ -284,8 +284,8 @@ typedef enum
 				[self playSound:EdgeSoundTypeWinning];
 				self.nextCard.hidden = YES;
 				[self showPopup:popupWin];
-				[Settings incrementEdgeGamesPlayed];
-				[Settings incrementEdgeGamesWon];
+				[Settings incrementEdgeGamesPlayedForMode:_mode];
+				[Settings incrementEdgeGamesWonForMode:_mode];
 				return;
 			}
 			
@@ -333,7 +333,7 @@ typedef enum
 					// Game over!
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotRemove];
-					[Settings incrementEdgeGamesPlayed];
+					[Settings incrementEdgeGamesPlayedForMode:_mode];
 				}
 			}
 			else
@@ -346,7 +346,7 @@ typedef enum
 				{
 					[self playSound:EdgeSoundTypeLosing];
 					[self showPopup:popupCannotPlace];
-					[Settings incrementEdgeGamesPlayed];
+					[Settings incrementEdgeGamesPlayedForMode:_mode];
 				}
 			}
 		}
@@ -380,7 +380,7 @@ typedef enum
 	{
 		[self playSound:EdgeSoundTypeLosing];
 		[self showPopup:popupCannotPlace];
-		[Settings incrementEdgeGamesPlayed];
+		[Settings incrementEdgeGamesPlayedForMode:_mode];
 	}
 }
 

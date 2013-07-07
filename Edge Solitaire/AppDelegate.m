@@ -15,6 +15,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+	NSObject *oldWon = [settings objectForKey:@"edgeGamesWon"];
+	NSObject *oldPlayed = [settings objectForKey:@"edgeGamesPlayed"];
+	if(oldWon != nil && oldPlayed != nil)
+	{
+		[settings setObject:oldWon forKey:@"edgeGamesWon_normal"];
+		[settings setObject:oldPlayed forKey:@"edgeGamesPlayed_normal"];
+		[settings removeObjectForKey:@"edgeGamesWon"];
+		[settings removeObjectForKey:@"edgeGamesPlayed"];
+	}
+	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
