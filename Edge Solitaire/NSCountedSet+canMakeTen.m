@@ -14,7 +14,14 @@
 	static NSArray* tensSums = nil;
 	if(tensSums == nil)
 		tensSums = [NSArray arrayWithObjects:
+					[NSCountedSet setWithObject:@10],
 					
+					// Face cards count as ten if they're in the
+					// list of cards to be checked.
+					[NSCountedSet setWithObject:@11],
+					[NSCountedSet setWithObject:@12],
+					[NSCountedSet setWithObject:@13],
+
 					[NSCountedSet setWithObjects: @1, @1, @1, @1, @2, @2, @2, nil],
 					[NSCountedSet setWithObjects: @1, @1, @2, @2, @2, @2, nil],
 					[NSCountedSet setWithObjects: @1, @1, @1, @2, @2, @3, nil],
