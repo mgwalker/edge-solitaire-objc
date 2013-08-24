@@ -298,24 +298,14 @@ typedef enum
 				
 				self.nextCard.hidden = YES;
 								
-				BOOL sumToTenExists = NO;
 				NSCountedSet* valuesToCheck = [NSCountedSet set];
 				for(CardSpot* spot in _allCardSpots)
 				{
-					if(spot.card != nil)
-					{
-						if(spot.card.value < 10)
-							[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
-						else if(spot.card.value >= 10 && spot.requiredCardValue == 0)
-						{
-							sumToTenExists = YES;
-							break;
-						}
-					}
+					if(spot.card != nil && spot.card.value != spot.requiredCardValue)
+						[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
 				}
 				
-				if(!sumToTenExists)
-					sumToTenExists = [valuesToCheck canMakeTen];
+				BOOL sumToTenExists = [valuesToCheck canMakeTen];
 				
 				if(sumToTenExists)
 				{
