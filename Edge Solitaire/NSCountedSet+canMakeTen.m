@@ -63,7 +63,7 @@
 		if([sum isSubsetOfSet:self])
 		{
 			BOOL isSum = YES;
-			for(NSNumber* num in self)
+			for(NSNumber* num in sum)
 			{
 				if([self countForObject:num] < [sum countForObject:num])
 				{
