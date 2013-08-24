@@ -14,202 +14,41 @@
 	static NSArray* tensSums = nil;
 	if(tensSums == nil)
 		tensSums = [NSArray arrayWithObjects:
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2], nil],
 					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2], nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @1, @2, @2, @2, nil],
+					[NSCountedSet setWithObjects: @1, @1, @2, @2, @2, @2, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @2, @2, @3, nil],
+					[NSCountedSet setWithObjects: @1, @2, @2, @2, @3, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @1, @3, @3, nil],
+					[NSCountedSet setWithObjects: @1, @1, @2, @3, @3, nil],
+					[NSCountedSet setWithObjects: @2, @2, @3, @3, nil],
+					[NSCountedSet setWithObjects: @1, @3, @3, @3, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @1, @2, @4, nil],
+					[NSCountedSet setWithObjects: @1, @1, @2, @2, @4, nil],
+					[NSCountedSet setWithObjects: @2, @2, @2, @4, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @3, @4, nil],
+					[NSCountedSet setWithObjects: @1, @2, @3, @4, nil],
+					[NSCountedSet setWithObjects: @3, @3, @4, nil],
+					[NSCountedSet setWithObjects: @1, @1, @4, @4, nil],
+					[NSCountedSet setWithObjects: @2, @4, @4, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @2, @5, nil],
+					[NSCountedSet setWithObjects: @1, @2, @2, @5, nil],
+					[NSCountedSet setWithObjects: @1, @1, @3, @5, nil],
+					[NSCountedSet setWithObjects: @2, @3, @5, nil],
+					[NSCountedSet setWithObjects: @1, @4, @5, nil],
+					[NSCountedSet setWithObjects: @5, @5, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @1, @6, nil],
+					[NSCountedSet setWithObjects: @1, @1, @2, @6, nil],
+					[NSCountedSet setWithObjects: @2, @2, @6, nil],
+					[NSCountedSet setWithObjects: @1, @3, @6, nil],
+					[NSCountedSet setWithObjects: @4, @6, nil],
+					[NSCountedSet setWithObjects: @1, @1, @1, @7, nil],
+					[NSCountedSet setWithObjects: @1, @2, @7, nil],
+					[NSCountedSet setWithObjects: @3, @7, nil],
+					[NSCountedSet setWithObjects: @1, @1, @8, nil],
+					[NSCountedSet setWithObjects: @2, @8, nil],
+					[NSCountedSet setWithObjects: @1, @9, nil],
 					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:4],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:4],
-					 [NSNumber numberWithInt:4], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:4],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:5],
-					 [NSNumber numberWithInt:5], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:6], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:6], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:6], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:6], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:4],
-					 [NSNumber numberWithInt:6], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:7], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:7], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:3],
-					 [NSNumber numberWithInt:7], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:8], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:2],
-					 [NSNumber numberWithInt:8], nil],
-					
-					[NSCountedSet setWithObjects:
-					 [NSNumber numberWithInt:1],
-					 [NSNumber numberWithInt:9], nil],
 					nil];
 	
 	for(NSCountedSet* sum in tensSums)
