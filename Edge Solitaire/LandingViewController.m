@@ -55,8 +55,8 @@
 	[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
 	[nf setNumberStyle:NSNumberFormatterDecimalStyle];
 	
-	NSString* playedString = [nf stringFromNumber:[NSNumber numberWithInt:played]];
-	NSString* wonString = [nf stringFromNumber:[NSNumber numberWithInt:won]];
+	NSString* playedString = [nf stringFromNumber:[NSNumber numberWithInteger:played]];
+	NSString* wonString = [nf stringFromNumber:[NSNumber numberWithInteger:won]];
 	NSString* percentageString = [NSString stringWithFormat:@"%.1f%%", percentage];
 	
 	if(played > 0)

@@ -302,7 +302,7 @@ typedef enum
 				for(CardSpot* spot in _allCardSpots)
 				{
 					if(spot.card != nil && spot.card.value != spot.requiredCardValue)
-						[valuesToCheck addObject:[NSNumber numberWithInt:spot.card.value]];
+						[valuesToCheck addObject:[NSNumber numberWithInteger:spot.card.value]];
 				}
 				
 				BOOL sumToTenExists = [valuesToCheck canMakeTen];
