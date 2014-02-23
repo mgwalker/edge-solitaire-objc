@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B90965C017F27070009C69BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90965BF17F27070009C69BF /* Images.xcassets */; };
 		B90A954C14B68E9300F33242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954B14B68E9300F33242 /* UIKit.framework */; };
 		B90A954E14B68E9300F33242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954D14B68E9300F33242 /* Foundation.framework */; };
 		B90A955014B68E9300F33242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90A954F14B68E9300F33242 /* CoreGraphics.framework */; };
@@ -49,6 +48,7 @@
 		B9667A4214C100C0006B58DB /* restart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3C14C100C0006B58DB /* restart@2x.png */; };
 		B9667A4314C100C0006B58DB /* unmute.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3D14C100C0006B58DB /* unmute.png */; };
 		B9667A4414C100C0006B58DB /* unmute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9667A3E14C100C0006B58DB /* unmute@2x.png */; };
+		B981CD1218BA714900DFC9C6 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B981CD1118BA714900DFC9C6 /* Images-2.xcassets */; };
 		B9A47C9114BE819F00D776D2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8A14BE819E00D776D2 /* Icon-Small-50.png */; };
 		B9A47C9214BE819F00D776D2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8B14BE819E00D776D2 /* Icon-Small.png */; };
 		B9A47C9314BE819F00D776D2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A47C8C14BE819E00D776D2 /* Icon-Small@2x.png */; };
@@ -330,7 +330,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B90965BF17F27070009C69BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B90A954714B68E9300F33242 /* Edge Solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edge Solitaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90A954B14B68E9300F33242 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B90A954D14B68E9300F33242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -380,6 +379,7 @@
 		B9667A3C14C100C0006B58DB /* restart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restart@2x.png"; sourceTree = "<group>"; };
 		B9667A3D14C100C0006B58DB /* unmute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unmute.png; sourceTree = "<group>"; };
 		B9667A3E14C100C0006B58DB /* unmute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unmute@2x.png"; sourceTree = "<group>"; };
+		B981CD1118BA714900DFC9C6 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		B9A47C8A14BE819E00D776D2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		B9A47C8B14BE819E00D776D2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		B9A47C8C14BE819E00D776D2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -727,7 +727,7 @@
 				B90A955D14B68E9300F33242 /* AppDelegate.m */,
 				B95FEADD14F339C10087F441 /* Settings.h */,
 				B95FEADE14F339C10087F441 /* Settings.m */,
-				B90965BF17F27070009C69BF /* Images.xcassets */,
+				B981CD1118BA714900DFC9C6 /* Images-2.xcassets */,
 				B90A955414B68E9300F33242 /* Supporting Files */,
 			);
 			path = "Edge Solitaire";
@@ -1228,6 +1228,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
+				TargetAttributes = {
+					B90A954614B68E9300F33242 = {
+						DevelopmentTeam = 3EBPJ585W7;
+					};
+				};
 			};
 			buildConfigurationList = B90A954114B68E9300F33242 /* Build configuration list for PBXProject "Edge Solitaire" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1296,7 +1301,6 @@
 				B9B1ABA814B906310052A30A /* H3_iPad.png in Resources */,
 				B9B1ABA914B906310052A30A /* H4_iPad.png in Resources */,
 				B9B1ABAA14B906310052A30A /* H5_iPad.png in Resources */,
-				B90965C017F27070009C69BF /* Images.xcassets in Resources */,
 				B9B1ABAB14B906310052A30A /* H6_iPad.png in Resources */,
 				B9B1ABAC14B906310052A30A /* H7_iPad.png in Resources */,
 				B9B1ABAD14B906310052A30A /* H8_iPad.png in Resources */,
@@ -1522,6 +1526,7 @@
 				B9A47CC414BE873300D776D2 /* MenuButton_iPhone@2x.png in Resources */,
 				B9A47CC514BE873300D776D2 /* PlayAgainButton_iPhone.png in Resources */,
 				B9A47CC614BE873300D776D2 /* PlayAgainButton_iPhone@2x.png in Resources */,
+				B981CD1218BA714900DFC9C6 /* Images-2.xcassets in Resources */,
 				B9A47CC714BE873300D776D2 /* popupBackground_iPhone.png in Resources */,
 				B9A47CC814BE873300D776D2 /* popupBackground_iPhone@2x.png in Resources */,
 				B9A47CC914BE873300D776D2 /* won_iPhone.png in Resources */,
@@ -1659,16 +1664,16 @@
 		B90A956514B68E9300F33242 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edge Solitaire/Edge Solitaire-Prefix.pch";
 				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5606AE24-81B4-4DF7-A873-CBE31F21BCCE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1676,17 +1681,16 @@
 		B90A956614B68E9300F33242 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edge Solitaire/Edge Solitaire-Prefix.pch";
 				INFOPLIST_FILE = "Edge Solitaire/Edge Solitaire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "534D54AD-0F4D-4A55-AF7D-B0A06F50C82E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
