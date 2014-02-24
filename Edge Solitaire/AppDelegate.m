@@ -9,12 +9,38 @@
 #import "AppDelegate.h"
 #import "LandingViewController.h"
 
+#import <GameCircle/GameCircle.h>
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 
+/*
+ Achievements:
+ 
+ Lose at Kings in the Corner
+ Win at Kings in the Corner
+ Win on the first round
+ Win with only kings on the board
+ Win with the board full
+ 
+ Lost at Royals on Edge
+ Win at Royals on Edge
+ Win on the first round
+ Win with only face cards on the board
+ Win with the board full
+ Win with the corners occupied by single suits
+
+ Clear all the nines
+ 
+ */
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[GameCircle beginWithFeatures:@[AGFeatureAchievements] completionHandler:^(NSError* error)
+	{
+	}];
+
 	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
 	NSObject *oldWon = [settings objectForKey:@"edgeGamesWon"];
 	NSObject *oldPlayed = [settings objectForKey:@"edgeGamesPlayed"];
@@ -28,18 +54,27 @@
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	// Override point for customization after application launch.
 	
 	UINavigationController* nav = [[UINavigationController alloc] init];
 	LandingViewController* vc = [[LandingViewController alloc] init];
 	self.window.rootViewController = nav;
 	[nav pushViewController:vc animated:NO];
 	
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+	self.window.backgroundColor = [UIColor whiteColor];
+	[self.window makeKeyAndVisible];
+
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [GameCircle handleOpenURL:url
+                   sourceApplication:sourceApplication];
+}
+
 
  #pragma mark - Application's Documents directory
 

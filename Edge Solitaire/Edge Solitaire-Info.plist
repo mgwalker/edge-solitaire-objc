@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJhcHBGYW1pbHlJZCI6ImFtem4xLmFwcGxpY2F0aW9uLjBhZTRmNjA1YjM5MjQyNjdiZWYyMTJjMjRkNzg5ODU4IiwiaWQiOiJhYjFjOGI3ZS05Y2YyLTExZTMtYWFiYy1hNzllNzk4N2E2OWQiLCJhcHBJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC43NDhmMDM4NjlkNGM0OWIxYjU1ODYwZDYzMjI5MTQ5OCIsImJ1bmRsZVNlZWRJZCI6ImNvbS56b3dtYmVoLkVkZ2UtU29saXRhaXJlIiwiaXNzIjoiQW1hem9uIiwiYnVuZGxlSWQiOiJjb20uem93bWJlaC5FZGdlLVNvbGl0YWlyZSIsInZlciI6IjIiLCJhcHBWYXJpYW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuNzQ4ZjAzODY5ZDRjNDliMWI1NTg2MGQ2MzIyOTE0OTgiLCJ0eXBlIjoiQVBJS2V5IiwiaWF0IjoiMTM5MzIwNTE4MTgyNiIsImNsaWVudElkIjoiYW16bjEuYXBwbGljYXRpb24tb2EyLWNsaWVudC4wNTFmZGNiNzJkYzI0MTg1YTVmM2U2ZTc1NWU0OGYwZSJ9.J9lM54lAjodrhL07C/OKuq25Y2Hvo7qogBDMwlhZ3WvIxnkNfJRI6TIJ83BuxbW9frxlH+oheJ9LmYAOFpJpnWZPXk5ArT9BEPIQ4lkIt61lMu8roQCG8m/0Cr7J3ezQMZY63Z6TTIxTb+zvQ4ZRTG1d2i5ckGmY7sde8Syi3b9kHH8MM2ydAdsjOjuhj3bTrnyIsRdPQ4VRqSST6v6wpEfD+pV+BpZdH0dAo8o4E+mYEQMiG8cO84YzAUP54ndKJzl3DxsAkwxtz84F5ue8ilnhTCTqSuiUEBrKctpgGjKGz2Qo4Ycz1OX6P/yJdkQHGa6XgWL1M4sSo8ulAS0QLQ==</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -31,8 +33,21 @@
 	<string>2.0.3</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-com.zowmbeh.Edge-Solitaire</string>
+			</array>
+			<key>URL identifier</key>
+			<string>com.zowmbeh.Edge-Solitaire</string>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>214</string>
+	<string>218</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
@@ -43,6 +58,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
